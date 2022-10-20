@@ -1,3 +1,3 @@
 # BRH-documentation
 Official Documentation of the Biomedical Research Hub (BRH) Data Mesh.
-https://brh.data-commons.org/dashboard/Public/index.html
+https://uc-cdis.github.io/BRH-documentation/home/#happy-birthday-bob-sara-verifying-edit-capabilities
