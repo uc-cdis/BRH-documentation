@@ -1,0 +1,64 @@
+site_name: BRH Markdown Test - QA v0.0
+site_url: https://qa-brh.planx-pla.net
+repo_url:
+nav:
+  - Home: home.md
+  - Return to BRH Platform: https://brh.data-commons.org/
+  - Data and Repositories: data_and_repos.md
+  - Types of Shared Data: types_of_shared_data.md
+  - How to Get Started:
+    - BRH Overview: BRH_overview.md
+    - Login Access Overview: loginoverview.md
+    - Workspace Registration:
+      - registration_ws/index.md
+      - registration_ws/temp_access.md
+      - registration_ws/extended_access.md
+  - BRH Page Features:
+    - features/index.md
+    - features/features_overview.md
+    - features/profile_page.md
+  - Access: 
+    - Individual Access: indiv_access.md
+
+
+  - About: about.md
+theme:
+  favicon: img/favicon.ico
+  logo: img/brh-logo.png
+  name: material
+
+  palette:
+
+   # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: brh_platform
+      toggle:
+        icon: material/eye
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: brh_platform_dark
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    - navigation.tracking
+extra_css:
+  - stylesheets/extra.css
+use_directory_urls: true
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: True
+      baselevel: 1
+  - pymdownx.superfences
+  - pymdownx.details
+plugins:
+  - search
+  - mkdocs-video:
+      is_video: True
+

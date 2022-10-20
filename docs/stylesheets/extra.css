@@ -1,0 +1,41 @@
+[data-md-color-scheme="brh_platform"] {
+  --md-primary-fg-color:        #2C89A0;
+  --md-accent-fg-color:         #322598;
+}
+
+[data-md-color-scheme="brh_platform_dark"] { 
+  --md-primary-fg-color:        #2C89A0;
+  --md-accent-fg-color:         #322598;
+  --md-default-fg-color:               hsla(0, 0%, 100%, 1);
+  --md-default-fg-color--light:        hsla(0, 0%, 100%, 0.87);
+  --md-default-fg-color--lighter:      hsla(0, 0%, 100%, 0.32);
+  --md-default-fg-color--lightest:     hsla(0, 0%, 100%, 0.12);
+  --md-default-bg-color:               hsla(232, 15%, 21%, 1);
+  --md-default-bg-color--light:        hsla(232, 15%, 21%, 0.54);
+  --md-default-bg-color--lighter:      hsla(232, 15%, 21%, 0.26);
+  --md-default-bg-color--lightest:     hsla(232, 15%, 21%, 0.07);
+
+  // Code color shades
+  --md-code-bg-color:                  hsla(232, 15%, 18%, 1);
+  --md-code-fg-color:                  hsla(60, 30%, 96%, 1);
+
+  // Text color shades
+  --md-text-color:                     var(--md-default-fg-color--light);
+  --md-text-link-color:                var(--md-accent-fg-color);
+  --md-typeset-color:                  var(--md-default-fg-color--light);
+
+  // Admonition color shades
+  --md-admonition-bg-color:            hsla(0, 0%, 100%, 0.025);
+  --md-admonition-fg-color:            var(--md-default-fg-color);
+
+  // Footer color shades
+  --md-footer-bg-color:                hsla(232, 15%, 12%, 0.87);
+  --md-footer-bg-color--dark:          hsla(232, 15%, 10%, 1);
+}
+
+.md-typeset a:hover:not(.md-button), a:focus:not(.md-button) {
+    text-decoration:              underline;
+    text-decoration-thickness:    .125em;
+    text-underline-offset:        1.5px;
+    text-decoration-style:        dotted;
+}
