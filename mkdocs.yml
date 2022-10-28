@@ -4,24 +4,19 @@ repo_url:
 nav:
   - Home: home.md
   - Return to BRH Platform: https://brh.data-commons.org/
-  - Data and Repositories: data_and_repos.md
   - Types of Shared Data: types_of_shared_data.md
+  - Data Management and Repositories: data_and_repos.md
   - How to Get Started:
     - BRH Overview: BRH_overview.md
-    - Login Access Overview: loginoverview.md
-    - Workspace Registration:
-      - registration_ws/index.md
-      - registration_ws/temp_access.md
-      - registration_ws/extended_access.md
-  - BRH Page Features:
-    - features/index.md
-    - features/features_overview.md
-    - features/profile_page.md
-  - Access: 
-    - Individual Access: indiv_access.md
+    - Workspace Registration: workspace_registration.md
+    - Login Page: loginoverview.md
+    - How to Check Request Access: how_to_check_request_access.md
+    - Discovery Page: discovery_page.md
+    - Workspaces Page: workspace_page.md
+    - Profile Page: profile_page.md
+  - Downloading Data Files: downloading_data_files.md
+  - Contact: contact.md
 
-
-  - About: about.md
 theme:
   favicon: img/favicon.ico
   logo: img/brh-logo.png
