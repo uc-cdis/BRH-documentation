@@ -3,7 +3,7 @@
   --md-accent-fg-color:         #322598;
 }
 
-[data-md-color-scheme="brh_platform_dark"] { 
+[data-md-color-scheme="brh_platform_dark"] {
   --md-primary-fg-color:        #2C89A0;
   --md-accent-fg-color:         #322598;
   --md-default-fg-color:               hsla(0, 0%, 100%, 1);
