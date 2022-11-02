@@ -14,7 +14,7 @@ The BRH is powered by the open-source software [“Gen3”][Gen3.org]
 
 [![Gen3 logo][img Gen3 logo]{: style="height:50px"}][Gen3.org]
 
->Gen3 was created by and is actively developed at the 
+>Gen3 was created by and is actively developed at the
 >University of Chicago’s Center for Translational Data Science (CTDS)
 >with the aim of creating interoperable cloud-based
 >data resources for the scientific research community.
