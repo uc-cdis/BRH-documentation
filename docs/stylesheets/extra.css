@@ -16,8 +16,9 @@
   --md-default-bg-color--lightest:     hsla(232, 15%, 21%, 0.07);
 
   // Code color shades
-  --md-code-bg-color:                  hsla(232, 15%, 18%, 1);
+  --md-typeset-color:                  var(--md-default-fg-color);
   --md-code-fg-color:                  hsla(60, 30%, 96%, 1);
+  --md-code-bg-color:                  hsla(232, 15%, 18%, 1);
 
   // Text color shades
   --md-text-color:                     var(--md-default-fg-color--light);
