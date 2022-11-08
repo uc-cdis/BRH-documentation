@@ -426,9 +426,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Downloading Data Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Downloading Data Files
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-data-files-into-a-workspace-with-the-python-sdk" class="md-nav__link">
+    Download Data Files into a Workspace with the Python SDK
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -469,6 +500,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-data-files-into-a-workspace-with-the-python-sdk" class="md-nav__link">
+    Download Data Files into a Workspace with the Python SDK
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -483,6 +529,33 @@
 
 
 <h1 id="downloading-data-files"><strong>Downloading Data Files</strong><a class="headerlink" href="#downloading-data-files" title="Permanent link">&para;</a></h1>
+<p>Users can download data files for work in the provided <a href="../workspace_page/">Workspace</a>. Utilizing workspaces leverages CTDS-owned python software development kit (SDK) as well as a cloud-based computing platform.</p>
+<p><strong>Note: accessing data files requires linked access to all FAIR enabled repositories, as described <a href="../how_to_check_request_access/">here</a>.</strong></p>
+<h2 id="download-data-files-into-a-workspace-with-the-python-sdk">Download Data Files into a Workspace with the Python SDK<a class="headerlink" href="#download-data-files-into-a-workspace-with-the-python-sdk" title="Permanent link">&para;</a></h2>
+<p>Users can load data files from a manifest created on the Discovery Page directly into a Workspace.
+Below are the steps to do so.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="../discovery_page/">Discovery Page</a>. Link your accounts to FAIR repositories as described <a href="../how_to_check_request_access/">here</a>.</p>
+</li>
+<li>
+<p>Find the study or studies of interest by using the <a href="../discovery_page/">search features</a> or the <a href="../discovery_page/">list of accessible studies</a>.</p>
+</li>
+<li>
+<p>Select the clickable boxes next to the studies.
+Click on "Open in Workspace", which will initiate the <a href="../workspace_page/">Workspace Launcher</a>.</p>
+<p><img alt="Select the studies and click &quot;Open In Workspace&quot;." src="../img/open_data_in_workspace.png" /></p>
+</li>
+<li>
+<p>The Workspace will be prepared and the selected data will be made available via a manifest placed in a time/date stamped directory in the following path: pd/data/brh.data-commons.org/exported-manifest-(time/date stamp) Please do not navigate away from this page until the download is complete. Created directory may take several minutes to load.</p>
+<p><img alt="Workspace manifest downloaded to pd directory" src="../img/open_in_workspace_manifest_path.png" /></p>
+</li>
+<li>
+<p>Once loaded, users can navigate into the directory and access either the manifest or an automatically generated notebook (e.g., data.ipynb) with instructions to download the data. Users should note that the gen3-sdk is utilized in this notebook and directory to download data.</p>
+<p><img alt="The manifest and a notebook are available in the pd directory" src="../img/open_in_workspace_datanb.png" /></p>
+</li>
+</ol>
+<!-- Links and Images -->
 
 
 

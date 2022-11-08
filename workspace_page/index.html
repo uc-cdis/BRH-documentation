@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workspace-page" class="md-skip">
+        <a href="#workspaces" class="md-skip">
           Skip to content
         </a>
       
@@ -392,9 +392,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Workspaces Page
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Workspaces Page
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guideline-to-get-started-in-workspaces" class="md-nav__link">
+    Guideline to get started in Workspaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-save-and-download-filesnotebooks" class="md-nav__link">
+    Upload, save, and download Files/Notebooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-languages-and-tools" class="md-nav__link">
+    Environments, Languages, and Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-3-and-r-in-jupyter" class="md-nav__link">
+    Python 3 and R in Jupyter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-workspace-shutdown" class="md-nav__link">
+    Automatic Workspace Shutdown
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -471,6 +530,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guideline-to-get-started-in-workspaces" class="md-nav__link">
+    Guideline to get started in Workspaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-save-and-download-filesnotebooks" class="md-nav__link">
+    Upload, save, and download Files/Notebooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-languages-and-tools" class="md-nav__link">
+    Environments, Languages, and Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-3-and-r-in-jupyter" class="md-nav__link">
+    Python 3 and R in Jupyter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-workspace-shutdown" class="md-nav__link">
+    Automatic Workspace Shutdown
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -484,7 +586,94 @@
                   
 
 
-<h1 id="workspace-page"><strong>Workspace Page</strong><a class="headerlink" href="#workspace-page" title="Permanent link">&para;</a></h1>
+<h1 id="workspaces"><strong>Workspaces</strong><a class="headerlink" href="#workspaces" title="Permanent link">&para;</a></h1>
+<p><strong>To use the workspace, users must register for workspace accounts to use the workspaces, as described on the <a href="../workspace_registration/">Workspace Registration page</a>.</strong></p>
+<p>BRH workspaces are secure data analysis environments in the cloud that can access data from one or more data resources. By default, Workspaces include Jupyter notebooks, Python and R, but can be configured to host virtually any application, including analysis workflows, data processing pipelines, or data visualization apps.</p>
+<blockquote>
+<p>New to Jupyter? Learn more about the popular tool for data scientists on <a href="https://jupyter.org/">Jupyter.org</a> (disclaimer: CTDS is not responsible for the content).</p>
+</blockquote>
+<h2 id="guideline-to-get-started-in-workspaces">Guideline to get started in Workspaces<a class="headerlink" href="#guideline-to-get-started-in-workspaces" title="Permanent link">&para;</a></h2>
+<p>Once users have access to workspaces, use this guide below to get started with analysis work in workspaces.</p>
+<ol>
+<li>
+<p>Users need to log in via <a href="https://brh.data-commons.org/login">https://brh.data-commons.org/login</a> to access workspaces.</p>
+</li>
+<li>
+<p>After navigating to <a href="https://brhstaging.data-commons.org/workspace">https://brh.data-commons.org/workspace</a>, users will discover a list of pre-configured virtual machine (VM) images, as shown below.</p>
+<p><img alt="Available workspaces on BRH" src="../img/workspace_flavors_080322.png" /></p>
+<ul>
+<li><strong>(Generic) Jupyter Notebook with R kernel:</strong> Choose this VM if you are familiar with setting up Python- or R-based Notebooks, or if you just exported one or multiple studies from the Discovery Page and want to start your custom analysis.</li>
+<li><strong>Tutorial Notebooks:</strong> Explore our Jupyter Notebook tutorials written in Python or R, which pull data from various sources of the Biomedical Research Hub to leverage statistical programs and data analysis tools.</li>
+</ul>
+</li>
+<li>
+<p>Click “Launch” on any of the workspace options to spin up a copy of that VM. The status of launching the workspace is displayed after clicking on “Launch”. Note: Launching the VM may take several minutes.</p>
+<p><img alt="Screenshot of the launch status of the workspace" src="../img/workspace_launch.png" /></p>
+</li>
+<li>
+<p>After launching, the home folders are displayed. One of these folders is the user's persistent drive ("/pd").</p>
+<p><img alt="Workspace home folder, including the /pd directory" src="../img/workspace_data_folder_080322.png" /></p>
+</li>
+<li>
+<p>Select the /pd folder. New files or licenses should be saved in the the /pd directory if users need to access them after restarting the workspaces. Only files saved in the /pd directory will remain available after termination of a workspace session.</p>
+<p><img alt="Screenshot of the /pd folder" src="../img/workspace_pd_folder_080422.png" /></p>
+<ul>
+<li><strong>Attention:</strong> Any personal files in the folder “data” will be lost. Personal files in the directory /pd will persist.</li>
+<li>Do not save files in the "data" or “data/brh.data-commons.org” folders.</li>
+<li>The folder “brh.data-commons.org” in the “data” folder will host the data files you have exported from the Discovery Page.</li>
+</ul>
+</li>
+<li>
+<p>Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language.</p>
+<p><img alt="Start a new notebook under “Notebook” in the Launcher tab" src="../img/workspace_new_080322.png" /></p>
+</li>
+<li>
+<p><strong>Experiment away!</strong> Code blocks are entered in cells, which can be executed individually or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support Markdown.</p>
+<p>Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.</p>
+</li>
+<li>
+<p>Do not forget to terminate your workspace once your work is finished. Unterminated workspaces continue to accrue computational costs. <strong>Note, that Workspaces automatically shut down after 90 minutes of <a href="./">idle time</a>.</strong></p>
+<p><img alt="Screenshot for terminating your workspace" src="../img/workspace_terminate_2.png" /></p>
+</li>
+</ol>
+<p>Further reading: read more about how to download data files into the Workspaces <a href="../downloading_data_files/">here</a>.</p>
+<h2 id="upload-save-and-download-filesnotebooks">Upload, save, and download Files/Notebooks<a class="headerlink" href="#upload-save-and-download-filesnotebooks" title="Permanent link">&para;</a></h2>
+<p>Users can <strong>upload</strong> data files or Notebooks from the local machine to the home directory by clicking on “Upload” in the top left corner. Access the uploaded content in the Notebook (see below).</p>
+<p><img alt="Upload data files or Notebooks to the workspace by clicking on “Upload” in the top left corner." src="../img/workspace_upload_080322.png" /></p>
+<p>Then <strong>run</strong> in the cells, for example:</p>
+<p><code>import os</code></p>
+<p><code>import pandas as pd</code></p>
+<p><code>os.chdir('/data')</code></p>
+<p><code>demo_df = pd.read_csv('/this_is_a_demo.txt', sep='\t')</code></p>
+<p><code>demo_df.head()</code></p>
+<p>Users can <strong>save</strong> the notebook by clicking "File" - "Save as", as shown below.</p>
+<p><img alt="Save the notebook under “File” - &quot;Save Notebook as&quot;" src="../img/workspace_notebook_save_080322.png" /></p>
+<p>Users can <strong>download</strong> notebooks by clicking "File" - "Download", as shown below. Download the notebook, for example, as ".ipynb".</p>
+<p><img alt="Download notebook" src="../img/workspace_notebook_download_080422.png" /></p>
+<h2 id="environments-languages-and-tools">Environments, Languages, and Tools<a class="headerlink" href="#environments-languages-and-tools" title="Permanent link">&para;</a></h2>
+<p>The following <strong>environments</strong> are available in the workspaces:</p>
+<ul>
+<li>Jupyter Lab
+      <img alt="Jupyter logo" src="../img/workspace_jupyter_logo.png" /></li>
+</ul>
+<p>The following <strong>programmatic languages</strong> are available in Jupyter Notebooks:</p>
+<ul>
+<li>R</li>
+<li>Python 3</li>
+</ul>
+<p>The following <strong>tools</strong> are available in Jupyter Notebooks:</p>
+<ul>
+<li>GitHub (<a href="https://docs.github.com/en">read GitHub documentation</a>)</li>
+</ul>
+<h2 id="python-3-and-r-in-jupyter">Python 3 and R in Jupyter<a class="headerlink" href="#python-3-and-r-in-jupyter" title="Permanent link">&para;</a></h2>
+<p>Both Python 3 and R are available in Jupyter Notebooks.</p>
+<p>Users can expect to be able to use typical Python or R packages, such as PyPI or CRAN. For Python and R, users can start a new notebook with a tile under "Notebook", as shown below.</p>
+<p><img alt="Find Python 3 or R when starting a new notebook under “New”." src="../img/workspace_new_080322.png" /></p>
+<h2 id="automatic-workspace-shutdown">Automatic Workspace Shutdown<a class="headerlink" href="#automatic-workspace-shutdown" title="Permanent link">&para;</a></h2>
+<p><strong>Warning:</strong> When a BRH Workspace reaches the STRIDES Credits limit for STRIDES Credits Workspaces, or reaches the Hard Limit for STRIDES Grant Workspaces, the Workspace will be automatically terminated. Please be sure to save any work before reaching the STRIDES Credit or Hard Limit.</p>
+<p><strong>Warning:</strong> Workspaces will also automatically shut down after 90 minutes of idle time. A pop-up window will remind users to navigate back to the workspaces page in order to save the data.</p>
+<p><img alt="2' warning for shutdown for workspace" src="../img/workspace_shutdown_sign_2.png" /></p>
+<!-- Links and Images -->
 
 
 
