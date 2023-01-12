@@ -39,12 +39,12 @@ Review data access permissions and generate API credentials files used for progr
 [![Screenshot of profile page showing active API keys and project access][img profile]{: style="height:100px"}][Profile Page]
 
 <!-- Links and Images -->
-[Register for workspaces]: workspace_registration.md
-[Login page]: loginoverview.md
-[Request study access]: how_to_check_request_access.md
-[Discovery page]: discovery_page.md
-[Workspaces page]: workspace_page.md
-[Profile page]: profile_page.md
+[Register for workspaces]: 05-workspace_registration.md
+[Login page]: 06-loginoverview.md
+[Request study access]: 07-how_to_check_request_access.md
+[Discovery page]: 08-discovery_page.md
+[Workspaces page]: 09-workspace_page.md
+[Profile page]: 10-profile_page.md
 [img wksp register]: ./img/brh-portal-login-strides.png
 [img login]: ./img/brh-login.png
 [img req access]: ./img/profile_login_other_commons.png
