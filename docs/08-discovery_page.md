@@ -17,8 +17,8 @@ On the Discovery page, several features help you navigate and refine your search
 3. **Free Text Search:** Use keywords or tags in the free-text-based search bar to find studies. The free-text search bar can be used to search for study name, ID number, Data Commons, or any keyword that is mentioned in the metadata of the study.
 4. **Data Resources/Data Commons Tags:** view these by selecting "Study Characteristics". Click on a tag to filter by a Data Resource/Data Commons. Selecting multiple tags works in an "OR" logic (e.g., "find AnVIL OR BioData Catalyst studies").
 5. **Export Options:** Login first to leverage the export options. Select one or multiple studies and download a file manifest or export the data files to a secure cloud environment "Workspace" to start your custom data analysis in Python or R.
-6. **Data Availability:** Filter on available, pending, and not-yet-available datasets. [Read further here][Data Availability Options].
-7. **Studies:** This table feature presents all current studies on BRH. Click on any study to show useful information about the study (metadata). [Read further here][Find Study Metadata].
+6. **Data Availability:** Filter on available, pending, and not-yet-available datasets.
+7. **Studies:** This table feature presents all current studies on BRH. Click on any study to show useful information about the study (metadata).
 
 ## Find available Study-level Metadata
 Clicking on any study will display the available study-level and dataset metadata.
@@ -39,8 +39,6 @@ Users can select and filter studies from multiple resources and conduct analyses
 [img Discover grid]: ./img/grid_discovery_color_080322.png
 [img Discovery features]: ./img/discovery_features_080322.png
 [img Discovery Study page metadata]: ./img/discovery_study_page_datafiles.png
-[Data Availability Options]: https://brh.data-commons.org/dashboard/Public/index.html#DataAvailabilityOptions
-[Find Study Metadata]: https://brh.data-commons.org/dashboard/Public/index.html#FindStudyMetadata
 [eRA]: https://era.nih.gov/
 [Profile page]: https://brh.data-commons.org/identity
 [BRH login]: https://brh.data-commons.org/login

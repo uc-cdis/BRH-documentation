@@ -1,6 +1,6 @@
 # **Login Access Overview**
 
-All users are able to browse the study metadata on the [Discovery Page][BRH Platform] without logging in.
+All users are able to browse the study metadata on the [Discovery Page][Discovery page] without logging in.
 
 Users will need to [log in][BRH login] and obtain authorization (access) in order to:
 
@@ -26,6 +26,7 @@ After successfully logging in, your username will appear in the upper right-hand
 [BRH login]: https://brh.data-commons.org/login
 [BRH Workspace]: https://brhstaging.data-commons.org/workspace
 [BRH Platform]: https://brh.data-commons.org/
+[Discovery page]: https://brh.data-commons.org/discovery
 [Gen3.org]: https://gen3.org/
 [img BRH logo]: ./img/brh-logo.png
 [img Gen3 logo]: ./img/gen3blue.png
