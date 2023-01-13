@@ -120,7 +120,7 @@ Users can expect to be able to use typical Python or R packages, such as PyPI or
 [img Workspace access success]: ./img/workspace_access_success.png
 [img workspace upload]: ./img/workspace_upload_080322.png
 [img Terminate workspace]: ./img/workspace_terminate_2.png
-[Workspace timeout]: workspace_page.md
+[Workspace timeout]: 09-workspace_page.md
 [img wksp register]: ./img/brh-portal-login-strides.png
 [STRIDES]: https://datascience.nih.gov/strides
 [img BRH Admin Portal]: ./img/brh-portal-login.png
@@ -143,7 +143,7 @@ Users can expect to be able to use typical Python or R packages, such as PyPI or
 [GitHub]: https://docs.github.com/en
 [Data Availability Options]: https://brh.data-commons.org/dashboard/Public/index.html#DataAvailabilityOptions
 [Find Study Metadata]: https://brh.data-commons.org/dashboard/Public/index.html#FindStudyMetadata
-[Download data files]: downloading_data_files.md
+[Download data files]: 11-downloading_data_files.md
 [Jupyter]: https://jupyter.org/
 [Profile page]: https://brh.data-commons.org/identity
 [BRH login]: https://brh.data-commons.org/login
@@ -153,9 +153,9 @@ Users can expect to be able to use typical Python or R packages, such as PyPI or
 [Gen3.org]: https://gen3.org/
 [img BRH logo]: ./img/brh-logo.png
 [img Gen3 logo]: ./img/gen3blue.png
-[Register for workspaces]: workspace_registration.md
-[Login page]: loginoverview.md
-[Request study access]: how_to_check_request_access.md
-[Discovery page]: discovery_page.md
-[Workspaces page]: workspace_page.md
-[Profile page]: profile_page.md
+[Register for workspaces]: 05-workspace_registration.md
+[Login page]: 06-loginoverview.md
+[Request study access]: 07-how_to_check_request_access.md
+[Discovery page]: 08-discovery_page.md
+[Workspaces page]: 09-workspace_page.md
+[Profile page]: 10-profile_page.md

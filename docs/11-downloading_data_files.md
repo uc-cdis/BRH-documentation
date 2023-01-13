@@ -78,9 +78,9 @@ Click on "Open in Workspace", which will initiate the [Workspace Launcher][Works
 [Gen3.org]: https://gen3.org/
 [img BRH logo]: ./img/brh-logo.png
 [img Gen3 logo]: ./img/gen3blue.png
-[Register for workspaces]: workspace_registration.md
-[Login page]: loginoverview.md
-[Request study access]: how_to_check_request_access.md
-[Discovery page]: discovery_page.md
-[Workspaces page]: workspace_page.md
-[Profile page]: profile_page.md
+[Register for workspaces]: 05-workspace_registration.md
+[Login page]: 06-loginoverview.md
+[Request study access]: 07-how_to_check_request_access.md
+[Discovery page]: 08-discovery_page.md
+[Workspaces page]: 09-workspace_page.md
+[Profile page]: 10-profile_page.md
