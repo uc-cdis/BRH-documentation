@@ -17,7 +17,21 @@ Once users have access to workspaces, use this guide below to get started with a
       ![Available workspaces on BRH][img workspaces]
 
       * **(Generic) Jupyter Notebook with R kernel:** Choose this VM if you are familiar with setting up Python- or R-based Notebooks, or if you just exported one or multiple studies from the Discovery Page and want to start your custom analysis.
-      * **Tutorial Notebooks:** Explore our Jupyter Notebook tutorials written in Python or R, which pull data from various sources of the Biomedical Research Hub to leverage statistical programs and data analysis tools.
+      * **Tutorial Notebooks:** Explore our [Jupyter Notebook tutorials][BRH tutorial notebooks] written in Python or R, which pull data from various sources of the Biomedical Research Hub to leverage statistical programs and data analysis tools.
+         * [JCOIN MOUD Accessibility Analysis][JCOIN MOUD]
+         * [Changes in Opiod Treatment Policy During COVID-19][Opiod Treatment Policy]
+         * [Gene Expression Analysis of Project TCGA-CHOL][Project TCGA-CHOL]
+         * [Proteome Data Commons (PDC) Clustergram][PDC Clustergram]
+         * [MIDRC CT Scan][MIDRC CT Scan]
+         * [Data Exploration using Python of Framingham Heart Study Teaching Dataset][Python Framingham]
+         * [Data Exploration using R of Framingham Heart Study Teaching Dataset][R Framingham]
+         * [Data Exploration of CAMP Study Teaching Dataset][CAMP Study]
+         * [Canine Data Commons FASTQ Reader][Canine Data Commons]
+         * [MIDRC Open-R1 Clinical Data Analysis][MIDRC Open-R1]
+         * [JCOIN Tracking Opioid Stigma][JCOIN Opioid Stigma]
+         * [Cox Model Implementation using ACTT Data from NIAID Clinical Trials Data Commons][Cox Model ACTT Data]
+         * [Identify Prostate Cancer Biomarker using Machine Learning][Prostate Cancer Biomarker]
+         * [Identification of Potential Drug Targets of Inflammatory Bowel Disease][Drug Targets of IBD]
 
 3. Click “Launch” on any of the workspace options to spin up a copy of that VM. The status of launching the workspace is displayed after clicking on “Launch”. Note: Launching the VM may take several minutes.
 
@@ -148,6 +162,7 @@ Users can expect to be able to use typical Python or R packages, such as PyPI or
 [Profile page]: https://brh.data-commons.org/identity
 [BRH login]: https://brh.data-commons.org/login
 [BRH Workspace]: https://brhstaging.data-commons.org/workspace
+[BRH tutorial notebooks]: https://brh.data-commons.org/resource-browser
 [BRH Platform]: https://brh.data-commons.org/
 [BRH Discovery]: https://brh.data-commons.org/discovery
 [Gen3.org]: https://gen3.org/
@@ -159,3 +174,17 @@ Users can expect to be able to use typical Python or R packages, such as PyPI or
 [Discovery page]: 08-discovery_page.md
 [Workspaces page]: 09-workspace_page.md
 [Profile page]: 10-profile_page.md
+[JCOIN MOUD]: https://brh.data-commons.org/dashboard/Public/notebooks/JCOIN_MOUD_accessibility_jupyter_notebook_BRH.html
+[Opiod Treatment Policy]: https://brh.data-commons.org/dashboard/Public/notebooks/JCOIN_PDAPS_Public_Policy_Changes.html
+[Project TCGA-CHOL]: https://brh.data-commons.org/dashboard/Public/notebooks/GDC_TCGA-CHOL_RNA_analysis_BRH_040722.html
+[PDC Clustergram]: https://brh.data-commons.org/dashboard/Public/notebooks/PDC_clustergram.html
+[MIDRC CT Scan]: https://brh.data-commons.org/dashboard/Public/notebooks/MIDRC_CT_Scan_Demo.html
+[Python Framingham]: https://brh.data-commons.org/dashboard/Public/notebooks/BDCat_Biolincc_Framingham_study_exploration.html
+[R Framingham]: https://brh.data-commons.org/dashboard/Public/notebooks/BDCat_Framingham_study_exploration_R.html
+[CAMP Study]: https://brh.data-commons.org/dashboard/Public/notebooks/BDCat_CAMP_study_exploration_notebook.html
+[Canine Data Commons]: https://brh.data-commons.org/dashboard/Public/notebooks/canine_datacommons_fastq_reader.html
+[MIDRC Open-R1]: https://brh.data-commons.org/dashboard/Public/notebooks/MIDRC_Clinical_Data_Demo.html
+[JCOIN Opioid Stigma]: https://brh.data-commons.org/dashboard/Public/notebooks/JCOIN_Tracking_Opioid_Stigma.html
+[Cox Model ACTT Data]: https://brh.data-commons.org/dashboard/Public/notebooks/ACTT1_accessclinical_notebook.html
+[Prostate Cancer Biomarker]: https://brh.data-commons.org/dashboard/Public/notebooks/TCGA_PRAD_Analysis.html
+[Drug Targets of IBD]: https://brh.data-commons.org/dashboard/Public/notebooks/IBD_notebook.html

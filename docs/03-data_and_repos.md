@@ -4,19 +4,17 @@ The BRH securely exposes study metadata and data files stored on multiple FAIR r
 
 FAIR data repositories are traditionally a part of a larger institution/working group established for research, data archiving, and, to serve data users of that organization.
 
-As of Fall 2022, the list of currently shared resources/Data Commons on BRH includes:
+As of March 2023, the list of currently shared resources/Data Commons on BRH includes:
 
-* AnVIL
 * BioData Catalyst
-* Cancer Imaging Data Commons
-* Canine Data Commons
-* Genomic Data Commons
+* CRDC Cancer Imaging Data Commons
+* CRDC Genomic Data Commons
+* CRDC Integrated Canine Data Commons
+* CRDC Proteomic Data Commons
 * IBD Commons
 * JCOIN
 * MIDRC
 * NIAID ClinicalData
-* Open Access Data Commons
-* Proteomic Data Commons
 
 <!-- Links and Images -->
 [BRH Platform]: https://brh.data-commons.org/
