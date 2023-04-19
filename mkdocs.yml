@@ -6,15 +6,21 @@ nav:
   - Home: 01-home.md
   - How to Get Started:
     - Quickstart - BRH Overview: 04-BRH_overview.md
-    - Workspace Registration: 05-workspace_registration.md
+    - Workspace Page (Registration): 05-workspace_registration.md
     - Login Page: 06-loginoverview.md
-    - How to Check & Request Access: 07-how_to_check_request_access.md
+    - Request Study Access and Link Accounts: 07-how_to_check_request_access.md
     - Discovery Page: 08-discovery_page.md
-    - Workspaces Page: 09-workspace_page.md
     - Profile Page: 10-profile_page.md
+  - Workspace User Guide:
+    - Getting Started in Workspace : 09-workspace_page.md
+    - Workspace Accounts - Trial and Persistent Pay Models (STRIDES, Direct Pay): 13-workspace_accounts.md
+    - Launch a Workspace with a Persistent Pay Model: 14-lauch_with_persistent_paymodel.md
+    - Monitor Compute Usage in Persistent Pay Models: 15-monitor_compute_usage.md
+    - If Compute Usage Exceeds Funding: 16-usage_exceeds_funding.md
+    - Downloading Data Files: 11-downloading_data_files.md
+    - Workspace FAQ: 17-workspace_faq.md
   - FAIR Data: 02-types_of_shared_data.md
   - Data Management and Repositories: 03-data_and_repos.md
-  - Downloading Data Files: 11-downloading_data_files.md
   - Contact: 12-contact.md
 
 theme:
