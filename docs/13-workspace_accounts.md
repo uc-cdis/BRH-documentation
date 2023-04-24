@@ -5,7 +5,7 @@
 We have 4 different pay models for workspace accounts:
 
 * **Trial Access** (free for user, limited to 2 months)
-* **OCC Direct Pay** (persistent pay model paid by credit card through OCC Payment Solutions Portal)
+* **OCC Direct Pay** (persistent pay model paid by credit card through OCC Payment Portal)
 * **STRIDES Grant/Award Funded** (persistent pay model paid by organizations with NIH grant funds)
 * **STRIDES Credits** (persistent pay model paid directly by NIH)
 
@@ -14,10 +14,10 @@ Instructions for requesting funding for each pay model are provided below.
 > **Please Note:**
 
 > * The process for granting access for a workspace account can take **2-4 weeks for NIH STRIDES**, and **a month for Direct Pay**.
-> * The account from each different paymodel will have its own workspace storage directory; **data is not shared between accounts with different funding types**. However, you can import and export data among accounts as long as they have funding.
+> * The account from each different paymodel will have its own workspace storage directory (`/pd`); **data is not shared between accounts with different funding types**. However, you can import and export data among accounts as long as they are active and have funding.
 
 ## Request Trial Access
-Trial Access is granted for 2 months when you request access to the BRH Workspace page. The instructions for requesting workspace access are on the [Workspace Registration page][Register for workspaces].
+Trial Access is granted for 2 months when you request access to the BRH Workspace page. The instructions for requesting workspace access are on the [Workspace Registration page][Register for workspaces]. Note that your trial access will become inactive as soon as you have a workspace account funded through a persistent paymodel.
 
 ## Requesting Funding for Workspace Accounts Through Any Persistent Pay Model
 
@@ -43,18 +43,18 @@ The **OCC Direct Pay** form can be selected if a user wants to pay with a person
 Funding a workspace account with OCC Direct Pay has 2 major parts:
 
 1. Request BillingID
-2. Use Billing ID to provision Direct Pay funds for the Workspace Account
+2. Use BillingID to provision Direct Pay funds for the Workspace Account
 
 #### Request BillingID
 
-*Note: It can take up to a month to receive a Billing ID if you act promptly to complete each step.*
+*Note: It can take up to a month to receive a BillingID if you act promptly to complete each step.*
 
-1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Solutions Portal link on the OCC Direct Pay tab for the workspace account request form.
-       ![Screenshot showing where the OCC Payment Solutions Portal link can be found in the OCC Direct Pay form][img BRH logo]
-2. Create an account for the OCC Payment Solutions Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be an email address you check regularly, as relevant alerts will be sent here.*
+1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Portal link on the OCC Direct Pay tab for the workspace account request form.
+       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img BRH logo]
+2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be an email address you check regularly, as relevant alerts will be sent here.*
 3. You will receive an email with a 6-digit token within a couple minutes of your request. It may go to spam, so watch the Spam folder, as well.
-4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Solutions Portal. Click Sign In.
-5. Successful sign-in will open a [Profile page][Payment Portal Profile] for your account on the OCC Payment Solutions Portal. When you first create your account on the payment portal, you will not have any access requests.
+4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In.
+5. Successful sign-in will open a [Profile page][Payment Portal Profile] for your account on the OCC Payment Portal. When you first create your account on the payment portal, you will not have any access requests.
        ![Screenshot showing payment portal profle page, showing no access requests at the bottom.][img BRH logo]
 6. Click the “request access” button. The form shown below will open. Complete the form and click Submit.
        ![Request Access form on OCC Payment Portal][img BRH logo]
@@ -62,36 +62,36 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
        For Role, indicate your role within your organization/institution. If you don't have an institutional affiliation, you can put "independent data analyst"
 
 7. Once the form is submitted, a message will appear indicating successful submission. You will also receive an email (again, check spam).
-8. If you return to the [Profile page][Payment Portal Profile] in the OCC Payment Solutions Portal now, you’ll see there is an active request in the table at the bottom. Click “Check Status” to view progress on the steps toward final approval and provisioning of your request. You can view what happens at each stage of processing here: [https://payments.occ-data.org/processing-stages/][OCC processing stages].
+8. If you return to the [Profile page][Payment Portal Profile] in the OCC Payment Portal now, you’ll see there is an active request in the table at the bottom. Click “Check Status” to view progress on the steps toward final approval and provisioning of your request. You can view what happens at each stage of processing here: [https://payments.occ-data.org/processing-stages/][OCC processing stages].
 9. When you click Check Status, you can see the progress of your request. At first, you will see that they are processing your request (indicated by an orange color). Once OCC finishes processing your access request, you will receive 2 emails, and the progress tracker at the bottom will show that Submit Access Request is completed (green). Complete E-Doc is now colored orange. The first email indicates that your access request status has progressed, and the second email has a link to an electronic document.
 
       >>>
       **Important: Review the Agreement carefully to understand the terms.**
       PLEASE READ THIS DOCUMENT VERY CAREFULLY BEFORE SIGNING!
       This document presents the terms governing how your Direct Pay funds will be allocated, among other things. Be sure you understand all the terms before you sign and submit.
-      If you have any questions or concerns about the terms and conditions, please email billing@occ-data.org before you sign.
+      If you have any questions or concerns about the terms and conditions, please email [billing@occ-data.org](billing@occ-data.org) before you sign.
       >>>
 
       Once you submit the signed document, it could take up to 5 days to finish processing receipt of the signed document and update your progress tracker. You will receive an email when processing is complete.
 
       But, you will receive an email quickly confirming that the document has been signed and providing a link to download the signed document for your records. If you do not receive that within 5 minutes (be sure to check your spam folder), please return to the document and verify that you fully signed and submitted the document. Please save the document so you can reference it as needed.
 
-10. When your request has been fully approved, the “Received Approval” step will be green, you’ll receive an email, and your Billing ID field will have been populated on the [Profile page][Payment Portal Profile] of the OCC Payment Solutions Portal.
+10. When your request has been fully approved, the “Received Approval” step will be green, you’ll receive an email, and your BillingID field will have been populated on the [Profile page][Payment Portal Profile] of the OCC Payment Portal.
 
 You may now use your BillingID to provision a Direct Pay workspace account in BRH.
 
-#### Use Billing ID to provision Direct Pay funds for the Workspace Account
+#### Use BillingID to provision Direct Pay funds for the Workspace Account
 
-*Note 1: Before you request any persistent pay model (eg, Direct Pay, STRIDES), be sure to backup all data in your /pd for your workspace. Once your persistent pay model is funded, you will no longer have access to the /pd used during blanket billing. ([What’s a /pd?][pd link])*
+*Note 1: Before you request a workspace account through any persistent pay model (eg, Direct Pay, STRIDES), be sure to backup all data in your `/pd` for your workspace. Once your persistent pay model is funded, you will no longer have access to the `/pd` used during blanket billing. ([What’s a `/pd`?][pd link])*
 
-*Note 2: It can take up to 12 business days to provision funds from a Billing ID.*
+*Note 2: It can take up to 12 business days to provision funds from a BillingID.*
 
-1. Copy your Billing ID from your [User Profile page][Payment Portal Profile] in the OCC Payment Solutions Portal.
+1. Copy your BillingID from your [User Profile page][Payment Portal Profile] in the OCC Payment Portal.
 2. Return to the [Workspace Account Manager][BRH Workspace Acct Mgr], and click Request New Workspace to open the [Workspace Account Request Form][Req new wksp].
 3. Click the OCC Direct Pay tab.
-4. Paste your Billing ID in the field, and enter the first 3 characters of the email address associated with your Billing ID (For example, if your email was john.smith@gmail.com, you would enter “joh”)
-5. Click Confirm Billing ID. Once your Billing ID is confirmed, the bottom part of the form will open to allow you to enter the details for provisioning your account.
-6. Be sure to check the box that says that you agree to be invoiced. The amount of the invoice is taken from the value you entered when you made your access request on the [Payment Solutions Portal][OCC Payment Portal].
+4. Paste your BillingID in the field, and enter the first 3 characters of the email address associated with your BillingID (For example, if your email was john.smith@gmail.com, you would enter “joh”)
+5. Click Confirm BillingID. Once your BillingID is confirmed, the bottom part of the form will open to allow you to enter the details for provisioning your account.
+6. Be sure to check the box that says that you agree to be invoiced. The amount of the invoice is taken from the value you entered when you made your access request on the [Payment Portal][OCC Payment Portal].
       * Enter a title for your project and a brief summary. This is to be used to help you keep track of your requests in case you have multiple accounts for different projects.
       * Identify whether your workspace use is personal or organizational.
       * Indicate whether you have a credit card you are allowed to use to pay for provisioning the workspace account. If your workspace is personal and you have any credit card, the answer will be yes. If your workspace is organizational - make sure you are not using a departmental card or similar without permission.
@@ -194,4 +194,4 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [Req new wksp]: https://brh-portal.org/request-workspace
 [OCC Payment Portal]: https://payments.occ-data.org/
 [Payment Portal Profile]: https://payments.occ-data.org/profile/
-[OCC Request Billing ID]: https://payments.occ-data.org/request-billingid/
+[OCC Request BillingID]: https://payments.occ-data.org/request-billingid/

@@ -1,22 +1,30 @@
 # **Launch a Workspace with a Persistent Pay Model**
 
+***Important note: regardless of your account type, remember to terminate your workspace session when you are done using it to avoid accruing additional compute charges (i.e., "usage"). You can read more about terminating your workspace on our [Getting Started in Workspace page][Getting Started Workspaces page]. ***
 
+You can select which workspace account pay model to use from the Workspace page.
 
-1. jhvjhv.
-
-2. jhvbjhv.
-
-3. jhfkjhwb.
+* Log in and click on Workspace to open the workspace page.
 
       ![Select the studies and click "Open In Workspace".][img BRH logo]
 
-4. nvjh.
+* Click on Account Information to expand that tab.
 
-      ![Workspace manifest downloaded to pd directory][img BRH logo]
+      ![Select the studies and click "Open In Workspace".][img BRH logo]
 
-5. ,xvbk.
+* Under "Account" and "Apply for an account", you can click the dropdown to select which workspace account you want to use to launch the VM.
 
-      ![The manifest and a notebook are available in the pd directory][img BRH logo]
+      ![Select the studies and click "Open In Workspace".][img BRH logo]
+
+      The dropdown will only show workspace accounts that are active.
+
+      When you only have trial access, launching a new VM will always use your Trial Access workspace account.
+
+      However, once you have a workspace account funded through a persistent pay model, you will lose the trial access option, and you will only be able to launch a new VM using funded workspace account.
+
+      *Reminder: Each workspace account will have its own `/pd` for storing data beyond each workspace session. You can download data from one    and upload it to another. But note: once you have a funded workspace account, you will no longer have access to the `/pd` for your trial access workspace account. Download your data from your trial access account `/pd` before you receive funding in another workspace account.*
+
+*Looking for information on how to use the Workspace? Check out our [Getting Started page][Getting Started Workspaces page].*
 
 <!-- Images -->
 [img BRH Admin Portal]: ./img/brh-portal-login.png
@@ -75,10 +83,10 @@
 [Request study access]: 07-how_to_check_request_access.md
 [STRIDES]: https://datascience.nih.gov/strides
 [Workspace timeout]: https://brh.data-commons.org/dashboard/Public/index.html#AutomaticWorkspaceShutdown
-[Workspaces page]: 09-workspace_page.md
+[Getting Started Workspaces page]: 09-workspace_page.md
 [BRH wksp access req form]: https://brh.data-commons.org/workspace/request-access
 [Wksp account mgr]: https://brh-portal.org/
 [Req new wksp]: https://brh-portal.org/request-workspace
 [OCC Payment Portal]: https://payments.occ-data.org/
 [Payment Portal Profile]: https://payments.occ-data.org/profile/
-[OCC Request Billing ID]: https://payments.occ-data.org/request-billingid/
+[OCC Request BillingID]: https://payments.occ-data.org/request-billingid/

@@ -1,20 +1,14 @@
 # **If Compute Usage Exceeds Funding**
 
-1. jhvjhv.
+Coming Soon! We will describe:
 
-2. jhvbjhv.
+* Data protections if your workspace is shutdown
+* A terminology guide for shutdown vs terminate
 
-3. jhfkjhwb.
+<!-- 3. jhfkjhwb.
 
       ![Select the studies and click "Open In Workspace".][img BRH logo]
 
-4. nvjh.
-
-      ![Workspace manifest downloaded to pd directory][img BRH logo]
-
-5. ,xvbk.
-
-      ![The manifest and a notebook are available in the pd directory][img BRH logo]
 
 <!-- Images -->
 [img BRH Admin Portal]: ./img/brh-portal-login.png
