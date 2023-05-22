@@ -49,7 +49,7 @@ Once users have access to workspaces, use this guide below to get started with a
       * Do not save files in the "data" or “data/brh.data-commons.org” folders.
       * The folder “brh.data-commons.org” in the “data” folder will host the data files you have exported from the Discovery Page.
 
-6. Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language.
+6. Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language. *Note: You can open and run multiple notebooks in your workspace. However, the generic, tutorial and nextflow workspace images are currently separate docker images, so there is no functionality to combine them or run nextflow in the tutorial or generic images. This may be available in the future, after further testing and development activities.*
 
       ![Start a new notebook under “Notebook” in the Launcher tab][img New Notebook]
 

@@ -101,9 +101,9 @@ You may now use your BillingID to provision a Direct Pay workspace account in BR
 
 7. Once you submit this form, you will receive an email with the invoice. (It can take up to 5 business days to be sent.) There will be a secure link in the invoice to submit your credit card information and pay the invoice. When you pay the invoice, OCC will apply the funds, create an AWS account for this project’s workspace, and send that information to BRH to provision your account. This can take up to 7 business days after you have signed the form. You will receive an email when your account is set up and ready to be used in your workspace.
 
-      When you submit this form, you will also see a new entry in the OCC Direct Pay Accounts table in the [Workspace Account Manager][Wksp account mgr]. The request status for your request will be Pending until the invoice is paid and the account is finalized.
+      When you submit this form, you will also see a new entry in the OCC Direct Pay Accounts table in the [Workspace Account Manager][Workspace Acct Mgr]. The request status for your request will be Pending until the invoice is paid and the account is finalized.
 
-8. Once your Direct Pay request is funded, your workspace will be shown as Active on the Request Status column in the [Workspace Account Manager][Wksp account mgr].
+8. Once your Direct Pay request is funded, your workspace will be shown as Active on the Request Status column in the [Workspace Account Manager][Workspace Acct Mgr].
 
 ### **STRIDES Grant/Award** Funded Workspace Account
 
@@ -190,7 +190,7 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [Workspace timeout]: https://brh.data-commons.org/dashboard/Public/index.html#AutomaticWorkspaceShutdown
 [Workspaces page]: 09-workspace_page.md
 [BRH wksp access req form]: https://brh.data-commons.org/workspace/request-access
-[Wksp account mgr]: https://brh-portal.org/
+[Workspace Acct Mgr]: https://brh-portal.org/
 [Req new wksp]: https://brh-portal.org/request-workspace
 [OCC Payment Portal]: https://payments.occ-data.org/
 [Payment Portal Profile]: https://payments.occ-data.org/profile/
