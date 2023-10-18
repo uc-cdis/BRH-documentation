@@ -13,18 +13,19 @@ Instructions for requesting funding for each pay model are provided below.
 
 > **Please Note:**
 
-> * The process for granting access for a workspace account can take **2-4 weeks for NIH STRIDES**, and **a month for Direct Pay**.
-> * The account from each different paymodel will have its own workspace storage directory (`/pd`); **data is not shared between accounts with different funding types**. However, you can import and export data among accounts as long as they are active and have funding.
+> * The process for granting access for a workspace account can take **2-4 weeks for NIH STRIDES**, and **a month for Direct Pay**, although it may also be faster.
+> * The account from each different paymodel will have its own workspace storage directory (`/pd`; [read about `/pd` here][Workspaces page]); **data is not shared between accounts with different funding types**. However, you can import and export data among accounts as long as they are active and have funding.
 
 ## Request Trial Access
 Trial Access is granted for 2 months when you request access to the BRH Workspace page. The instructions for requesting workspace access are on the [Workspace Registration page][Register for workspaces]. Note that your trial access will become inactive as soon as you have a workspace account funded through a persistent paymodel.
 
 ## Requesting Funding for Workspace Accounts Through Any Persistent Pay Model
 
-1. Users can request a workspace account by visiting the BRH Workspace Account Manager at [https://brh-portal.org/][BRH Workspace Acct Mgr] and logging in.
-        ![BRH Workspace Account Manager login page][img BRH Admin Portal]
+1. Once they have access to the Workspace page, users can request a workspace account by first logging to BRH (#1), going to the Workspace page (#2), then clicking the Workspace Account Manager link (#3). Click "Log in" and "Yes, I authorize" to open the portal in a new tab.
 
-      *Some users may receive an invitation via email to register for an NIH STRIDES workspace account. Users can also click the link in the invitation email to get to the [BRH Workspace Account Manager][BRH Workspace Acct Mgr].*
+        ![Step by step navigation to open Workspace Account Manager][img open Workspace AM]
+
+      *Some STRIDES users may receive an invitation via email to register for an NIH STRIDES workspace account. These users can also click the link in the invitation email to get to the [BRH Workspace Account Manager][BRH Workspace Acct Mgr].*
 
 
 2. In the BRH Workspace Account Manager, users can see their persistent workspace accounts and any available credits or funds in the accounts. If you only have trial access, you will not see any active accounts.
@@ -34,7 +35,7 @@ Trial Access is granted for 2 months when you request access to the BRH Workspac
 
 
 3. Choose from any of the 3 persistent pay model funding options: a) STRIDES Grant/Award Funded; b) STRIDES Credits; or c) OCC Direct Pay to request a funded workspace account.
-        ![Options for funding workspaces through STRIDES][img STRIDES payment]
+        ![Options for persistent paymodels to fund workspaces][img Request persistent pay]
 
 ### **OCC Direct Pay** Funded Workspace Account
 
@@ -50,8 +51,8 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
 *Note: It can take up to a month to receive a BillingID if you act promptly to complete each step.*
 
 1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Portal link on the OCC Direct Pay tab for the workspace account request form.
-       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img BRH logo]
-2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be an email address you check regularly, as relevant alerts will be sent here.*
+       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img Link to pay Portal]
+2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be the email address you use to log into HEAL; Direct Pay is not currently compatible with ORCID login. Please monitor this address, as relevant alerts will be sent here.*
 3. You will receive an email with a 6-digit token within a couple minutes of your request. It may go to spam, so watch the Spam folder, as well.
 4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In.
 5. Successful sign-in will open a [Profile page][Payment Portal Profile] for your account on the OCC Payment Portal. When you first create your account on the payment portal, you will not have any access requests.
@@ -165,6 +166,9 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [img Workspaces access request]: ./img/workspace_access_form.png
 [img workspaces]: ./img/workspace_flavors_080322.png
 [img Yes access]: ./img/access_YES.png
+[img open Workspace AM]: ./img/open-wkspc-acct-mgr.png
+[img Request persistent pay]: ./img/persistent-paymodel-request.png
+[img Link to pay Portal]: ./img/link-to-pp.png
 
 <!-- Links -->
 [BRH Discovery]: https://brh.data-commons.org/discovery
