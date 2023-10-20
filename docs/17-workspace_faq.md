@@ -18,7 +18,7 @@
 
 #### Why does my Hard Limit not match the amount of funding I purchased?
 
-> As described in your Direct Pay User Agreement, some amount of your purchase is set aside for use for account operational expenses beyond compute costs. If you have further questions about this, please contact [billing@occ-data.org](billing@occ-data.org)
+> As described in your Direct Pay User Agreement, some amount of your purchase is set aside for use for account operational expenses beyond compute costs. If you have further questions about this, please contact billing@occ-data.org
 
 #### Can I get a refund on any unused compute funding I purchased?
 > Unfortunately, as described in your Direct Pay User Agreement, OCC cannot offer refunds for unused compute time already purchased.
