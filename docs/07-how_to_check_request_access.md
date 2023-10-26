@@ -22,7 +22,7 @@ Note: If you have access but cannot select the study to export to workspace, it 
 
 BRH securely provides access to data stored on multiple FAIR repositories, resources, and Data Commons.
 
-**Users authorize these resources on their account in order to:**
+**Users must authorize these resources on their account in order to:**
 
 1. *run* Jupyter Notebooks that utilize data stored in various FAIR repositories.
 2. *export* data that is stored in FAIR repositories from the Discovery Page to the Workspaces.
