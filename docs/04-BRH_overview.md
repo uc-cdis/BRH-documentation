@@ -14,9 +14,9 @@ Log in here to unlock controlled-access data and workspace access with your cred
 
 [![Screenshot of Login page][img login]{: style="height:100px"}][Login page]
 
-## [**Request study access and link accounts**][Request study access]
+## [**Check Study Access and Authorize External Data Resources**][Request study access]
 
-Check study access, request access, and connect your account to other resources to access all studies
+Check study access and connect your account to other resources to access all studies for which you are authorized.
 
 [![Screenshot showing you can link your BRH credentials to credentials for external data resources][img req access]{: style="height:100px"}][Request study access]
 

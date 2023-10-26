@@ -56,16 +56,16 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
 
       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img Link to pay Portal]
 
-2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be the email address you use to log into HEAL; Direct Pay is not currently compatible with ORCID login. Please monitor this address, as relevant alerts will be sent here.*
+2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be the email address you use to log into BRH; Direct Pay is not currently compatible with ORCID login. If you already logged in with ORCID to request a workspace account, please log out and authenticate with either the InCommon or Google option. Please monitor this address, as relevant alerts will be sent here.*
 3. You will receive an email with a 6-digit token within a couple minutes of your request. It may go to spam, so watch the Spam folder, as well.
-4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In. *(Note: You will be asked to enter a token at each log-in.)*)
+4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In. *(Note: You will be asked to enter a token at each log-in.)*
 5. Successful sign-in will open a [Profile page][Payment Portal Profile] for your account on the OCC Payment Portal. When you first create your account on the payment portal, you will not have any access requests.
 
-      ![Screenshot showing payment portal profle page, showing no access requests at the bottom.][img BRH logo]
+      ![Screenshot showing payment portal profile page, showing no access requests at the bottom.][img Pay Portal Profile]
 
 6. Click the “request access” button. The form shown below will open. Complete the form and click Submit.
 
-       ![Request Access form on OCC Payment Portal][img BRH logo]
+       ![Request Access form on OCC Payment Portal][img request BillingID]
 
        For Role, indicate your role within your organization/institution. If you don't have an institutional affiliation, you can put "independent data analyst"
 
@@ -77,7 +77,7 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
       **Important: Review the Agreement carefully to understand the terms.**
       PLEASE READ THIS DOCUMENT VERY CAREFULLY BEFORE SIGNING!
       This document presents the terms governing how your Direct Pay funds will be allocated, among other things. Be sure you understand all the terms before you sign and submit.
-      If you have any questions or concerns about the terms and conditions, please email [billing@occ-data.org](billing@occ-data.org) before you sign.
+      If you have any questions or concerns about the terms and conditions, please email [billing@occ-data.org][OCC billing email] before you sign.
       >>>
 
       Once you submit the signed document, it could take up to 5 days to finish processing receipt of the signed document and update your progress tracker. You will receive an email when processing is complete.
@@ -90,7 +90,7 @@ You may now use your BillingID to provision a Direct Pay workspace account in BR
 
 #### Use BillingID to provision Direct Pay funds for the Workspace Account
 
-*Note 1: Before you request a workspace account through any persistent pay model (eg, Direct Pay, STRIDES), be sure to backup all data in your `/pd` for your workspace. Once your persistent pay model is funded, you will no longer have access to the `/pd` used during blanket billing. ([What’s a `/pd`?][pd link])*
+*Note 1: Before you request a workspace account through any persistent pay model (eg, Direct Pay, STRIDES), be sure to backup all data in your `/pd` for your workspace. Once your persistent pay model is funded, you will no longer have access to the `/pd` used during trial access. ([What’s a `/pd`?][pd link])*
 
 *Note 2: It can take up to 12 business days to provision funds from a BillingID.*
 
@@ -105,7 +105,7 @@ You may now use your BillingID to provision a Direct Pay workspace account in BR
       * Indicate whether you have a credit card you are allowed to use to pay for provisioning the workspace account. If your workspace is personal and you have any credit card, the answer will be yes. If your workspace is organizational - make sure you are not using a departmental card or similar without permission.
       * Indicate what role you have as a researcher on this project.
 
-       ![OCC Workspace Account Request form on BRH Workspace Account Manager][img BRH logo]
+       ![OCC Workspace Account Request form on BRH Workspace Account Manager][img Request Direct Pay workspace]
 
 7. Once you submit this form, you will receive an email with the invoice. (It can take up to 5 business days to be sent.) There will be a secure link in the invoice to submit your credit card information and pay the invoice. When you pay the invoice, OCC will apply the funds, create an AWS account for this project’s workspace, and send that information to BRH to provision your account. This can take up to 7 business days after you have signed the form. You will receive an email when your account is set up and ready to be used in your workspace.
 
@@ -176,6 +176,9 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [img open Workspace AM]: ./img/open-wkspc-acct-mgr.png
 [img Request persistent pay]: ./img/persistent-paymodel-request.png
 [img Link to pay Portal]: ./img/link-to-pp.png
+[img Pay Portal Profile]: ./img/payportal-profile.png
+[img request BillingID]: ./img/request-billingid.png
+[img Request Direct Pay workspace]: ./img/request-OCC-workspace.png
 
 <!-- Links -->
 [BRH Discovery]: https://brh.data-commons.org/discovery
@@ -206,3 +209,4 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [OCC Payment Portal]: https://payments.occ-data.org/
 [Payment Portal Profile]: https://payments.occ-data.org/profile/
 [OCC Request BillingID]: https://payments.occ-data.org/request-billingid/
+[OCC billing email]: mailto:billing@occ-data.org
