@@ -23,7 +23,7 @@ Trial Access is granted for 2 months when you request access to the BRH Workspac
 
 1. Once they have access to the Workspace page, users can request a workspace account by first logging to BRH (#1), going to the Workspace page (#2), then clicking the Workspace Account Manager link (#3). Click "Log in" and "Yes, I authorize" to open the portal in a new tab.
 
-        ![Step by step navigation to open Workspace Account Manager][img open Workspace AM]
+      ![Step by step navigation to open Workspace Account Manager][img open Workspace AM]
 
       *Some STRIDES users may receive an invitation via email to register for an NIH STRIDES workspace account. These users can also click the link in the invitation email to get to the [BRH Workspace Account Manager][BRH Workspace Acct Mgr].*
 
@@ -31,11 +31,13 @@ Trial Access is granted for 2 months when you request access to the BRH Workspac
 2. In the BRH Workspace Account Manager, users can see their persistent workspace accounts and any available credits or funds in the accounts. If you only have trial access, you will not see any active accounts.
 
       To request a workspace account with a persistent paymodel, click the "Request New Workspace" button.
-        ![BRH Workspace Account Manager page to request new workspace account][img BRH portal request]
+
+      ![BRH Workspace Account Manager page to request new workspace account][img BRH portal request]
 
 
 3. Choose from any of the 3 persistent pay model funding options: a) STRIDES Grant/Award Funded; b) STRIDES Credits; or c) OCC Direct Pay to request a funded workspace account.
-        ![Options for persistent paymodels to fund workspaces][img Request persistent pay]
+
+      ![Options for persistent paymodels to fund workspaces][img Request persistent pay]
 
 ### **OCC Direct Pay** Funded Workspace Account
 
@@ -50,21 +52,26 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
 
 *Note: It can take up to a month to receive a BillingID if you act promptly to complete each step.*
 
-1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Portal link on the OCC Direct Pay tab for the workspace account request form.
-       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img Link to pay Portal]
+1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Portal link (red arrow below) on the OCC Direct Pay tab for the workspace account request form.
+
+      ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img Link to pay Portal]
+
 2. Create an account for the OCC Payment Portal: Under Create Account, enter your email address and click “Request Token”. *Note: This should be the email address you use to log into HEAL; Direct Pay is not currently compatible with ORCID login. Please monitor this address, as relevant alerts will be sent here.*
 3. You will receive an email with a 6-digit token within a couple minutes of your request. It may go to spam, so watch the Spam folder, as well.
-4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In.
+4. Copy your token from your email. Paste it into the Enter Token field on the OCC Payment Portal. Click Sign In. *(Note: You will be asked to enter a token at each log-in.)*)
 5. Successful sign-in will open a [Profile page][Payment Portal Profile] for your account on the OCC Payment Portal. When you first create your account on the payment portal, you will not have any access requests.
-       ![Screenshot showing payment portal profle page, showing no access requests at the bottom.][img BRH logo]
+
+      ![Screenshot showing payment portal profle page, showing no access requests at the bottom.][img BRH logo]
+
 6. Click the “request access” button. The form shown below will open. Complete the form and click Submit.
+
        ![Request Access form on OCC Payment Portal][img BRH logo]
 
        For Role, indicate your role within your organization/institution. If you don't have an institutional affiliation, you can put "independent data analyst"
 
 7. Once the form is submitted, a message will appear indicating successful submission. You will also receive an email (again, check spam).
 8. If you return to the [Profile page][Payment Portal Profile] in the OCC Payment Portal now, you’ll see there is an active request in the table at the bottom. Click “Check Status” to view progress on the steps toward final approval and provisioning of your request. You can view what happens at each stage of processing here: [https://payments.occ-data.org/processing-stages/][OCC processing stages].
-9. When you click Check Status, you can see the progress of your request. At first, you will see that they are processing your request (indicated by an orange color). Once OCC finishes processing your access request, you will receive 2 emails, and the progress tracker at the bottom will show that Submit Access Request is completed (green). Complete E-Doc is now colored orange. The first email indicates that your access request status has progressed, and the second email has a link to an electronic document.
+9.  When you click Check Status, you can see the progress of your request. At first, you will see that they are processing your request (indicated by an orange color). Once OCC finishes processing your access request, you will receive 2 emails, and the progress tracker at the bottom will show that Submit Access Request is completed (green). Complete E-Doc is now colored orange. The first email indicates that your access request status has progressed, and the second email has a link to an electronic document.
 
       >>>
       **Important: Review the Agreement carefully to understand the terms.**
