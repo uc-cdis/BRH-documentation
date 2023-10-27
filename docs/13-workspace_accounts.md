@@ -70,7 +70,7 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
       **Important: Review the Agreement carefully to understand the terms.**
       PLEASE READ THIS DOCUMENT VERY CAREFULLY BEFORE SIGNING!
       This document presents the terms governing how your Direct Pay funds will be allocated, among other things. Be sure you understand all the terms before you sign and submit.
-      If you have any questions or concerns about the terms and conditions, please email billing@occ-data.org before you sign.
+      If you have any questions or concerns about the terms and conditions, please email [billing@occ-data.org][OCC billing] before you sign.
       >>>
 
       Once you submit the signed document, it could take up to 5 days to finish processing receipt of the signed document and update your progress tracker. You will receive an email when processing is complete.
@@ -201,3 +201,4 @@ NIH-funded researchers with an active NIH award may take advantage of the STRIDE
 [OCC Payment Portal]: https://payments.occ-data.org/
 [Payment Portal Profile]: https://payments.occ-data.org/profile/
 [OCC Request BillingID]: https://payments.occ-data.org/request-billingid/
+[OCC billing]: mailto:billing@occ-data.org
