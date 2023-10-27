@@ -18,21 +18,21 @@ Access is displayed as a green box on top of each Study Page.
 
 Note: If you have access but cannot select the study to export to workspace, it is because the manifest is not yet available. Please use API for these cases.
 
-## Linking Access to FAIR enabled Repositories/Resources
+## Authorize to Gain Access to FAIR-enabled Repositories/Resources
 
 BRH securely provides access to data stored on multiple FAIR repositories, resources, and Data Commons.
 
-**Users need to link their account to currently all resources/repositories in order to:**
+**Users must authorize these resources on their account in order to:**
 
-1. *run* Jupyter Notebooks that utilize data stored on various FAIR repositories.
-2. *export* data that is stored on FAIR repositories from the Discovery Page to the Workspaces.
-3. *download* data that is stored on FAIR repositories from the Discovery Page.
+1. *run* Jupyter Notebooks that utilize data stored in various FAIR repositories.
+2. *export* data that is stored in FAIR repositories from the Discovery Page to the Workspaces.
+3. *download* data that is stored in FAIR repositories from the Discovery Page.
 
-In order to link the account to the involved repositories, navigate to the [Profile Page][Profile page] and link the account to relevant commons by clicking on the the respective Refresh or Authenticate buttons as shown below.
+In order to authorize access to these repositories and data commons, navigate to the [Profile Page][Profile page]. Authorize the relevant commons by clicking on the buttons for the relevant commons (e.g., the Refresh or Authenticate buttons in the image shown below).
 
-Access needs to be renewed after 30 days, as indicated after "Status: expires in [..] days".
+Authorization needs to be renewed after 30 days, as indicated after "Status: expires in [..] days".
 
-![Linking access options on the Profile page][img Login other commons]
+![Authorization options on the Profile page][img Login other commons]
 
 
 <!-- Links and Images -->
