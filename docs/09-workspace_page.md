@@ -17,21 +17,7 @@ Once users have access to workspaces, use this guide below to get started with a
       ![Available workspaces on BRH][img workspaces]
 
       * **(Generic) Jupyter Notebook with R kernel:** Choose this VM if you are familiar with setting up Python- or R-based Notebooks, or if you just exported one or multiple studies from the Discovery Page and want to start your custom analysis.
-      * **Tutorial Notebooks:** Explore our [Jupyter Notebook tutorials][BRH tutorial notebooks] written in Python or R, which pull data from various sources of the Biomedical Research Hub to leverage statistical programs and data analysis tools.
-         * [JCOIN MOUD Accessibility Analysis][JCOIN MOUD]
-         * [Changes in Opiod Treatment Policy During COVID-19][Opiod Treatment Policy]
-         * [Gene Expression Analysis of Project TCGA-CHOL][Project TCGA-CHOL]
-         * [Proteome Data Commons (PDC) Clustergram][PDC Clustergram]
-         * [MIDRC CT Scan][MIDRC CT Scan]
-         * [Data Exploration using Python of Framingham Heart Study Teaching Dataset][Python Framingham]
-         * [Data Exploration using R of Framingham Heart Study Teaching Dataset][R Framingham]
-         * [Data Exploration of CAMP Study Teaching Dataset][CAMP Study]
-         * [Canine Data Commons FASTQ Reader][Canine Data Commons]
-         * [MIDRC Open-R1 Clinical Data Analysis][MIDRC Open-R1]
-         * [JCOIN Tracking Opioid Stigma][JCOIN Opioid Stigma]
-         * [Cox Model Implementation using ACTT Data from NIAID Clinical Trials Data Commons][Cox Model ACTT Data]
-         * [Identify Prostate Cancer Biomarker using Machine Learning][Prostate Cancer Biomarker]
-         * [Identification of Potential Drug Targets of Inflammatory Bowel Disease][Drug Targets of IBD]
+      * **Tutorial Notebooks:** Explore our [Jupyter Notebook tutorials][BRH tutorial notebooks] written in Python or R, which pull data from various sources of the Biomedical Research Hub to leverage statistical programs and data analysis tools. These are excellent resources for code to pull and analyze data from BRH, and examples that illustrate the variety of data and analyses available through BRH.
 
 3. Click “Launch” on any of the workspace options to spin up a copy of that VM. The status of launching the workspace is displayed after clicking on “Launch”. Note: Launching the VM may take several minutes.
 
@@ -43,13 +29,14 @@ Once users have access to workspaces, use this guide below to get started with a
 
 5. Select the /pd folder. New files or licenses should be saved in the the /pd directory if users need to access them after restarting the workspaces. Only files saved in the /pd directory will remain available after termination of a workspace session.
 
-      ![Screenshot of the /pd folder][img PD folder]
+      [![Screenshot of the /pd folder][img PD folder]{: style="height:400px"}]
 
       * **Attention:** Any personal files in the folder “data” will be lost. Personal files in the directory /pd will persist.
       * Do not save files in the "data" or “data/brh.data-commons.org” folders.
-      * The folder “brh.data-commons.org” in the “data” folder will host the data files you have exported from the Discovery Page.
+      * The folder “brh.data-commons.org” in the “data” folder will host the data files you have exported from the Discovery Page. Move these files to the /pd directory if you do not want to have to export them again.
+      * /pd has a capacity limit of 10GB.
 
-6. Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language.
+6. Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language. *Note: You can open and run multiple notebooks in your workspace. However, the generic, tutorial and nextflow workspace images are currently separate docker images, so there is no functionality to combine them or run nextflow in the tutorial or generic images. This may be available in the future, after further testing and development activities.*
 
       ![Start a new notebook under “Notebook” in the Launcher tab][img New Notebook]
 
@@ -94,7 +81,8 @@ Users can **download** notebooks by clicking "File" - "Download", as shown below
 The following **environments** are available in the workspaces:
 
 * Jupyter Lab
-      ![Jupyter logo][img Jupyter logo]
+
+      ![Jupyter logo][img Jupyter logo]{: style="height:100px"}
 
 The following **programmatic languages** are available in Jupyter Notebooks:
 
