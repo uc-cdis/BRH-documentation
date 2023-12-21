@@ -1,4 +1,4 @@
-[![Nextflow logo](/img/nextflow.svg){: style="height:75px"}](https://www.nextflow.io/)
+[![Nextflow logo](img/nextflow.svg){: style="height:75px"}](https://www.nextflow.io/)
 
 # **Tutorial Nextflow Workflows**
 
