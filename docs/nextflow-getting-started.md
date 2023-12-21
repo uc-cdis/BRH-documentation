@@ -4,7 +4,7 @@
 
 ## **Background**
 
-[![Gen3 logo](/img/Gen3-Logo-01-blue.png){: style="height:75px"}](https://gen3.org/)
+[![Gen3 logo](img/Gen3-Logo-01-blue.png){: style="height:75px"}](https://gen3.org/)
 
 ### *What is Gen3?*
 
@@ -61,7 +61,7 @@ Once you have been notified that you have a workspace account provisioned with p
 * When you click the button, the workspace will begin to launch. This can take 5-10 minutes. You will know you successfully started the launch because you will see 3 animated dots rippling in the Launch button (see yellow highlight).
 > *If it takes longer than 10 minutes, try refreshing the screen and re-trying the launch. If it seems to stall out (longer than 10 min again), or if you get an error, reach out to CTDS staff through the Slack channel (but don't close the tab with the launch).*
 
-![Screenshot of workspace launch screen](/img/launch-workspace.png)
+![Screenshot of workspace launch screen](img/launch-workspace.png)
 
 ### **Quick orientation to the the workspace**
 
@@ -73,7 +73,7 @@ There are several key points we want you to be aware of:
 
 Store all files you want to keep after the workspace closes in the `/pd` directory; **only files saved in the /pd directory will persist**. Any personal files in the folder `data` will be lost.
 
-![Screenshot of /pd and data folders](/img/workspace_pd_folder_080422.png){: style="height:400px"}
+![Screenshot of /pd and data folders](img/workspace_pd_folder_080422.png){: style="height:400px"}
 
 #### Automated shutdown for the night
 
