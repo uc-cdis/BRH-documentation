@@ -16,9 +16,7 @@ This guide is for external users who have received temporary credentials grantin
 Your temporary AWS credentials only lasts for 1 hour from when they were created; User Services should have provided an expiration time when sharing the credentials with you. You must fully complete the push to ECR before they expire, or you will need to request new credentials from User Services.
 
 ### Set AWS Environment Variables:
-Before you can push your Docker image to the ECR repository, you need to configure the AWS CLI with the temporary credentials you received. Here's how you can do that:
-
- Replace `< AccessKeyId >`, `< SecretAccessKey >`, and `< SessionToken >` with the credentials provided to you.
+Before you can push your Docker image to the ECR repository, you need to configure the AWS CLI with the temporary credentials you received. In the credentials sent to you, there should be the commands needed to run this below the line "Please run the following commands to set your AWS credentials:". Copy those (they will look similar to the block below) and run them in the terminal.
 
       export AWS_ACCESS_KEY_ID=<AccessKeyId>
       export AWS_SECRET_ACCESS_KEY=<SecretAccessKey>
@@ -30,11 +28,9 @@ Before you can push your Docker image to the ECR repository, you need to configu
 Run `aws sts get-caller-identity` to verify that your CLI is using the temporary credentials.
 
 ### Logging in to ECR
-Use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry.
+Next, use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry. in the credentials, there is a command below the line "After setting credentials you will need to log in to your docker registry. Please run the following command:" Copy that (it will look similar to the command below) and run it in the terminal.
 
      aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <repositoryUri>
-
-Replace `< region >` with `us-east-1`, and `< repositoryUri >` with the URI of the ECR repository you've been given access to.
 
 ## Pushing Your Docker Image
 ### Tag Your Docker Image:
@@ -52,7 +48,7 @@ Replace `< repositoryUri >` with the ECR repository URI provided by User Service
 > If you want to replace previous versions of your container, you can use the same image-tag.
 
 ### Push the Image:
-Push the tagged image to the ECR repository.
+Push the tagged image to the ECR repository. (The command is also in the credentials - you just need to specify the image tag.)
 
      docker push <repositoryUri>:<image-tag>
 
