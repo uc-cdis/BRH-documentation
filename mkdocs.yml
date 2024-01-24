@@ -24,7 +24,7 @@ nav:
   - Contact: 12-contact.md
   - '':
     - Nextflow - Getting Started: nextflow-getting-started.md
-    - Nextflow - Tutorial Workflows: nextflow-tutorial workflows.md
+    - Nextflow - Tutorial Workflows: nextflow-tutorial-workflows.md
     - Nextflow - Create Dockerfile: nextflow-create-docker.md
     - Nextflow - Request Credentials: nextflow-request-creds.md
     - Nextflow - Upload Dockerfile: nextflow-upload-docker.md
