@@ -44,7 +44,7 @@ Next, use the AWS CLI to retrieve an authentication token and authenticate your 
 
 The specific steps you use to prepare to push your image depends on whether you have an image already built or if you will need to build from a Dockerfile.
 
-### If you already built a local Docker image: Tag your Docker Image
+### If you already built a local Docker image: Tag your Docker image
 
 If you already have a locally-built Docker image, you will not need to run the `docker build` command included in the credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use. This command is not in the credentials file.
 
@@ -85,3 +85,5 @@ Once the push completes, your Docker image will be available in the ECR reposito
 ## Support
 
 If you encounter any issues or require assistance, please reach out to the User Services team that provided you with the temporary credentials, or brhsupport@datacommons.io, or reach out on Slack. (Slack is likely to result in the quickest reply.)
+
+[*Continue to Tutorial Workflows*](./nextflow-tutorial-workflows.md)
