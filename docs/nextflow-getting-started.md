@@ -20,19 +20,27 @@ Many workflow languages have been developed in recent years. Common examples inc
 
 ### *Workflow execution in Gen3*
 
-Gen3 is based on kubernetes and is container-based.  We are currently building and testing a workflow execution system in Gen3 that researchers can use to run containers on the cloud for various applications in a secure and isolated manner. The testing and development of workflows is currently underway in the [Biomedical Research Hub (BRH)](https://brh.data-commons.org/), one of the first data ecosystems (or meshes) built at CTDS.
+Gen3 is based on kubernetes and is container-based. A container is a standalone, self-contained collection of software that contains specific software you may need for your application (e.g., Pydicom/DICOM, Numpy, SciPy). We are testing a new workflow execution system in Gen3 that researchers can use to run containers on the cloud for various applications in a secure and isolated manner. We developed an isolation process so that each user’s workflow is separate from each other, from the Gen3 core system, and from Gen3 data, except when approved and required for the specific task. The testing and development of workflows is currently underway in the [Biomedical Research Hub (BRH)](https://brh.data-commons.org/), one of the first data ecosystems (or meshes) built at CTDS.
 
 ### *What is Nextflow? What is AWS Batch?*
 
-The workflow execution in Gen3 is powered using [Nextflow](https://www.nextflow.io/), a framework for writing data-driven computational pipelines using software containers. It is a very popular and convenient framework for specifying containers, inputs and outputs, and running jobs on the cloud. Researchers have used Nextflow for several years, and 2023 has continued to see a rapid gain in its popularity per a [recent survey](https://seqera.io/blog/the-state-of-the-workflow-2023-community-survey-results/).  The scalability of workflows in Gen3 comes from [AWS Batch](https://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html), an AWS service capable of running compute jobs over large datasets on the Cloud.
+The workflow execution in Gen3 is powered using [Nextflow](https://www.nextflow.io/), a framework for writing data-driven computational pipelines using software containers. It is a very popular and convenient framework for specifying containers, inputs and outputs, and running jobs on the cloud. Researchers have used Nextflow for several years, and 2023 has continued to see a rapid gain in its popularity per a [recent survey](https://seqera.io/blog/the-state-of-the-workflow-2023-community-survey-results/). The scalability of workflows in Gen3 comes from [AWS Batch](https://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html), an AWS service capable of running compute jobs over large datasets on the Cloud.
 
 ## **Steps to run workflows in Gen3**
+
+To run workflows in Gen3, you will need the following:
+
+* Access to the BRH workspace (covered on this page)
+* A funded workspace account (covered on this page)
+* A Docker image uploaded to an ECR created for you (start with [Create Dockerfile](./nextflow-create-docker.md))
+
+*Depending on your specific workflows, you may also need additional tools, resources, or access.*
 
 ### **Get access to the BRH workspace and set up a funded account**
 
 #### 1) Request access to the BRH workspace
 
-The BRH exposes a [computational workspace](https://brh.data-commons.org/workspace) that researchers can use to run simple Jupyter notebooks and submit workflows. To submit workflow jobs, you need access to the BRH workspace -- specifically our QA environment (QA-BRH).
+The BRH exposes a [computational workspace](https://brh.data-commons.org/workspace) that researchers can use to run simple Jupyter notebooks and submit workflows. To submit workflow jobs, you need access to the BRH workspace -- specifically in our QA environment (QA-BRH).
 
 Follow [these instructions](https://uc-cdis.github.io/BRH-documentation/05-workspace_registration/#requesting-temporary-trial-access-to-brh-workspace) to request temporary trial access to the QA-BRH workspace (but **note**: request access from the QA site: [https://qa-brh.planx-pla.net/login](https://qa-brh.planx-pla.net/login) and not the production BRH site that is linked in the documentation). After you have submitted your request, please ping `@Sara Volk de Garcia` in Slack to alert her to look for your request and approve it.
 
@@ -83,4 +91,4 @@ Store all files you want to keep after the workspace closes in the `/pd` directo
 
 Workspaces will automatically be shut down (and all workflows terminated) after **90 minutes of idle time**.
 
-[*Continue to Tutorial Workflows*](nextflow-tutorial workflows.md)
+[*Continue to Create Dockerfile*](./nextflow-create-docker.md)

@@ -24,3 +24,7 @@ To ensure prompt attention, I will also ping `@Sara Volk de Garcia` on the Slack
 Thanks!
 
 **[your name]**
+
+------
+
+[*Continue to Upload Docker Image*](./nextflow-upload-docker.md)
