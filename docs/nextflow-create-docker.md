@@ -2,21 +2,15 @@
 
 # **Create a Dockerfile**
 
-## Overview of developing and deploying a container in Gen3
+##
 
-![Overview of steps in developing a container and making it available for use in workflows](./img/container-development.png)
+- go to [quay](https://quay.io/repository/cdis/containers?tab=tags&tag=latest), get image
+- gen3-cuda-12.3-ubuntu22.04-openssl - use for GPU workflows
+- gen3-amazonlinux-base-AL2023fix  - use for CPU workflows
 
-**Locally build and test container:**
-Gen3 provides several FedRAMP security-compliant base images that users can pull and customize.
-
-**Request credentials and push container to Gen3 staging:**
-Users can email Gen3 to request short-term credentials that permit them to authenticate Docker in their terminal to upload the local image to Gen3 staging for security review.
-
-**Container is security-scanned; Gen3 sends approved container URI:**
-Gen3 completes the security scan within minutes. If it is compliant, the image is moved to an ECR repo from where the container can be run, and Gen3 staff will send a container URI. If there are problems, a report of the vulnerabilities is provided for remediation and resubmission.
-
-**Run workflow using approved container URI:**
-In the BRH workspace, use a Nextflow Jupyter notebook to run Nextflow workflows in the approved container using the approved container URI.
+click on fetch tag
+- the command is gonna be the first of your dockerfile
+- make sure you can pull the image by running the command in your terminal.
 
 ---
 *enter more info here from [this doc](https://docs.google.com/document/d/1v02oDuXjwmw7nV_KjpNik2rGsNPlNU87gqlg54WbLK8/edit?usp=sharing)*
