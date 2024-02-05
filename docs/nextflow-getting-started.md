@@ -91,4 +91,4 @@ Store all files you want to keep after the workspace closes in the `/pd` directo
 
 Workspaces will automatically be shut down (and all workflows terminated) after **90 minutes of idle time**.
 
-[*Continue to Create Dockerfile*](./nextflow-create-docker.md)
+[*Continue to General Workflows*](./nextflow-tutorial-1.md)
