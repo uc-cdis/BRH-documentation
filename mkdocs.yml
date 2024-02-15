@@ -22,6 +22,14 @@ nav:
   - FAIR Data: 02-types_of_shared_data.md
   - Data Management and Repositories: 03-data_and_repos.md
   - Contact: 12-contact.md
+  - '':
+    - Nextflow - Getting Started: nextflow-getting-started.md
+    - Nextflow - General Workflows: nextflow-tutorial-1.md
+    - Nextflow - Containers in Gen3: nextflow-overview-containers.md
+    - Nextflow - Create Dockerfile: nextflow-create-docker.md
+    - Nextflow - Request Credentials: nextflow-request-creds.md
+    - Nextflow - Upload Docker Image: nextflow-upload-docker.md
+    - Nextflow - Tutorials with Containers: nextflow-tutorial-workflows.md
 
 theme:
   favicon: img/favicon.ico
