@@ -12,14 +12,11 @@ You need to generate a MIDRC credentials on the profile page of the [MIDRC porta
 
 ![Screenshot showing how to find and save MIDRC credentials](./img/MIDRC-credentials.png)
 
-### Get and replace placeholder values in the Nextflow config
+### Get and replace placeholder values from the Nextflow config
 
-Once you have launched the nextflow workspace for the first time, please ping @Sai or @Ao on Slack so they can give you the values to replace the placeholders in the`queue`, `jobRole` and `workDir` fields in the [midrc_batch_cpu_demo notebook](https://github.com/uc-cdis/bio-nextflow/blob/feature/gpu_test/nextflow_notebooks/midrc_demo_notebooks/midrc_batch_cpu_demo.ipynb). For now, these placeholder values will need to be replaced manually, but we are working on pre-populating these values in our configs.
+You can find the values to replace the placeholders in the`queue`, `jobRole` and `workDir` fields in the `nextflow.config` file in your Nextflow workspace. Directions for finding this file are at the bottom of the "Welcome to Nextflow" page that opens when your Nextflow workspace first opens. These placeholder values will need to be replaced in each of the various tutorial Nextflow notebooks.
 
-## Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata
-
-Please see code snippet below that shows an example of how to run two basic processes on DICOM files on AWS Batch: i) convert to PNG, ii) extract metadata. Note that to run this, you need to first download open-access DICOM files first to your workspace using the Gen3 SDK (PART 1), and you can stage the files on AWS Batch and run the workflow (PART 2)
-
+Note that you should only copy/paste the value to replace `placeholder` for each field; do not copy/paste larger sections of the nextflow config, or there could be indentation problems that interfere with the code.
 
 ## Example Nextflow notebooks
 
@@ -47,3 +44,7 @@ For container building, see Dockerfile and requirements file, python code to con
 Link to notebook here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo)
 
 Has same stuff as above and a README [here](https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_cpu_workflows/README) that describes two workflows: one local download workflow, and one batch workflow
+
+## Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata
+
+Please see code snippet below that shows an example of how to run two basic processes on DICOM files on AWS Batch: i) convert to PNG, ii) extract metadata. Note that to run this, you need to first download open-access DICOM files first to your workspace using the Gen3 SDK (PART 1), and you can stage the files on AWS Batch and run the workflow (PART 2)
