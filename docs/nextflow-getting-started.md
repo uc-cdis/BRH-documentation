@@ -64,8 +64,8 @@ Once you have been notified that you have a workspace account provisioned with p
 
 * Log in to QA-BRH and open the workspace page.
 * In the dropdown under "Account" in top left, select "Direct Pay" as your paymodel (#1 in screenshot below).
-* Once you select the Direct Pay workspace account, you should see a new option for workspace image: "(Nextflow) Test Nextflow in qa-brh"
-* Click the Launch button for the Nextflow workspace image (#2).
+* Once you select the Direct Pay workspace account, you should see a new option for workspace image: "(Beta) Nextflow with CPU instances"
+* Click the Launch button for this Nextflow workspace image (#2).
 * When you click the button, the workspace will begin to launch. This can take 5-10 minutes. You will know you successfully started the launch because you will see 3 animated dots rippling in the Launch button (see yellow highlight).
 > *If it takes longer than 10 minutes, try refreshing the screen and re-trying the launch. If it seems to stall out (longer than 10 min again), or if you get an error, reach out to CTDS staff through the Slack channel (but don't close the tab with the launch).*
 

@@ -4,7 +4,7 @@
 
 ### Overview
 
-This guide is for external users who have received temporary credentials granting access to push container images to a specific AWS Elastic Container Registry (ECR) repository.
+This guide is for users who have received temporary credentials granting access to push container images to a specific AWS Elastic Container Registry (ECR) repository.
 
 ### Prerequisites
 
