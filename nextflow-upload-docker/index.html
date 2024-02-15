@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://brh.data-commons.org/05-workspace_registration/">
+        <link rel="canonical" href="https://brh.data-commons.org/nextflow-upload-docker/">
       
       
-        <link rel="prev" href="../04-BRH_overview/">
+        <link rel="prev" href="../nextflow-request-creds/">
       
       
-        <link rel="next" href="../06-loginoverview/">
+        <link rel="next" href="../nextflow-tutorial-workflows/">
       
       
       <link rel="icon" href="../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Workspace Page (Registration) - Biomedical Research Hub Documentation</title>
+        <title>Nextflow - Upload Docker Image - Biomedical Research Hub Documentation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#register-for-brh-workspace" class="md-skip">
+        <a href="#pushing-docker-images-to-aws-ecr" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workspace Page (Registration)
+              Nextflow - Upload Docker Image
             
           </span>
         </div>
@@ -288,8 +288,6 @@
       
   
   
-    
-  
   
     
     
@@ -310,12 +308,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -329,7 +327,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             How to Get Started
@@ -360,29 +358,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Workspace Page (Registration)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05-workspace_registration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,40 +369,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-temporary-trial-access-to-brh-workspace" class="md-nav__link">
-    Requesting Temporary Trial Access to BRH Workspace
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-extended-access-to-brh-workspace-using-a-persistent-pay-model-eg-strides-direct-pay" class="md-nav__link">
-    Requesting Extended Access to BRH Workspace using a Persistent Pay Model (e.g., STRIDES, Direct Pay)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -777,6 +721,8 @@
       
   
   
+    
+  
   
     
     
@@ -799,12 +745,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -818,7 +764,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -929,9 +875,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../nextflow-upload-docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nextflow - Upload Docker Image
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -940,6 +906,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-note-about-timing" class="md-nav__link">
+    A note about timing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-aws-environment-variables" class="md-nav__link">
+    Set AWS environment variables:
+  </a>
+  
+    <nav class="md-nav" aria-label="Set AWS environment variables:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-configuration" class="md-nav__link">
+    Verify configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticate-docker-to-ecr" class="md-nav__link">
+    Authenticate Docker to ECR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-push-your-docker-image" class="md-nav__link">
+    Preparing to push your Docker image
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing to push your Docker image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" class="md-nav__link">
+    If you already built a local Docker image: Tag your Docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-need-to-build-your-docker-image" class="md-nav__link">
+    If you need to build your Docker image:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-the-docker-image-to-the-ecr" class="md-nav__link">
+    Push the Docker image to the ECR
+  </a>
+  
+    <nav class="md-nav" aria-label="Push the Docker image to the ECR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completion" class="md-nav__link">
+    Completion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -999,15 +1087,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requesting-temporary-trial-access-to-brh-workspace" class="md-nav__link">
-    Requesting Temporary Trial Access to BRH Workspace
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-extended-access-to-brh-workspace-using-a-persistent-pay-model-eg-strides-direct-pay" class="md-nav__link">
-    Requesting Extended Access to BRH Workspace using a Persistent Pay Model (e.g., STRIDES, Direct Pay)
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-note-about-timing" class="md-nav__link">
+    A note about timing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-aws-environment-variables" class="md-nav__link">
+    Set AWS environment variables:
+  </a>
+  
+    <nav class="md-nav" aria-label="Set AWS environment variables:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-configuration" class="md-nav__link">
+    Verify configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticate-docker-to-ecr" class="md-nav__link">
+    Authenticate Docker to ECR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-push-your-docker-image" class="md-nav__link">
+    Preparing to push your Docker image
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing to push your Docker image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" class="md-nav__link">
+    If you already built a local Docker image: Tag your Docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-need-to-build-your-docker-image" class="md-nav__link">
+    If you need to build your Docker image:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-the-docker-image-to-the-ecr" class="md-nav__link">
+    Push the Docker image to the ECR
+  </a>
+  
+    <nav class="md-nav" aria-label="Push the Docker image to the ECR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completion" class="md-nav__link">
+    Completion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
   </a>
   
 </li>
@@ -1030,34 +1206,72 @@
   
 
 
-<div><h1 id="register-for-brh-workspace"><strong>Register for BRH Workspace</strong><a class="headerlink" href="#register-for-brh-workspace" title="Permanent link">¶</a></h1>
-<p>To start exploring BRH Workspace right away, users can apply for a Temporary Trial Access. Extended access to BRH Workspace is granted using a persistent pay model workspace account (e.g., STRIDES or Direct Pay), which can be requested after trial access is provisioned. Please see below for more details.</p>
-<h2 id="requesting-temporary-trial-access-to-brh-workspace">Requesting Temporary Trial Access to BRH Workspace<a class="headerlink" href="#requesting-temporary-trial-access-to-brh-workspace" title="Permanent link">¶</a></h2>
-<p>For new users without workspace access, please follow these steps</p>
-<ol>
-<li>Login to <a href="https://brh.data-commons.org/login">BRH</a></li>
-<li>Click on the <a href="https://brhstaging.data-commons.org/workspace">Workspace tab</a>. That opens the Workspace Access Request form</li>
-<li>
-<p>Fill in the details and submit the form shown below.</p>
-<p><img alt="Screenshot of workspace access request form" src="../img/workspace_access_form.png"></p>
-</li>
-<li>
-<p>The form should be completed only once. Following submission, users will see a success message and a link back to the Discovery page.</p>
-<p><img alt="Success message after form submission" src="../img/workspace_access_success.png"></p>
-</li>
-<li>
-<p>Users will receive an email notifying them that the request has been received.</p>
-</li>
-<li>
-<p>Users will receive another email notifying them that the temporary trial access request has been approved. They should then be able to access  workspaces on BRH. Please note that the timeline for this approval can be a few business days.</p>
-</li>
-</ol>
-<h2 id="requesting-extended-access-to-brh-workspace-using-a-persistent-pay-model-eg-strides-direct-pay">Requesting Extended Access to BRH Workspace using a Persistent Pay Model (e.g., STRIDES, Direct Pay)<a class="headerlink" href="#requesting-extended-access-to-brh-workspace-using-a-persistent-pay-model-eg-strides-direct-pay" title="Permanent link">¶</a></h2>
+<div><p><a href="https://www.nextflow.io/"><img alt="Nextflow logo" src="../img/nextflow.svg" style="height:75px"></a></p>
+<h1 id="pushing-docker-images-to-aws-ecr"><strong>Pushing Docker Images to AWS ECR</strong><a class="headerlink" href="#pushing-docker-images-to-aws-ecr" title="Permanent link">¶</a></h1>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h3>
+<p>This guide is for users who have received temporary credentials granting access to push container images to a specific AWS Elastic Container Registry (ECR) repository.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://www.docker.com/get-started/">Docker</a> installed on your local machine.</li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">AWS CLI</a> installed locally</li>
+<li>Temporary AWS credentials provided by the User Services team.</li>
+<li>The URI of the ECR repository you have been given access to (shared in the AWS credentials)</li>
+<li>A image you want to push, or a Dockerfile to build your image.</li>
+</ul>
+<h3 id="a-note-about-timing">A note about timing<a class="headerlink" href="#a-note-about-timing" title="Permanent link">¶</a></h3>
+<p>Your temporary AWS credentials only lasts for 1 hour from when they were created; User Services should have provided an expiration time when sharing the credentials with you. You must fully complete the push to ECR before they expire, or you will need to request new credentials from User Services.</p>
+<h2 id="set-aws-environment-variables">Set AWS environment variables:<a class="headerlink" href="#set-aws-environment-variables" title="Permanent link">¶</a></h2>
+<p><em>The commands in this section are valid if you are using a Linux or MacOS. If you are using Windows, we will provide a separate set of commands for you to set the AWS environment variables.</em></p>
+<p>Before you can push your Docker image to the ECR repository, you need to configure the AWS CLI with the temporary credentials you received. In the credentials sent to you, there should be the commands needed to run this below the line "Please run the following commands to set your AWS credentials:". Copy those (they will look similar to the block below) and run them in the terminal.</p>
+<pre><code>  export AWS_ACCESS_KEY_ID=&lt;AccessKeyId&gt;
+  export AWS_SECRET_ACCESS_KEY=&lt;SecretAccessKey&gt;
+  export AWS_SESSION_TOKEN=&lt;SessionToken&gt;
+</code></pre>
 <blockquote>
-<p>Please Note: The process for granting access for a workspace account can take 2-4 weeks for NIH STRIDES, and a month for Direct Pay.</p>
+<p>Note: the variables are set only as long as the terminal is open; export the variables again if you close and open a new terminal.</p>
 </blockquote>
-<p>Find instructions for funding workspace accounts with any of the persistent pay models on the <a href="../13-workspace_accounts/">Workspace Accounts page</a>.</p>
-<!-- Links and Images --></div>
+<h3 id="verify-configuration">Verify configuration:<a class="headerlink" href="#verify-configuration" title="Permanent link">¶</a></h3>
+<p>Run <code>aws sts get-caller-identity</code> to verify that your CLI is using the temporary credentials.</p>
+<h3 id="authenticate-docker-to-ecr">Authenticate Docker to ECR<a class="headerlink" href="#authenticate-docker-to-ecr" title="Permanent link">¶</a></h3>
+<p>Next, use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry. In the credentials, there is a command below the line "After setting credentials you will need to log in to your docker registry. Please run the following command:". Copy that (it will look similar to the command below) and run it in the terminal.</p>
+<pre><code> aws ecr get-login-password --region &lt;region&gt; | docker login --username AWS --password-stdin &lt;repositoryUri&gt;
+</code></pre>
+<h2 id="preparing-to-push-your-docker-image">Preparing to push your Docker image<a class="headerlink" href="#preparing-to-push-your-docker-image" title="Permanent link">¶</a></h2>
+<p>The specific steps you use to prepare to push your image depends on whether you have an image already built or if you will need to build from a Dockerfile.</p>
+<h3 id="if-you-already-built-a-local-docker-image-tag-your-docker-image">If you already built a local Docker image: Tag your Docker image<a class="headerlink" href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" title="Permanent link">¶</a></h3>
+<p>If you already have a locally-built Docker image, you will not need to run the <code>docker build</code> command included in the credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use. This command is not in the credentials file.</p>
+<pre><code> docker tag &lt;local-image&gt;:&lt;local-tag&gt; &lt;repositoryUri&gt;:&lt;image-tag&gt;
+</code></pre>
+<p>Replace <code>&lt; local-image &gt;</code> with the name of your local Docker image and <code>&lt; local-tag &gt;</code> with the tag you want to push.</p>
+<blockquote>
+<p>If you're not sure what your local image and tag names are, you can run <code>docker images</code> in your terminal. It will provide a list of all your saved docker images. The column called <code>REPOSITORY</code> is the local image name. The column called <code>TAG</code> is the local tag name for this image.</p>
+</blockquote>
+<p>Replace <code>&lt; repositoryUri &gt;</code> with the ECR repository URI provided at the top of the credentials file, and <code>&lt; image-tag &gt;</code> with the image tag name you want to use in your ECR.</p>
+<blockquote>
+<p>Important note: If you do not want the most-recently-pushed image to replace an earlier version with the same tag in your ECR, image-tags should be unique.
+For example, you create an image with an image-tag <code>batch-poc</code>. If you later push another image to <code>&lt; repositoryUri &gt;:batch-poc</code>, it will overwrite the previous version of the image in your ECR (you will only have 1 container with the image tag "batch-poc").
+If you do not want to overwrite, you can use versioned image-tags. For example: <code>batch-poc-1.0</code>, and then <code>batch-poc-1.1</code>.
+If you want to replace previous versions of your container, you can use the same image-tag.</p>
+</blockquote>
+<h3 id="if-you-need-to-build-your-docker-image">If you need to build your Docker image:<a class="headerlink" href="#if-you-need-to-build-your-docker-image" title="Permanent link">¶</a></h3>
+<p>If you haven't already built your Docker image, you can use the "build" command that is included in your credentials, similar to what is shown below. Note that you should run this command from the directory holding your Dockerfile. You will need to replace the <code>&lt; tag &gt;</code> in your command with the image tag name you want to use in your ECR. (Read more about image tags in the previous section.)</p>
+<pre><code> docker build -t &lt;repositoryUri&gt;:&lt;tag&gt;
+</code></pre>
+<blockquote>
+<p>If you use this <code>docker build</code> command from your credentials, you do not need to use the <code>docker tag</code> command (described in the previous section).</p>
+</blockquote>
+<h2 id="push-the-docker-image-to-the-ecr">Push the Docker image to the ECR<a class="headerlink" href="#push-the-docker-image-to-the-ecr" title="Permanent link">¶</a></h2>
+<p>Push the tagged image to the ECR repository. The <code>docker push</code> command is also in the credentials - you just need to specify the image tag you selected when either tagging or building the image in the previous section.</p>
+<pre><code> docker push &lt;repositoryUri&gt;:&lt;image-tag&gt;
+</code></pre>
+<p>If the <strong>push is successful</strong>, you will see various "layer 1" "layer 2" etc outputs, and it will indicate progress in pushing. This can take minutes, depending on how large your container is.</p>
+<p>If the <strong>push fails</strong>, you will get a persistent message about "Waiting for layer". This usually means it cannot find the repository, so double-check that there is no typo, and that you have set your <a href="#set-aws-environment-variables">AWS environment variables</a> since you opened the terminal most recently.</p>
+<h3 id="completion">Completion<a class="headerlink" href="#completion" title="Permanent link">¶</a></h3>
+<p>Once the push completes, your Docker image will be available in the ECR repository (although you will not be able to see it). It will be scanned, and if passes the security scanning, CTDS will move it to the nextflow-approved repo. When it's available in nextflow-approved, User Services will share a docker URI that looks something like this:
+<code>143731057154.dkr.ecr.us-east-1.amazonaws.com/nextflow-approved/&lt; your username &gt;:&lt; image-tag &gt;</code>. You can then use this new URI to run Nextflow workflows with your container in the BRH workspace.</p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">¶</a></h2>
+<p>If you encounter any issues or require assistance, please reach out to the User Services team that provided you with the temporary credentials, or brhsupport@datacommons.io, or reach out on Slack. (Slack is likely to result in the quickest reply.)</p>
+<p><a href="../nextflow-tutorial-workflows/"><em>Continue to Tutorial Workflows</em></a></p></div>
 
 
 
