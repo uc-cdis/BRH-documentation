@@ -32,7 +32,7 @@ Before you can push your Docker image to the ECR repository, you need to configu
 
 ### Verify configuration:
 
-Run `aws sts get-caller-identity` to verify that your CLI is using the temporary credentials.
+Run `aws sts get-caller-identity` to verify that your CLI is using the temporary credentials. If you successfully set the variables, you should see output showing the AWS information - UserID, account, etc.
 
 ### Authenticate Docker to ECR
 
