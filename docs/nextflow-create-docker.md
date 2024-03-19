@@ -17,7 +17,7 @@ Gen3 offers a collection of FedRAMP security-compliant base images. Building on 
 
 You can access these images on Quay.io, a repository site for Docker images:
 
-[https://quay.io/repository/cdis/containers?tab=tags](https://quay.io/repository/cdis/containers?tab=tag)
+[https://quay.io/repository/cdis/containers?tab=tags](https://quay.io/repository/cdis/containers?tab=tags)
 
 ### How to choose your base image
 
