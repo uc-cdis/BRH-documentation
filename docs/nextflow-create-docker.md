@@ -15,9 +15,9 @@ This guide is for users who want to build Docker containers for use in Gen3 work
 
 Gen3 offers a collection of FedRAMP security-compliant base images. Building on these base images makes it easier for your customized Docker image to pass the security scanning.
 
-You can access these images on on Quay.io, a repository site for Docker images:
+You can access these images on Quay.io, a repository site for Docker images:
 
-[https://quay.io/repository/cdis/containers?tab=tags&tag=latest](https://quay.io/repository/cdis/containers?tab=tags&tag=latest)
+[https://quay.io/repository/cdis/containers?tab=tags](https://quay.io/repository/cdis/containers?tab=tags)
 
 ### How to choose your base image
 
@@ -32,6 +32,7 @@ Some tools you may be using in your workflow can take advantage of GPU capacity 
 We have 2 images in our current selection that offer [CUDA](https://www.turing.com/kb/understanding-nvidia-cuda) support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.
 
 > gen3-cuda-12.3-ubuntu22.04-openssl *(preferred)*
+>
 > gen3-cuda-11.8-ubuntu22.04-openssl *(only use if your tools require a lower version of CUDA)*
 
 **CPU images**
@@ -78,7 +79,7 @@ Once you are signed in to Docker, you can run the command they suggest after pul
 
 You can run the next suggested command (shown in red box above, `docker scout cves...`) to see the full list of vulnerabilities.
 
-Images will be able to pass Gen3 security scanning if there are no Critical or High vulnerabilities, and **[add something about CVSS?]**
+Images should be able to pass Gen3 security scanning if there are no Critical vulnerabilities.
 
 *Want to know more about Docker Scout? [Check out the documentation](https://docs.docker.com/scout/quickstart/).*
 
@@ -98,7 +99,11 @@ In our example here, we will have you build your image using a `requirements.txt
 
 Our example will use the files in the [torch_cuda_test directory](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test) of the bio-nextflow repository. You can review the `readme` file in this directory for more information. It is a simple example that will build up from our base image by adding PyTorch. The Nextflow script will ultimately use a python script that checks the version of CUDA in the GPU instance and checks whether it is compatible with the version of PyTorch and CUDA available in the container.
 
-First, in the terminal, navigate to the directory where the downloaded Dockerfile and requirements.txt are located.
+First, in the terminal, navigate to the directory where you cloned the the `bio-nextflow` repository (see [Prerequisites section](#prerequisites)). Next, navigate to where the downloaded Dockerfile and requirements.txt are located:
+
+>>>
+cd bio-nextflow/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test
+>>>
 
 > Note that the first line of the Dockerfile references the fetch tag for one of our GPU base images. This is always how you will reference a base image -- with `FROM` and the Dockertag.
 
