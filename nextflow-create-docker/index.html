@@ -1231,8 +1231,8 @@
 </ul>
 <h2 id="start-with-a-security-validated-base-image">Start with a security-validated base image<a class="headerlink" href="#start-with-a-security-validated-base-image" title="Permanent link">¶</a></h2>
 <p>Gen3 offers a collection of FedRAMP security-compliant base images. Building on these base images makes it easier for your customized Docker image to pass the security scanning.</p>
-<p>You can access these images on on Quay.io, a repository site for Docker images:</p>
-<p><a href="https://quay.io/repository/cdis/containers?tab=tags&amp;tag=latest">https://quay.io/repository/cdis/containers?tab=tags&amp;tag=latest</a></p>
+<p>You can access these images on Quay.io, a repository site for Docker images:</p>
+<p><a href="https://quay.io/repository/cdis/containers?tab=tags">https://quay.io/repository/cdis/containers?tab=tags</a></p>
 <h3 id="how-to-choose-your-base-image">How to choose your base image<a class="headerlink" href="#how-to-choose-your-base-image" title="Permanent link">¶</a></h3>
 <p><strong>GPU vs. CPU</strong></p>
 <p><em>Not sure what these are? <a href="https://blogs.nvidia.com/blog/whats-the-difference-between-a-cpu-and-a-gpu/">Here's a nice overview.</a></em></p>
@@ -1240,8 +1240,8 @@
 <p><strong>GPU images</strong></p>
 <p>We have 2 images in our current selection that offer <a href="https://www.turing.com/kb/understanding-nvidia-cuda">CUDA</a> support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.</p>
 <blockquote>
-<p>gen3-cuda-12.3-ubuntu22.04-openssl <em>(preferred)</em>
-gen3-cuda-11.8-ubuntu22.04-openssl <em>(only use if your tools require a lower version of CUDA)</em></p>
+<p>gen3-cuda-12.3-ubuntu22.04-openssl <em>(preferred)</em></p>
+<p>gen3-cuda-11.8-ubuntu22.04-openssl <em>(only use if your tools require a lower version of CUDA)</em></p>
 </blockquote>
 <p><strong>CPU images</strong></p>
 <p>We have one image that is available for running workflows on CPUs.</p>
@@ -1270,7 +1270,7 @@ gen3-cuda-11.8-ubuntu22.04-openssl <em>(only use if your tools require a lower v
 <p>Once you are signed in to Docker, you can run the command they suggest after pulling an image (for example, see the command in blue text in the red box above, <code>docker scout quickview...</code>). If the command runs successfully, you should see output similar to the screenshot below. This is a summary of the vulnerabilities in your image.</p>
 <p><img alt="Test Docker Scout command in terminal" src="../img/scout-quickview.png"></p>
 <p>You can run the next suggested command (shown in red box above, <code>docker scout cves...</code>) to see the full list of vulnerabilities.</p>
-<p>Images will be able to pass Gen3 security scanning if there are no Critical or High vulnerabilities, and <strong>[add something about CVSS?]</strong></p>
+<p>Images should be able to pass Gen3 security scanning if there are no Critical vulnerabilities.</p>
 <p><em>Want to know more about Docker Scout? <a href="https://docs.docker.com/scout/quickstart/">Check out the documentation</a>.</em></p>
 <h2 id="build-your-image-locally-on-top-of-the-base-image">Build your image locally on top of the base image<a class="headerlink" href="#build-your-image-locally-on-top-of-the-base-image" title="Permanent link">¶</a></h2>
 <p>To build your own image, you need to create a Dockerfile. To build your image on a base image, the first line of the Dockerfile should reference the base image tag. The Dockerfile you create typically lives in the Git repository where you have your code to make it easier to copy into your container.</p>
@@ -1280,8 +1280,14 @@ gen3-cuda-11.8-ubuntu22.04-openssl <em>(only use if your tools require a lower v
 <h3 id="example-build-an-image-with-a-dockerfile-and-a-requirementstxt">Example: Build an image with a Dockerfile and a requirements.txt<a class="headerlink" href="#example-build-an-image-with-a-dockerfile-and-a-requirementstxt" title="Permanent link">¶</a></h3>
 <p>In our example here, we will have you build your image using a <code>requirements.txt</code> to identify the software tools you want to add to the base image, as well as a Dockerfile that pulls in the base image, adds the software tools specified in the requirements file, copies relevant code files, and establishes some setup parameters.</p>
 <p>Our example will use the files in the <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test">torch_cuda_test directory</a> of the bio-nextflow repository. You can review the <code>readme</code> file in this directory for more information. It is a simple example that will build up from our base image by adding PyTorch. The Nextflow script will ultimately use a python script that checks the version of CUDA in the GPU instance and checks whether it is compatible with the version of PyTorch and CUDA available in the container.</p>
-<p>First, in the terminal, navigate to the directory where the downloaded Dockerfile and requirements.txt are located.</p>
+<p>First, in the terminal, navigate to the directory where you cloned the the <code>bio-nextflow</code> repository (see <a href="#prerequisites">Prerequisites section</a>). Next, navigate to where the downloaded Dockerfile and requirements.txt are located:</p>
 <blockquote>
+<blockquote>
+<blockquote>
+<p>cd bio-nextflow/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test
+</p>
+</blockquote>
+</blockquote>
 <p>Note that the first line of the Dockerfile references the fetch tag for one of our GPU base images. This is always how you will reference a base image -- with <code>FROM</code> and the Dockertag.</p>
 </blockquote>
 <p>Then, run the Docker <code>build</code> command. For example:</p>

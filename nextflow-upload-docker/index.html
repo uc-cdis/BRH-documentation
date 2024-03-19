@@ -1231,7 +1231,7 @@
 <p>Note: the variables are set only as long as the terminal is open; export the variables again if you close and open a new terminal.</p>
 </blockquote>
 <h3 id="verify-configuration">Verify configuration:<a class="headerlink" href="#verify-configuration" title="Permanent link">¶</a></h3>
-<p>Run <code>aws sts get-caller-identity</code> to verify that your CLI is using the temporary credentials.</p>
+<p>Run <code>aws sts get-caller-identity</code> to verify that your CLI is using the temporary credentials. If you successfully set the variables, you should see output showing the AWS information - UserID, account, etc.</p>
 <h3 id="authenticate-docker-to-ecr">Authenticate Docker to ECR<a class="headerlink" href="#authenticate-docker-to-ecr" title="Permanent link">¶</a></h3>
 <p>Next, use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry. In the credentials, there is a command below the line "After setting credentials you will need to log in to your docker registry. Please run the following command:". Copy that (it will look similar to the command below) and run it in the terminal.</p>
 <pre><code> aws ecr get-login-password --region &lt;region&gt; | docker login --username AWS --password-stdin &lt;repositoryUri&gt;
