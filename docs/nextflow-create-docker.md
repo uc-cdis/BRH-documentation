@@ -15,7 +15,7 @@ This guide is for users who want to build Docker containers for use in Gen3 work
 
 Gen3 offers a collection of FedRAMP security-compliant base images. Building on these base images makes it easier for your customized Docker image to pass the security scanning.
 
-You can access these images on on Quay.io, a repository site for Docker images:
+You can access these images on Quay.io, a repository site for Docker images:
 
 [https://quay.io/repository/cdis/containers?tab=tags](https://quay.io/repository/cdis/containers?tab=tag)
 
