@@ -9,7 +9,7 @@ Hello, User Services,
 
 Please create new temporary AWS credentials to permit me to upload a Nextflow container.
 
-The email address I use to log in to BRH is: **[BRH login email here]**
+The email address or ORCID I use to log in to BRH is: **[BRH login email here]**
 
 I understand that these credentials will last for 1 hour, once created. If I continue to need access to upload after they expire, I will request new credentials.
 
@@ -21,10 +21,13 @@ Since the credentials will ONLY last 1 hour after creation, you may prefer we se
 
 To ensure prompt attention, I will also ping `@Sara Volk de Garcia` on the Slack channel after I have sent my email.
 
+
 Thanks!
 
 **[your name]**
 
 ------
+
+Please note: If you receive credentials but you are not able to successfully upload an image before they expire, please ping @Sara on Slack to let her know she does not need to monitor your submitted image.
 
 [*Continue to Upload Docker Image*](./nextflow-upload-docker.md)
