@@ -87,7 +87,7 @@
 > STRIDES program benefits include:
 >
 > * Cost discounts on AWS services (e.g., compute, storage, and egress fees)
-> * Premium-level [AWS Enterprise Support][AWS Enterprise Support]
+> * [AWS Enterprise Support][AWS Enterprise Support]
 > * [Training and education programs][STRIDES training]
 > * and more! See the [STRIDES program benefits][STRIDES benefits] page for more information
 

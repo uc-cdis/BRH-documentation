@@ -2,9 +2,11 @@
 
 # **Getting started with workflows on Gen3**
 
-## **Background**
-
 [![Gen3 logo](img/Gen3-Logo-01-blue.png){: style="height:75px"}](https://gen3.org/)
+
+*Please note: Nextflow features are only available to users with a Direct Pay workspace account. [See our documentation for persistent paymodels](13-workspace_accounts.md) to learn more about getting a Direct Pay workspace account.*
+
+## **Background**
 
 ### *What is Gen3?*
 
@@ -40,21 +42,15 @@ To run workflows in Gen3, you will need the following:
 
 #### 1) Request access to the BRH workspace
 
-The BRH exposes a [computational workspace](https://brh.data-commons.org/workspace) that researchers can use to run simple Jupyter notebooks and submit workflows. To submit workflow jobs, you need access to the BRH workspace -- specifically in our QA environment (QA-BRH).
+The BRH exposes a [computational workspace](https://brh.data-commons.org/workspace) that researchers can use to run simple Jupyter notebooks and submit workflows. To submit workflow jobs, you need access to the BRH workspace.
 
-Follow [these instructions](https://uc-cdis.github.io/BRH-documentation/05-workspace_registration/#requesting-temporary-trial-access-to-brh-workspace) to request temporary trial access to the QA-BRH workspace (but **note**: request access from the QA site: [https://qa-brh.planx-pla.net/login](https://qa-brh.planx-pla.net/login) and not the production BRH site that is linked in the documentation). After you have submitted your request, please ping `@Sara Volk de Garcia` in Slack to alert her to look for your request and approve it.
-
-**Some notes about QA-BRH**
-
-* QA-BRH is scheduled to spin itself up at 6am CDT (12pm UTC) on weekdays, and shuts down at 9:20pm CDT (02:20am UTC). If QA-BRH is not up, you will not be able to log in or access the workspace to run anything.
-* Be sure that your workflow is complete and your data saved by the time QA-BRH is scheduled to shut down for the night; otherwise, you could lose all your unsaved work.
-* If QA-BRH is expected to be up, but you are getting a "Bad Gateway" message (or any other trouble) when trying to open the page, reach out to Sara on Slack.
+Follow [these instructions](https://uc-cdis.github.io/BRH-documentation/05-workspace_registration/#requesting-temporary-trial-access-to-brh-workspace) to request trial access to the BRH workspace.  After you have submitted your request, please ping `@Sara Volk de Garcia` in Slack to alert her to look for your request and approve it.
 
 #### 2) Establish a workspace account with a persistent pay model in BRH
 
-When you initially are granted workspace access in BRH, it is a trial access that is free for the user (paid by CTDS). However, the trial access paymodel does not permit access to the Nextflow image. To gain access to the Nextflow image needed for testing, you must request a workspace account with a persistent paymodel, so that the cost of compute jobs in your project can accrue to the right account. BRH currently supports several persistent pay models such as NIH STRIDES (payment through grant funds) and Direct Pay (credit card payment). If you're curious, see [here](https://uc-cdis.github.io/BRH-documentation/13-workspace_accounts/) for more information about pay models.
+When you initially are granted workspace access in BRH, it is a trial access that is free for the user (paid by CTDS). However, the trial access paymodel does not permit access to the Nextflow image. To gain access to the Nextflow image needed for testing, you must request a workspace account with a persistent paymodel, so that the cost of compute jobs in your project can accrue to the right account. BRH currently supports several persistent pay models such as NIH STRIDES (payment through grant funds) and Direct Pay (credit card payment). If you're curious, [see here](https://uc-cdis.github.io/BRH-documentation/13-workspace_accounts/) for more information about pay models.
 
-For MIDRC, we have already established a Direct-Pay-type* of workspace account for testing. When you have workspace access, please contact Ao Liu (`@Ao`) over Slack to request the team to add a Direct Pay account to your workspace (please share with Ao the email you use to log in).
+For MIDRC, we have already established a Direct-Pay-type* of workspace account for testing. When you receive workspace access, Sara will work with the Nextflow team to add a Direct Pay account to your workspace.
 
 *\* Note about this Direct-Pay-type of account: It is not an ACTUAL Direct Pay account, and it does not go through the normal Direct Pay account route, nor through OCC, at all. It is funded with MIDRC contract funds, but will be labeled Direct Pay in your workspace.*
 
@@ -62,7 +58,7 @@ For MIDRC, we have already established a Direct-Pay-type* of workspace account f
 
 Once you have been notified that you have a workspace account provisioned with persistent paymodel funds, you can proceed.
 
-* Log in to QA-BRH and open the workspace page.
+* Log in to BRH and open the workspace page.
 * In the dropdown under "Account" in top left, select "Direct Pay" as your paymodel (#1 in screenshot below).
 * Once you select the Direct Pay workspace account, you should see a new option for workspace image: "(Beta) Nextflow with CPU instances"
 * Click the Launch button for this Nextflow workspace image (#2).
@@ -83,12 +79,8 @@ Store all files you want to keep after the workspace closes in the `/pd` directo
 
 ![Screenshot of /pd and data folders](img/workspace_pd_folder_080422.png){: style="height:400px"}
 
-#### Automated shutdown for the night
-
-**QA-BRH shuts down at 9:20pm CDT** (02:20am UTC). Be sure that your workflow is complete and your data saved by the time QA-BRH is scheduled to shut down for the night; otherwise, you could lose all your unsaved work.
-
 #### Automated shutdown for idle workspaces
 
 Workspaces will automatically be shut down (and all workflows terminated) after **90 minutes of idle time**.
 
-[*Continue to General Workflows*](./nextflow-tutorial-1.md)
+[*Continue to Overview of Containers in Gen3*](./nextflow-overview-containers.md)

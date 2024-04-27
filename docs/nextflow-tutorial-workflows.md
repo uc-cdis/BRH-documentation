@@ -2,49 +2,50 @@
 
 # **Tutorial Nextflow Workflows**
 
-## Get set: Download necessary credentials and software
+We have a collection of notebooks using Nextflow in Gen3 here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks)
 
-Be ready to execute the tutorial workflows below by gathering credentials and installing necessary software.
+Before you start executing any tutorial notebooks, review the information in the [Get Set](#get-set-download-necessary-credentials-and-software) section.  
 
-### **MIDRC credentials**
+## **Get set: Download necessary credentials and software**
 
-You need to generate a MIDRC credentials on the profile page of the [MIDRC portal](https://data.midrc.org/) to download GUIDs in the workspace. For this, please go to [data.midrc.org](https://data.midrc.org/), click on the user icon in the right corner (#1), and open the Profile page (#2). Click on Create API Key (#3). A pop-up window will appear with the key. If you scroll down slightly, you can see the button to download the credentials as a JSON. Credentials are valid for 1 month.
+Be ready to execute the tutorial workflows below by gathering credentials and installing necessary software.  
 
-![Screenshot showing how to find and save MIDRC credentials](./img/MIDRC-credentials.png)
-
-### Get and replace placeholder values from the Nextflow config
+### **Get and replace placeholder values from the Nextflow config**
 
 You can find the values to replace the placeholders in the`queue`, `jobRole` and `workDir` fields in the `nextflow.config` file in your Nextflow workspace. Directions for finding this file are at the bottom of the "Welcome to Nextflow" page that opens when your Nextflow workspace first opens. These placeholder values will need to be replaced in each of the various tutorial Nextflow notebooks.
 
 Note that you should only copy/paste the value to replace `placeholder` for each field; do not copy/paste larger sections of the nextflow config, or there could be indentation problems that interfere with the code.
 
-## Example Nextflow notebooks
+### **MIDRC credentials**
 
-We have a collection of notebooks using Nextflow in Gen3 here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks)
+To download GUIDs in the workspace, you will first need to generate a MIDRC credentials on the profile page of the [MIDRC portal](https://data.midrc.org/). For this, please go to [data.midrc.org](https://data.midrc.org/), click on the user icon in the right corner (#1), and open the Profile page (#2). Click on Create API Key (#3). A pop-up window will appear with the key. If you scroll down slightly, you can see the button to download the credentials as a JSON. Credentials are valid for 1 month.
 
-For this section, you will be most interested in:
+![Screenshot showing how to find and save MIDRC credentials](./img/MIDRC-credentials.png)
 
-* containerized_cpu workflows
-* containerized_gpu workflows
+## **Example Nextflow notebooks**
 
-### Containerized gpu workflow example 1
+### **Notebooks with no containers**
 
-Link to notebook here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container)
+There are several general Nextflow notebooks that do not use containers at all. If you're new to nextflow and just want to get started with workflow commands, try these notebooks: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/non_containerized_nextflow_workflows](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/non_containerized_nextflow_workflows)
 
-For container building, see Dockerfile and requirements file, python code to containerize, and a README that explains how to grab open source models and code and build container. For running workflows there's a python notebook (midrc_gpu_batch_template.ipynb) with additional desc in README
+### **Notebooks using containers**
 
-### Containerized gpu workflow example 2
+We have several [containerized notebooks using CPU](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows), and other [containerized notebooks using GPU](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows).  
 
-Link to notebook here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test)
+#### Notebooks using CPU
 
-For container building, see Dockerfile and requirements file, python code to containerize, and a similar README as above. For running workflows there's a python notebook (torch_cuda_batch_template.ipynb) with additional desc in README
+You can find the directory with containerized notebooks using CPU here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows)
 
-### Containerized cpu workflow example
+Some use cases in this directory include:
 
-Link to notebook here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo)
+* **Cancer use case:** The `chip_cancer` [example tutorial here](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/chip_cancer) includes a Dockerfile, a requirements file, a Nextflow notebook, a collection of python scripts, and a README.
+* **DICOM metadata extraction use case:** The `midrc_batch_demo` [example tutorial here](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo) includes a Dockerfile, a requirements file, two Nextflow notebooks, a collection of python scripts, and a README.
 
-Has same stuff as above and a README [here](https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_cpu_workflows/README) that describes two workflows: one local download workflow, and one batch workflow
+#### Notebooks using GPU
 
-## Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata
+You can find the directory with containerized notebooks using GPU here: [https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows)
 
-Please see code snippet below that shows an example of how to run two basic processes on DICOM files on AWS Batch: i) convert to PNG, ii) extract metadata. Note that to run this, you need to first download open-access DICOM files first to your workspace using the Gen3 SDK (PART 1), and you can stage the files on AWS Batch and run the workflow (PART 2)
+Some use cases in this directory include:
+
+* **Pytorch/cuda test simple use case:** The `torch_cuda_test` [example tutorial here](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test) includes a Dockerfile, a requirements file, a Nextflow notebook, a simple python script, and a README.
+* **COVID Challenge 2022 use case:** The `covid_challenge_container` [example tutorial here](https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container) includes a Dockerfile, a requirements file, a Nextflow notebook, a python script, and a README.
