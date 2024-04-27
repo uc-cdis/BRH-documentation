@@ -14,13 +14,15 @@
         <link rel="prev" href="../nextflow-upload-docker/">
       
       
+        <link rel="next" href="../02-types_of_shared_data/">
+      
       
       <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
-        <title>Nextflow - Tutorials with Containers - Biomedical Research Hub Documentation</title>
+        <title>Nextflow - Tutorials Workflows - Biomedical Research Hub Documentation</title>
       
     
     
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nextflow - Tutorials with Containers
+              Nextflow - Tutorials Workflows
             
           </span>
         </div>
@@ -662,70 +664,11 @@
       
   
   
-  
-    <li class="md-nav__item">
-      <a href="../02-types_of_shared_data/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FAIR Data
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-data_and_repos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data Management and Repositories
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../12-contact/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contact
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
     
     
-      
-        
       
         
       
@@ -748,24 +691,24 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    
+    Nextflow User Guide
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
+            Nextflow User Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -780,26 +723,6 @@
   
   <span class="md-ellipsis">
     Nextflow - Getting Started
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nextflow-tutorial-1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nextflow - General Workflows
   </span>
   
 
@@ -908,7 +831,7 @@
           
   
   <span class="md-ellipsis">
-    Nextflow - Tutorials with Containers
+    Nextflow - Tutorials Workflows
   </span>
   
 
@@ -919,7 +842,7 @@
         
   
   <span class="md-ellipsis">
-    Nextflow - Tutorials with Containers
+    Nextflow - Tutorials Workflows
   </span>
   
 
@@ -949,15 +872,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#midrc-credentials" class="md-nav__link">
-    MIDRC credentials
+  <a href="#get-and-replace-placeholder-values-from-the-nextflow-config" class="md-nav__link">
+    Get and replace placeholder values from the Nextflow config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-and-replace-placeholder-values-from-the-nextflow-config" class="md-nav__link">
-    Get and replace placeholder values from the Nextflow config
+  <a href="#midrc-credentials" class="md-nav__link">
+    MIDRC credentials
   </a>
   
 </li>
@@ -976,22 +899,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#containerized-gpu-workflow-example-1" class="md-nav__link">
-    Containerized gpu workflow example 1
+  <a href="#notebooks-with-no-containers" class="md-nav__link">
+    Notebooks with no containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerized-gpu-workflow-example-2" class="md-nav__link">
-    Containerized gpu workflow example 2
+  <a href="#notebooks-using-containers" class="md-nav__link">
+    Notebooks using containers
+  </a>
+  
+    <nav class="md-nav" aria-label="Notebooks using containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notebooks-using-cpu" class="md-nav__link">
+    Notebooks using CPU
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerized-cpu-workflow-example" class="md-nav__link">
-    Containerized cpu workflow example
+  <a href="#notebooks-using-gpu" class="md-nav__link">
+    Notebooks using GPU
   </a>
   
 </li>
@@ -1000,11 +931,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorial-1-test-running-nextflow-and-aws-batch-workflow-in-existing-docker-container-to-get-midrc-image-files-convert-them-to-png-and-extract-the-metadata" class="md-nav__link">
-    Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1020,6 +949,63 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-types_of_shared_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAIR Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-data_and_repos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Management and Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1059,15 +1045,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#midrc-credentials" class="md-nav__link">
-    MIDRC credentials
+  <a href="#get-and-replace-placeholder-values-from-the-nextflow-config" class="md-nav__link">
+    Get and replace placeholder values from the Nextflow config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-and-replace-placeholder-values-from-the-nextflow-config" class="md-nav__link">
-    Get and replace placeholder values from the Nextflow config
+  <a href="#midrc-credentials" class="md-nav__link">
+    MIDRC credentials
   </a>
   
 </li>
@@ -1086,22 +1072,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#containerized-gpu-workflow-example-1" class="md-nav__link">
-    Containerized gpu workflow example 1
+  <a href="#notebooks-with-no-containers" class="md-nav__link">
+    Notebooks with no containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerized-gpu-workflow-example-2" class="md-nav__link">
-    Containerized gpu workflow example 2
+  <a href="#notebooks-using-containers" class="md-nav__link">
+    Notebooks using containers
+  </a>
+  
+    <nav class="md-nav" aria-label="Notebooks using containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notebooks-using-cpu" class="md-nav__link">
+    Notebooks using CPU
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerized-cpu-workflow-example" class="md-nav__link">
-    Containerized cpu workflow example
+  <a href="#notebooks-using-gpu" class="md-nav__link">
+    Notebooks using GPU
   </a>
   
 </li>
@@ -1110,11 +1104,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorial-1-test-running-nextflow-and-aws-batch-workflow-in-existing-docker-container-to-get-midrc-image-files-convert-them-to-png-and-extract-the-metadata" class="md-nav__link">
-    Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1138,32 +1130,35 @@
 
 <div><p><a href="https://www.nextflow.io/"><img alt="Nextflow logo" src="../img/nextflow.svg" style="height:75px"></a></p>
 <h1 id="tutorial-nextflow-workflows"><strong>Tutorial Nextflow Workflows</strong><a class="headerlink" href="#tutorial-nextflow-workflows" title="Permanent link">¶</a></h1>
-<h2 id="get-set-download-necessary-credentials-and-software">Get set: Download necessary credentials and software<a class="headerlink" href="#get-set-download-necessary-credentials-and-software" title="Permanent link">¶</a></h2>
-<p>Be ready to execute the tutorial workflows below by gathering credentials and installing necessary software.</p>
-<h3 id="midrc-credentials"><strong>MIDRC credentials</strong><a class="headerlink" href="#midrc-credentials" title="Permanent link">¶</a></h3>
-<p>You need to generate a MIDRC credentials on the profile page of the <a href="https://data.midrc.org/">MIDRC portal</a> to download GUIDs in the workspace. For this, please go to <a href="https://data.midrc.org/">data.midrc.org</a>, click on the user icon in the right corner (#1), and open the Profile page (#2). Click on Create API Key (#3). A pop-up window will appear with the key. If you scroll down slightly, you can see the button to download the credentials as a JSON. Credentials are valid for 1 month.</p>
-<p><img alt="Screenshot showing how to find and save MIDRC credentials" src="../img/MIDRC-credentials.png"></p>
-<h3 id="get-and-replace-placeholder-values-from-the-nextflow-config">Get and replace placeholder values from the Nextflow config<a class="headerlink" href="#get-and-replace-placeholder-values-from-the-nextflow-config" title="Permanent link">¶</a></h3>
+<p>We have a collection of notebooks using Nextflow in Gen3 here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks</a></p>
+<p>Before you start executing any tutorial notebooks, review the information in the <a href="#get-set-download-necessary-credentials-and-software">Get Set</a> section.  </p>
+<h2 id="get-set-download-necessary-credentials-and-software"><strong>Get set: Download necessary credentials and software</strong><a class="headerlink" href="#get-set-download-necessary-credentials-and-software" title="Permanent link">¶</a></h2>
+<p>Be ready to execute the tutorial workflows below by gathering credentials and installing necessary software.  </p>
+<h3 id="get-and-replace-placeholder-values-from-the-nextflow-config"><strong>Get and replace placeholder values from the Nextflow config</strong><a class="headerlink" href="#get-and-replace-placeholder-values-from-the-nextflow-config" title="Permanent link">¶</a></h3>
 <p>You can find the values to replace the placeholders in the<code>queue</code>, <code>jobRole</code> and <code>workDir</code> fields in the <code>nextflow.config</code> file in your Nextflow workspace. Directions for finding this file are at the bottom of the "Welcome to Nextflow" page that opens when your Nextflow workspace first opens. These placeholder values will need to be replaced in each of the various tutorial Nextflow notebooks.</p>
 <p>Note that you should only copy/paste the value to replace <code>placeholder</code> for each field; do not copy/paste larger sections of the nextflow config, or there could be indentation problems that interfere with the code.</p>
-<h2 id="example-nextflow-notebooks">Example Nextflow notebooks<a class="headerlink" href="#example-nextflow-notebooks" title="Permanent link">¶</a></h2>
-<p>We have a collection of notebooks using Nextflow in Gen3 here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks</a></p>
-<p>For this section, you will be most interested in:</p>
+<h3 id="midrc-credentials"><strong>MIDRC credentials</strong><a class="headerlink" href="#midrc-credentials" title="Permanent link">¶</a></h3>
+<p>To download GUIDs in the workspace, you will first need to generate a MIDRC credentials on the profile page of the <a href="https://data.midrc.org/">MIDRC portal</a>. For this, please go to <a href="https://data.midrc.org/">data.midrc.org</a>, click on the user icon in the right corner (#1), and open the Profile page (#2). Click on Create API Key (#3). A pop-up window will appear with the key. If you scroll down slightly, you can see the button to download the credentials as a JSON. Credentials are valid for 1 month.</p>
+<p><img alt="Screenshot showing how to find and save MIDRC credentials" src="../img/MIDRC-credentials.png"></p>
+<h2 id="example-nextflow-notebooks"><strong>Example Nextflow notebooks</strong><a class="headerlink" href="#example-nextflow-notebooks" title="Permanent link">¶</a></h2>
+<h3 id="notebooks-with-no-containers"><strong>Notebooks with no containers</strong><a class="headerlink" href="#notebooks-with-no-containers" title="Permanent link">¶</a></h3>
+<p>There are several general Nextflow notebooks that do not use containers at all. If you're new to nextflow and just want to get started with workflow commands, try these notebooks: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/non_containerized_nextflow_workflows">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/non_containerized_nextflow_workflows</a></p>
+<h3 id="notebooks-using-containers"><strong>Notebooks using containers</strong><a class="headerlink" href="#notebooks-using-containers" title="Permanent link">¶</a></h3>
+<p>We have several <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows">containerized notebooks using CPU</a>, and other <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows">containerized notebooks using GPU</a>.  </p>
+<h4 id="notebooks-using-cpu">Notebooks using CPU<a class="headerlink" href="#notebooks-using-cpu" title="Permanent link">¶</a></h4>
+<p>You can find the directory with containerized notebooks using CPU here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows</a></p>
+<p>Some use cases in this directory include:</p>
 <ul>
-<li>containerized_cpu workflows</li>
-<li>containerized_gpu workflows</li>
+<li><strong>Cancer use case:</strong> The <code>chip_cancer</code> <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/chip_cancer">example tutorial here</a> includes a Dockerfile, a requirements file, a Nextflow notebook, a collection of python scripts, and a README.</li>
+<li><strong>DICOM metadata extraction use case:</strong> The <code>midrc_batch_demo</code> <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo">example tutorial here</a> includes a Dockerfile, a requirements file, two Nextflow notebooks, a collection of python scripts, and a README.</li>
 </ul>
-<h3 id="containerized-gpu-workflow-example-1">Containerized gpu workflow example 1<a class="headerlink" href="#containerized-gpu-workflow-example-1" title="Permanent link">¶</a></h3>
-<p>Link to notebook here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container</a></p>
-<p>For container building, see Dockerfile and requirements file, python code to containerize, and a README that explains how to grab open source models and code and build container. For running workflows there's a python notebook (midrc_gpu_batch_template.ipynb) with additional desc in README</p>
-<h3 id="containerized-gpu-workflow-example-2">Containerized gpu workflow example 2<a class="headerlink" href="#containerized-gpu-workflow-example-2" title="Permanent link">¶</a></h3>
-<p>Link to notebook here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test</a></p>
-<p>For container building, see Dockerfile and requirements file, python code to containerize, and a similar README as above. For running workflows there's a python notebook (torch_cuda_batch_template.ipynb) with additional desc in README</p>
-<h3 id="containerized-cpu-workflow-example">Containerized cpu workflow example<a class="headerlink" href="#containerized-cpu-workflow-example" title="Permanent link">¶</a></h3>
-<p>Link to notebook here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_cpu_workflows/midrc_batch_demo</a></p>
-<p>Has same stuff as above and a README <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_cpu_workflows/README">here</a> that describes two workflows: one local download workflow, and one batch workflow</p>
-<h2 id="tutorial-1-test-running-nextflow-and-aws-batch-workflow-in-existing-docker-container-to-get-midrc-image-files-convert-them-to-png-and-extract-the-metadata">Tutorial 1: Test running Nextflow and AWS Batch workflow in existing Docker container to get MIDRC image files, convert them to PNG, and extract the metadata<a class="headerlink" href="#tutorial-1-test-running-nextflow-and-aws-batch-workflow-in-existing-docker-container-to-get-midrc-image-files-convert-them-to-png-and-extract-the-metadata" title="Permanent link">¶</a></h2>
-<p>Please see code snippet below that shows an example of how to run two basic processes on DICOM files on AWS Batch: i) convert to PNG, ii) extract metadata. Note that to run this, you need to first download open-access DICOM files first to your workspace using the Gen3 SDK (PART 1), and you can stage the files on AWS Batch and run the workflow (PART 2)</p></div>
+<h4 id="notebooks-using-gpu">Notebooks using GPU<a class="headerlink" href="#notebooks-using-gpu" title="Permanent link">¶</a></h4>
+<p>You can find the directory with containerized notebooks using GPU here: <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows">https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows</a></p>
+<p>Some use cases in this directory include:</p>
+<ul>
+<li><strong>Pytorch/cuda test simple use case:</strong> The <code>torch_cuda_test</code> <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test">example tutorial here</a> includes a Dockerfile, a requirements file, a Nextflow notebook, a simple python script, and a README.</li>
+<li><strong>COVID Challenge 2022 use case:</strong> The <code>covid_challenge_container</code> <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/covid_challenge_container">example tutorial here</a> includes a Dockerfile, a requirements file, a Nextflow notebook, a python script, and a README.</li>
+</ul></div>
 
 
 
