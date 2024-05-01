@@ -27,11 +27,11 @@ You can access the URLs to pull these images using Docker here:
 
 *Not sure what these are? [Here's a nice overview.](https://blogs.nvidia.com/blog/whats-the-difference-between-a-cpu-and-a-gpu/)*
 
-If your workflow requires GPU (e.g., deep learning or other AI/ML models), please use the GPU instance; otherwise, use CPU.
+In our BRH Workspace, we offer workspace images for CPU and GPU tools. You can read more about this on our [Getting Started page](nextflow-getting-started.md/#gpu-vs-cpu-nextflow-workspace-images). Choose the appropriate workspace image (CPU or GPU) for your Docker image and tools.
 
 **GPU images**
 
-We have 3 images in our current selection that offer [CUDA](https://www.turing.com/kb/understanding-nvidia-cuda) support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.
+We have 3 base images in our current selection that offer [CUDA](https://www.turing.com/kb/understanding-nvidia-cuda) support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.
 
 > gen3-cuda-12.3-ubuntu22.04-openssl *(preferred)*
 >
@@ -41,7 +41,7 @@ We have 3 images in our current selection that offer [CUDA](https://www.turing.c
 
 **CPU images**
 
-We have one image that is available for running workflows on CPUs.
+We have one base image that is available for running workflows on CPUs.
 
 > amazonlinux-base
 
@@ -57,7 +57,9 @@ Next, open your terminal. Run `docker pull <image URL>`, where the image URL is 
 
 ### **Test using Docker Scout to evaluate image vulnerabilities**
 
-At the end of your test fetch, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). We have already evaluated the security compliance for our image, so it's not necessary here. However, since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout.
+At the end of your test fetch, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). We have already evaluated the security compliance for our image, so it's not necessary for security here. However, since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout.  
+
+*Note: If you don't seem to have access to Docker Scout, check whether you're using the [latest Docker version](#prerequisites).*
 
 #### **Run Docker Scout**
 
