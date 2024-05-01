@@ -90,11 +90,13 @@ If the **push fails**, you will get a persistent message about "Waiting for laye
 
 Once the push completes, your Docker image will be available in the ECR repository (although you will not be able to see it). It will be scanned, and if passes the security scanning, CTDS will move it to the nextflow-approved repo. When it's available in nextflow-approved, User Services will share a docker URI that looks something like this:  
 `143731057154.dkr.ecr.us-east-1.amazonaws.com/nextflow-approved/< your username >:< image-tag >`  
-You can then use this new URI to run Nextflow workflows with your container in the BRH workspace.
+You can then use this new URI to run Nextflow workflows with your container in the BRH workspace. (Note that you need to copy the whole URI into the container field of the nextflow notebook, as described [in the next section](#how-to-use-an-approved-docker-uri).)
 
 ## **How to use an approved Docker URI**  
 
-Once you have your Docker URI, you are ready to run your Nextflow workflow! You can take the Docker URI and make it the value for the "container" field(s) in your Nextflow notebook. For example, in the `torch_cuda_batch` [Nextflow notebook](https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb), you would go to the `nextflow.config` section and replace the `placeholder` value for `container` with the approved Docker URI.  
+Once you have your Docker URI, you are ready to run your Nextflow workflow! You can take the Docker URI (copy the entire line) and make it the value for the "container" field(s) in your Nextflow notebook. For example, in the `torch_cuda_batch` [Nextflow notebook](https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb), you would go to the `nextflow.config` section and replace the `placeholder` value for `container` with the approved Docker URI.  
+
+Please note that you will need to replace all `placeholder` values in the `nextflow.config` with values specific to your workspace. Please see the section ["Get and replace placeholder values from the Nextflow config"](nextflow-tutorial-workflows.md/#get-and-replace-placeholder-values-from-the-nextflow-config) on the Tutorials page for more information.
 
 ![Screenshot of nextflow.config, showing where you put the Docker URI](img/nextflow-config.png)
 

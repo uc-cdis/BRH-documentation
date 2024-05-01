@@ -83,4 +83,8 @@ Store all files you want to keep after the workspace closes in the `/pd` directo
 
 Workspaces will automatically be shut down (and all workflows terminated) after **90 minutes of idle time**.
 
+#### GPU vs CPU Nextflow workspace images
+
+As you can see [in the screenshot above](#3-launch-a-workspace-with-the-persistent-paymodel), there are 2 Nextflow workspace images: A CPU image and a GPU image. If your workflow requires GPU (e.g., deep learning or other AI/ML models), please use the GPU instance; otherwise, use CPU. You can [read more about CPU and GPU options in Gen3 Nextflow here](nextflow-create-docker.md/#how-to-choose-your-base-image).  
+
 [*Continue to Overview of Containers in Gen3*](./nextflow-overview-containers.md)
