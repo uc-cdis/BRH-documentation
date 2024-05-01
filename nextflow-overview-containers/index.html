@@ -945,15 +945,15 @@
 <div><p><a href="https://www.nextflow.io/"><img alt="Nextflow logo" src="../img/nextflow.svg" style="height:75px"></a></p>
 <h1 id="overview-developing-and-deploying-containers-in-gen3"><strong>Overview: Developing and Deploying Containers in Gen3</strong><a class="headerlink" href="#overview-developing-and-deploying-containers-in-gen3" title="Permanent link">¶</a></h1>
 <p><img alt="Overview of steps in developing a container and making it available for use in workflows" src="../img/container-development.png"></p>
-<p><strong>Locally build and test container:</strong>
-Gen3 provides several <a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">FedRAMP security-compliant base images</a> that users can pull and customize.</p>
-<p><strong>Request credentials and push container to Gen3 staging:</strong>
-Users can email Gen3 to <a href="../nextflow-request-creds/">request short-term credentials</a> that permit them to authenticate Docker in their terminal to upload the local Docker image to a Gen3 staging repo for security review.</p>
-<p><strong>Container is security-scanned; Gen3 sends approved container URI:</strong>
-Gen3 completes the security scan within minutes. If it is compliant, the image is moved to an ECR repo ("approved") from where the container can be run, and Gen3 staff will send a container URI to the user.</p>
+<p><strong>Locally build and test container:</strong></p>
+<p>Gen3 provides several <a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">FedRAMP security-compliant base images</a> that users can pull and customize.</p>
+<p><strong>Request credentials and push container to Gen3 staging:</strong></p>
+<p>Users can email Gen3 to <a href="../nextflow-request-creds/">request short-term credentials</a> that permit them to authenticate Docker in their terminal to upload the local Docker image to a Gen3 staging repo for security review.</p>
+<p><strong>Container is security-scanned; Gen3 sends approved container URI:</strong></p>
+<p>Gen3 completes the security scan of the container. Typically, the scanning completes within a couple hours; however it takes longer for larger images with more layers. If it is security-compliant, the image is moved to an ECR repo ("approved") from where the container can be run, and Gen3 staff will send a container URI to the user for use in the Nextflow workflows.</p>
 <p>If there are problems that make the image non-compliant with security requirements, a report of the vulnerabilities is provided to the user for remediation and resubmission. Users are responsible for resolving image vulnerabilities and resubmitting for scanning.  </p>
-<p><strong>Run workflow using approved container URI:</strong>
-In the BRH workspace, use a Nextflow Jupyter notebook to run Nextflow workflows in the approved container using the approved container URI. Some example notebooks can be found <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks">here</a>, and specific examples that use an approved image URI can be found <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb">here</a> and <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/README.md">here</a></p>
+<p><strong>Run workflow using approved container URI:</strong></p>
+<p>In the BRH workspace, use a Nextflow Jupyter notebook to run Nextflow workflows in the approved container using the approved container URI. Some example notebooks can be found <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks">here</a>, and specific examples that use an approved image URI can be found <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb">here</a> and <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/README.md">here</a></p>
 <hr>
 <p><a href="../nextflow-create-docker/"><em>Continue to Create Dockerfile</em></a></p></div>
 

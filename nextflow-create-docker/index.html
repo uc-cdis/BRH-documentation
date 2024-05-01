@@ -1201,16 +1201,16 @@
 <h3 id="how-to-choose-your-base-image"><strong>How to choose your base image</strong><a class="headerlink" href="#how-to-choose-your-base-image" title="Permanent link">¶</a></h3>
 <p><strong>GPU vs. CPU</strong></p>
 <p><em>Not sure what these are? <a href="https://blogs.nvidia.com/blog/whats-the-difference-between-a-cpu-and-a-gpu/">Here's a nice overview.</a></em></p>
-<p>If your workflow requires GPU (e.g., deep learning or other AI/ML models), please use the GPU instance; otherwise, use CPU.</p>
+<p>In our BRH Workspace, we offer workspace images for CPU and GPU tools. You can read more about this on our <a href="../nextflow-getting-started/#gpu-vs-cpu-nextflow-workspace-images">Getting Started page</a>. Choose the appropriate workspace image (CPU or GPU) for your Docker image and tools.</p>
 <p><strong>GPU images</strong></p>
-<p>We have 3 images in our current selection that offer <a href="https://www.turing.com/kb/understanding-nvidia-cuda">CUDA</a> support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.</p>
+<p>We have 3 base images in our current selection that offer <a href="https://www.turing.com/kb/understanding-nvidia-cuda">CUDA</a> support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.</p>
 <blockquote>
 <p>gen3-cuda-12.3-ubuntu22.04-openssl <em>(preferred)</em></p>
 <p>gen3-cuda-12.3-torch2.2-ubuntu22.04-openssl <em>(also preferred)</em></p>
 <p>gen3-cuda-11.8-ubuntu22.04-openssl <em>(only use if your tools require a lower version of CUDA)</em></p>
 </blockquote>
 <p><strong>CPU images</strong></p>
-<p>We have one image that is available for running workflows on CPUs.</p>
+<p>We have one base image that is available for running workflows on CPUs.</p>
 <blockquote>
 <p>amazonlinux-base</p>
 </blockquote>
@@ -1220,7 +1220,8 @@
 <p>Next, open your terminal. Run <code>docker pull &lt;image URL&gt;</code>, where the image URL is the full line as displayed in the <a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">file of security-validated base images</a>. If it's working, you will see language that it is pulling (see below). When it's complete (and successfully pulled), there will be a line that says <code>Status: Downloaded &lt;image&gt;</code> (see yellow highlight below). If you see this, you know that all the steps necessary to pull your image work. If you don't see this, reach out to us on Slack.</p>
 <p><img alt="Test docker pull command in terminal" src="../img/test-docker-pull.png"></p>
 <h3 id="test-using-docker-scout-to-evaluate-image-vulnerabilities"><strong>Test using Docker Scout to evaluate image vulnerabilities</strong><a class="headerlink" href="#test-using-docker-scout-to-evaluate-image-vulnerabilities" title="Permanent link">¶</a></h3>
-<p>At the end of your test fetch, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). We have already evaluated the security compliance for our image, so it's not necessary here. However, since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout.</p>
+<p>At the end of your test fetch, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). We have already evaluated the security compliance for our image, so it's not necessary for security here. However, since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout.  </p>
+<p><em>Note: If you don't seem to have access to Docker Scout, check whether you're using the <a href="#prerequisites">latest Docker version</a>.</em></p>
 <h4 id="run-docker-scout"><strong>Run Docker Scout</strong><a class="headerlink" href="#run-docker-scout" title="Permanent link">¶</a></h4>
 <p>To run Docker Scout, you must:</p>
 <ul>
