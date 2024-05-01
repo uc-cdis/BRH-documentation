@@ -1236,6 +1236,10 @@
 <p><em>Want to know more about Docker Scout? <a href="https://docs.docker.com/scout/quickstart/">Check out the documentation</a>.</em></p>
 <h2 id="build-your-image-locally-on-top-of-the-base-image"><strong>Build your image locally on top of the base image</strong><a class="headerlink" href="#build-your-image-locally-on-top-of-the-base-image" title="Permanent link">¶</a></h2>
 <p>To build your own image, you need to create a Dockerfile. To build your image on a base image, the first line of the Dockerfile should reference the base image tag. The Dockerfile you create typically lives in the Git repository where you have your code to make it easier to copy into your container.</p>
+<p><strong>Important note: Users on Macs with an M1 or M2 chip</strong> must build the Docker image using a platform flag so it can be run in Batch. Use this command to set the appropriate target platform for <code>build</code>:  </p>
+<p><code>docker buildx build --platform linux/amd64 .</code></p>
+<p><em>(note the <code>.</code> at the end of the command)</em></p>
+<p><em>You can read more about this platform flag and building for a platform <a href="https://docs.docker.com/reference/cli/docker/buildx/build/#platform">here</a> and <a href="https://docs.docker.com/build/building/multi-platform/">here</a>.</em></p>
 <h3 id="unfamiliar-with-creating-dockerfiles"><strong>Unfamiliar with creating Dockerfiles?</strong><a class="headerlink" href="#unfamiliar-with-creating-dockerfiles" title="Permanent link">¶</a></h3>
 <p>If you are unfamiliar with creating Dockerfiles, we encourage you to explore the <a href="https://medium.com/@anshita.bhasin/a-step-by-step-guide-to-create-dockerfile-9e3744d38d11">excellent tutorial here</a>, as well as review the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Dockerfile documentation here</a>, before you proceed. We have identified only key highlights below.</p>
 <p>One reminder: Dockerfiles are typically named just "Dockerfile" - with a capital D and no file extension.</p>
