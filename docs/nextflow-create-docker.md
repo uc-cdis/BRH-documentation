@@ -83,6 +83,14 @@ You can run the next suggested command (shown in red box above, `docker scout cv
 
 To build your own image, you need to create a Dockerfile. To build your image on a base image, the first line of the Dockerfile should reference the base image tag. The Dockerfile you create typically lives in the Git repository where you have your code to make it easier to copy into your container.
 
+**Important note: Users on Macs with an M1 or M2 chip** must build the Docker image using a platform flag so it can be run in Batch. Use this command to set the appropriate target platform for `build`:  
+
+`docker buildx build --platform linux/amd64 .`
+
+*(note the `.` at the end of the command)*
+
+*You can read more about this platform flag and building for a platform [here](https://docs.docker.com/reference/cli/docker/buildx/build/#platform) and [here](https://docs.docker.com/build/building/multi-platform/).*
+
 ### **Unfamiliar with creating Dockerfiles?**
 
 If you are unfamiliar with creating Dockerfiles, we encourage you to explore the [excellent tutorial here](https://medium.com/@anshita.bhasin/a-step-by-step-guide-to-create-dockerfile-9e3744d38d11), as well as review the [Dockerfile documentation here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/), before you proceed. We have identified only key highlights below.
