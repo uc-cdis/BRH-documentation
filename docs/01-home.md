@@ -27,6 +27,6 @@ The BRH is powered by the open-source software [“Gen3”][Gen3.org]
 
 This is a (test)[https://github.com/uc-cdis/BRH-documentation/edit/master/docs/01-home.md#test] I expect to pass b/c it's a real link
 This is a (test)[http://github.com/uc-cdis/BRH-documentation/edit/master/docs/01-home.md#test] I expect to pass b/c it's a real link
-This is a (test)[https://example.com#test] I expect to fail b/c it's not a real link
-This is a (test)[http://example.com#test] I expect to fail b/c it's not a real link
+This is a (test)[https://test.example.com#test] I expect to fail b/c it's not a real link
+This is a (test)[http://test.example.com#test] I expect to fail b/c it's not a real link
 This is another (test)[something#test] I expect to pass b/c this should get ignored
