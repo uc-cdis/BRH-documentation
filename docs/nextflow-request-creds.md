@@ -2,6 +2,8 @@
 
 # **Request Credentials for Uploading a Docker Container**
 
+Before you request credentials, please be sure that you have successfully [built your Docker image locally](nextflow-create-docker.md/#build-your-image-locally-on-top-of-the-base-image), and that you have already [scanned it with Docker Scout](nextflow-create-docker.md/#my-image-passes-the-local-security-scanning). This will reduce the likelihood of needing to re-request credentials for this container. 
+
 *Please copy and paste the email template below into a new email and send to [brhsupport@datacommons.io](mailto:brhsupport@datacommons.io). Please be sure to add the relevant information to the bolded fields.*
 
 ------
