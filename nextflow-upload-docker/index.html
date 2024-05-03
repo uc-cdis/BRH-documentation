@@ -899,29 +899,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preparing-to-push-your-docker-image" class="md-nav__link">
-    Preparing to push your Docker image
+  <a href="#preparing-to-push-your-docker-image-tag-your-docker-image" class="md-nav__link">
+    Preparing to push your Docker image: Tag your Docker image
   </a>
-  
-    <nav class="md-nav" aria-label="Preparing to push your Docker image">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" class="md-nav__link">
-    If you already built a local Docker image: Tag your Docker image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-you-need-to-build-your-docker-image" class="md-nav__link">
-    If you need to build your Docker image:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1134,29 +1114,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preparing-to-push-your-docker-image" class="md-nav__link">
-    Preparing to push your Docker image
+  <a href="#preparing-to-push-your-docker-image-tag-your-docker-image" class="md-nav__link">
+    Preparing to push your Docker image: Tag your Docker image
   </a>
-  
-    <nav class="md-nav" aria-label="Preparing to push your Docker image">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" class="md-nav__link">
-    If you already built a local Docker image: Tag your Docker image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#if-you-need-to-build-your-docker-image" class="md-nav__link">
-    If you need to build your Docker image:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1246,10 +1206,8 @@
 <p>Next, use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry. In the credentials, there is a command below the line "After setting credentials you will need to log in to your docker registry. Please run the following command:". Copy that (it will look similar to the command below) and run it in the terminal.</p>
 <pre><code> aws ecr get-login-password --region &lt;region&gt; | docker login --username AWS --password-stdin &lt;repositoryUri&gt;
 </code></pre>
-<h2 id="preparing-to-push-your-docker-image"><strong>Preparing to push your Docker image</strong><a class="headerlink" href="#preparing-to-push-your-docker-image" title="Permanent link">¶</a></h2>
-<p>The specific steps you use to prepare to push your image depends on whether you have an image already built or if you will need to build from a Dockerfile.</p>
-<h3 id="if-you-already-built-a-local-docker-image-tag-your-docker-image"><strong>If you already built a local Docker image: Tag your Docker image</strong><a class="headerlink" href="#if-you-already-built-a-local-docker-image-tag-your-docker-image" title="Permanent link">¶</a></h3>
-<p>If you already have a locally-built Docker image, you will not need to run the <code>docker build</code> command included in the credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use. <em>This command is not in the credentials file.</em>  </p>
+<h2 id="preparing-to-push-your-docker-image-tag-your-docker-image"><strong>Preparing to push your Docker image: Tag your Docker image</strong><a class="headerlink" href="#preparing-to-push-your-docker-image-tag-your-docker-image" title="Permanent link">¶</a></h2>
+<p>You should already have a <a href="../nextflow-create-docker/">locally-built Docker image</a> before you get your credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use.  </p>
 <pre><code> docker tag &lt;local-image&gt;:&lt;local-tag&gt; &lt;repositoryUri&gt;:&lt;image-tag&gt;
 </code></pre>
 <p>Replace <code>&lt; local-image &gt;</code> with the name of your local Docker image and <code>&lt; local-tag &gt;</code> with the tag you want to push.</p>
@@ -1263,13 +1221,6 @@ Note: the <code>image-tag</code> you select will travel with your image to the a
 For example, you create an image with an image-tag <code>batch-poc</code>. If you later push another image to <code>&lt; repositoryUri &gt;:batch-poc</code>, it will overwrite the previous version of the image in your ECR (you will only have 1 container with the image tag "batch-poc").<br>
 If you do not want to overwrite, you can use versioned image-tags. For example: <code>batch-poc-1.0</code>, and then <code>batch-poc-1.1</code>.<br>
 If you want to replace previous versions of your container, you can use the same image-tag.  </p>
-</blockquote>
-<h3 id="if-you-need-to-build-your-docker-image"><strong>If you need to build your Docker image:</strong><a class="headerlink" href="#if-you-need-to-build-your-docker-image" title="Permanent link">¶</a></h3>
-<p>If you haven't already built your Docker image, you can use the <code>docker build</code> command that is included in your credentials, similar to what is shown below. Note that you should run this command from the directory holding your Dockerfile. You will need to replace the <code>&lt; tag &gt;</code> in your command with the image tag name you want to use in your ECR. (Read more about image tags in the previous section.)</p>
-<pre><code> docker build -t &lt;repositoryUri&gt;:&lt;tag&gt;
-</code></pre>
-<blockquote>
-<p>If you use this <code>docker build</code> command from your credentials, you do not need to use the <code>docker tag</code> command (described in the previous section).  </p>
 </blockquote>
 <h2 id="push-the-docker-image-to-the-ecr"><strong>Push the Docker image to the ECR</strong><a class="headerlink" href="#push-the-docker-image-to-the-ecr" title="Permanent link">¶</a></h2>
 <p>Push the tagged image to the ECR repository. The <code>docker push</code> command is also in the credentials - you just need to specify the image tag you selected when either tagging or building the image in the previous section.  </p>
