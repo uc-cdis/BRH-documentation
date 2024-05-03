@@ -48,13 +48,9 @@ Next, use the AWS CLI to retrieve an authentication token and authenticate your 
 
      aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <repositoryUri>
 
-## **Preparing to push your Docker image**
+## **Preparing to push your Docker image: Tag your Docker image**
 
-The specific steps you use to prepare to push your image depends on whether you have an image already built or if you will need to build from a Dockerfile.
-
-### **If you already built a local Docker image: Tag your Docker image**
-
-If you already have a locally-built Docker image, you will not need to run the `docker build` command included in the credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use. *This command is not in the credentials file.*  
+You should already have a [locally-built Docker image](nextflow-create-docker.md) before you get your credentials. But, you do need to tag it with the ECR repository URI and the image tag you want to use.  
 
      docker tag <local-image>:<local-tag> <repositoryUri>:<image-tag>
 
@@ -67,14 +63,6 @@ Replace `< repositoryUri >` with the ECR repository URI provided at the top of t
 > For example, you create an image with an image-tag `batch-poc`. If you later push another image to `< repositoryUri >:batch-poc`, it will overwrite the previous version of the image in your ECR (you will only have 1 container with the image tag "batch-poc").  
 > If you do not want to overwrite, you can use versioned image-tags. For example: `batch-poc-1.0`, and then `batch-poc-1.1`.  
 > If you want to replace previous versions of your container, you can use the same image-tag.  
-
-### **If you need to build your Docker image:**
-
-If you haven't already built your Docker image, you can use the `docker build` command that is included in your credentials, similar to what is shown below. Note that you should run this command from the directory holding your Dockerfile. You will need to replace the `< tag >` in your command with the image tag name you want to use in your ECR. (Read more about image tags in the previous section.)
-
-     docker build -t <repositoryUri>:<tag>
-
-> If you use this `docker build` command from your credentials, you do not need to use the `docker tag` command (described in the previous section).  
 
 ## **Push the Docker image to the ECR**
 
