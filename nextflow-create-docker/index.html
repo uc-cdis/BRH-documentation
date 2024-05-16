@@ -832,6 +832,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-that-your-docker-and-docker-scout-are-working-as-expected" class="md-nav__link">
+    Verify that your Docker and Docker Scout are working as expected
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify that your Docker and Docker Scout are working as expected">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#test-pulling-the-docker-image" class="md-nav__link">
     Test pulling the Docker image
@@ -1093,6 +1106,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-that-your-docker-and-docker-scout-are-working-as-expected" class="md-nav__link">
+    Verify that your Docker and Docker Scout are working as expected
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify that your Docker and Docker Scout are working as expected">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#test-pulling-the-docker-image" class="md-nav__link">
     Test pulling the Docker image
@@ -1190,7 +1216,9 @@
 <p>This guide is for users who want to build Docker containers for use in Gen3 workspaces.</p>
 <h3 id="prerequisites"><strong>Prerequisites</strong><a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://www.docker.com/get-started/">Docker</a> installed on your local machine</li>
+<li><a href="https://www.docker.com/get-started/">Docker Desktop</a> installed on your local machine <em>(note: Docker Desktop comes with Docker Scout, which will allow you to do your own preliminary security scanning before requesting credentials, so as to save you time. Strictly speaking, only the Docker CLI is required if you are willing to risk uploading without scanning.)</em></li>
+<li>Docker Scout <em>(comes with Docker Desktop)</em> - required for scanning your built image before requesting credentials</li>
+<li>Create a Docker account - also required for scanning your built image before requesting credentials <em>(when you sign in on Docker Desktop for the first time, you will be asked to create an account)</em></li>
 <li>Clone or download the <a href="https://github.com/uc-cdis/bio-nextflow/tree/master"><code>bio-nextflow</code> repo</a></li>
 </ul>
 <h2 id="start-with-a-security-validated-base-image"><strong>Start with a security-validated base image</strong><a class="headerlink" href="#start-with-a-security-validated-base-image" title="Permanent link">¶</a></h2>
@@ -1198,11 +1226,13 @@
 <p>You can access the URLs to pull these images using Docker here:</p>
 <p><a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt</a></p>
 <p><img alt="Screenshot of URLs for secure base images" src="../img/base-image-URLs.png"></p>
+<p>Please note: if you see <strong>an asterisk next to one of these URLs, it means that the image is temporarily unavailable</strong> because we are resolving a vulnerability in our base image. Please wait until the asterisk is removed to build an image on that base image. If you would like an estimated timeframe for when the base image will be available, please ping us on Slack (<code>@nextflow-support</code>).  </p>
 <h3 id="how-to-choose-your-base-image"><strong>How to choose your base image</strong><a class="headerlink" href="#how-to-choose-your-base-image" title="Permanent link">¶</a></h3>
 <p><strong>GPU vs. CPU</strong></p>
 <p><em>Not sure what these are? <a href="https://blogs.nvidia.com/blog/whats-the-difference-between-a-cpu-and-a-gpu/">Here's a nice overview.</a></em></p>
 <p>In our BRH Workspace, we offer workspace images for CPU and GPU tools. You can read more about this on our <a href="../nextflow-getting-started/#gpu-vs-cpu-nextflow-workspace-images">Getting Started page</a>. Choose the appropriate workspace image (CPU or GPU) for your Docker image and tools.</p>
 <p><strong>GPU images</strong></p>
+<p><strong>Note for May 2024 MIDRC testers: please be sure to choose the image using CUDA 11.8; even though it is described as "less preferred", it is the version that is compatible with the other tools you're using.</strong></p>
 <p>We have 3 base images in our current selection that offer <a href="https://www.turing.com/kb/understanding-nvidia-cuda">CUDA</a> support for running on GPUs -- these have "cuda" in the image name, followed by the CUDA version. When possible, please choose the latest version of CUDA compatible with your tools.</p>
 <blockquote>
 <p>gen3-cuda-12.3-ubuntu22.04-openssl <em>(preferred)</em></p>
@@ -1214,13 +1244,15 @@
 <blockquote>
 <p>amazonlinux-base</p>
 </blockquote>
+<h2 id="verify-that-your-docker-and-docker-scout-are-working-as-expected">Verify that your Docker and Docker Scout are working as expected<a class="headerlink" href="#verify-that-your-docker-and-docker-scout-are-working-as-expected" title="Permanent link">¶</a></h2>
+<p>Before you take the time to build your own Dockerfile, its good to be sure your Docker is able to pull the base image of interest and that you are able to scan with Docker Scout. Doing these tests will be quite quick, and will help you identify problems more easily than if you try to troubleshoot problems in a build.</p>
 <h3 id="test-pulling-the-docker-image"><strong>Test pulling the Docker image</strong><a class="headerlink" href="#test-pulling-the-docker-image" title="Permanent link">¶</a></h3>
-<p>Before you proceed with using this URL in your Dockerfile, you want to make sure you can pull the image. You can verify this by running the <code>docker pull</code> commmand in your terminal while Docker is running.</p>
+<p>This will help make sure you can pull the base image of interest by running the <code>docker pull</code> commmand in your terminal, as described below.</p>
 <p>First, open your Docker Desktop application (just to be sure Docker is running).</p>
-<p>Next, open your terminal. Run <code>docker pull &lt;image URL&gt;</code>, where the image URL is the full line as displayed in the <a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">file of security-validated base images</a>. If it's working, you will see language that it is pulling (see below). When it's complete (and successfully pulled), there will be a line that says <code>Status: Downloaded &lt;image&gt;</code> (see yellow highlight below). If you see this, you know that all the steps necessary to pull your image work. If you don't see this, reach out to us on Slack.</p>
+<p>Next, open your terminal. Run <code>docker pull &lt;image URL&gt;</code>, where the image URL is the full line as displayed in the <a href="https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt">file of security-validated base images</a>. If it's working, you will see language that it is pulling (see below). When it's complete (and successfully pulled), there will be a line that says <code>Status: Downloaded &lt;image&gt;</code> (see yellow highlight below). If you see this, you know that all the steps necessary to pull your image work. If you don't see this, reach out to us on Slack (<code>@nextflow-support</code>)</p>
 <p><img alt="Test docker pull command in terminal" src="../img/test-docker-pull.png"></p>
 <h3 id="test-using-docker-scout-to-evaluate-image-vulnerabilities"><strong>Test using Docker Scout to evaluate image vulnerabilities</strong><a class="headerlink" href="#test-using-docker-scout-to-evaluate-image-vulnerabilities" title="Permanent link">¶</a></h3>
-<p>At the end of your test fetch, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). We have already evaluated the security compliance for our image, so it's not necessary for security here. However, since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout.  </p>
+<p>At the end of your test pull, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). Since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout (even though we do not expect the base images to have any security problems).  </p>
 <p><em>Note: If you don't seem to have access to Docker Scout, check whether you're using the <a href="#prerequisites">latest Docker version</a>.</em></p>
 <h4 id="run-docker-scout"><strong>Run Docker Scout</strong><a class="headerlink" href="#run-docker-scout" title="Permanent link">¶</a></h4>
 <p>To run Docker Scout, you must:</p>
@@ -1233,34 +1265,38 @@
 <p><img alt="Test Docker Scout command in terminal" src="../img/scout-quickview.png"></p>
 <p>You can run the next suggested command (shown in red box above, <code>docker scout cves...</code>) to see the full list of vulnerabilities.</p>
 <p><strong>Images should be able to pass Gen3 security scanning if there are no Critical vulnerabilities.</strong>  </p>
+<p><em>But please note: The unfortunate nature of vulnerabilities is that there are always new ones appearing, despite our active monitoring. If you do see that one of our base images has a Critical vulnerability reported by Docker Scout, please alert us on Slack (<code>@nextflow-support</code>)</em></p>
 <p><em>Want to know more about Docker Scout? <a href="https://docs.docker.com/scout/quickstart/">Check out the documentation</a>.</em></p>
 <h2 id="build-your-image-locally-on-top-of-the-base-image"><strong>Build your image locally on top of the base image</strong><a class="headerlink" href="#build-your-image-locally-on-top-of-the-base-image" title="Permanent link">¶</a></h2>
-<p>To build your own image, you need to create a Dockerfile. To build your image on a base image, the first line of the Dockerfile should reference the base image tag. The Dockerfile you create typically lives in the Git repository where you have your code to make it easier to copy into your container.</p>
-<p><strong>Important note: Users on Macs with an M1 or M2 chip</strong> must build the Docker image using a platform flag so it can be run in Batch. Use this command to set the appropriate target platform for <code>build</code>:  </p>
-<p><code>docker buildx build --platform linux/amd64 .</code></p>
+<p>To build your own image, you need to create a Dockerfile. <em>(Reminder: Dockerfiles are typically named just "Dockerfile" - with a capital D and no file extension.)</em> To build your image on a base image, the first line of the Dockerfile should reference the base image tag. The Dockerfile you create typically lives in the Git repository where you have your code to make it easier to copy into your container.  </p>
+<p><strong>Important note: Users on Macs with an M1 or M2 chip</strong> MUST build the Docker image using a platform flag so it can be run in Batch. <em>(If you are not using an M1/M2 chip, you can also use this command, although you do not have to if you prefer a more typical build command.)</em> This command will set the appropriate target platform for <code>build</code> so your image can be used in Batch:  </p>
+<p><code>docker buildx build --pull --platform linux/amd64 .</code></p>
 <p><em>(note the <code>.</code> at the end of the command)</em></p>
+<p><em>The <code>--pull</code> part of the command will ensure you are always pulling a fresh version of the base image, and not using any cached images from previous builds that may now have vulnerabilities.</em></p>
 <p><em>You can read more about this platform flag and building for a platform <a href="https://docs.docker.com/reference/cli/docker/buildx/build/#platform">here</a> and <a href="https://docs.docker.com/build/building/multi-platform/">here</a>.</em></p>
 <h3 id="unfamiliar-with-creating-dockerfiles"><strong>Unfamiliar with creating Dockerfiles?</strong><a class="headerlink" href="#unfamiliar-with-creating-dockerfiles" title="Permanent link">¶</a></h3>
-<p>If you are unfamiliar with creating Dockerfiles, we encourage you to explore the <a href="https://medium.com/@anshita.bhasin/a-step-by-step-guide-to-create-dockerfile-9e3744d38d11">excellent tutorial here</a>, as well as review the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Dockerfile documentation here</a>, before you proceed. We have identified only key highlights below.</p>
-<p>One reminder: Dockerfiles are typically named just "Dockerfile" - with a capital D and no file extension.</p>
+<p>If you are unfamiliar with creating Dockerfiles, we encourage you to explore the <a href="https://medium.com/@anshita.bhasin/a-step-by-step-guide-to-create-dockerfile-9e3744d38d11">excellent tutorial here</a>, as well as review the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Dockerfile documentation here</a>, before you proceed.  </p>
+<p>Note: Dockerfiles are typically named just "Dockerfile" - with a capital D and no file extension.</p>
 <h3 id="example-build-an-image-with-a-dockerfile-and-a-requirementstxt"><strong>Example: Build an image with a Dockerfile and a requirements.txt</strong><a class="headerlink" href="#example-build-an-image-with-a-dockerfile-and-a-requirementstxt" title="Permanent link">¶</a></h3>
+<p><em>Please note: Images built on any of the base images with CUDA can take 3 hours or more to completely build.</em>  </p>
 <p>In our example here, we will have you build your image using a <code>requirements.txt</code> to identify the software tools you want to add to the base image, as well as a Dockerfile that pulls in the base image, adds the software tools specified in the requirements file, copies relevant code files, and establishes some setup parameters.</p>
-<p>Our example will use the files in the <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test">torch_cuda_test directory</a> of the bio-nextflow repository. You can review the <code>readme</code> file in this directory for more information. It is a simple example that will build up from our base image by adding PyTorch. The Nextflow script will ultimately use a python script that checks the version of CUDA in the GPU instance and checks whether it is compatible with the version of PyTorch and CUDA available in the container.</p>
+<p>Our example will use the files in the <a href="https://github.com/uc-cdis/bio-nextflow/tree/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test">torch_cuda_test directory</a> of the bio-nextflow repository. You can review the <code>readme</code> file in this directory for more information. It is a simple example that will build up from our base image by adding PyTorch. The Nextflow script will ultimately use a Python script that checks the version of CUDA in the GPU instance and checks whether it is compatible with the version of PyTorch and CUDA available in the container.</p>
 <p>First, in the terminal, navigate to the directory where you cloned the the <code>bio-nextflow</code> repository (see <a href="#prerequisites">Prerequisites section</a>). Next, navigate to where the downloaded Dockerfile and requirements.txt are located:</p>
 <p><code>cd bio-nextflow/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test</code></p>
 <blockquote>
 <p>If you open the Dockerfile, note that the first line of the Dockerfile references the URL for one of our GPU base images. This is always how you will reference a base image -- with <code>FROM</code> and the URL.</p>
 </blockquote>
 <p>Then, run the Docker <code>build</code> command. For example:</p>
-<p><code>docker build . -t my_docker</code></p>
-<p>will tag the Dockerfile in the directory with the tag <code>my_docker</code>, and build a Docker image using the Dockerfile.  </p>
+<p><code>docker buildx build --pull --platform linux/amd64 . -t my_docker</code>  </p>
+<p>will tag the Dockerfile in the local directory with the tag <code>my_docker</code>, and build a Docker image using the Dockerfile.  </p>
 <h3 id="example-examine-built-image-for-vulnerabilities"><strong>Example: Examine built image for vulnerabilities</strong><a class="headerlink" href="#example-examine-built-image-for-vulnerabilities" title="Permanent link">¶</a></h3>
-<p>You now have a new Docker image built upon our security-compliant base image. To more rapidly identify and address any security concerns in your customized image, we encourage all users to locally scan their image for vulnerabilities using Docker Scout, as described <a href="#test-using-docker-scout-to-evaluate-image-vulnerabilities">in our test above</a>. Here, we have tagged our new image with <code>my_docker</code>. So, we would run the Docker Scout <code>quickview</code> command on the image using this command:</p>
+<p>You now have a new Docker image built upon our security-compliant base image. To identify and address any security concerns in your customized image before submitting for upload, we encourage all users to locally scan their image for vulnerabilities using Docker Scout, as described <a href="#test-using-docker-scout-to-evaluate-image-vulnerabilities">in our test above</a>. Here, we have tagged our new image with <code>my_docker</code>. So, we would run the Docker Scout <code>quickview</code> command on the image using this command:</p>
 <p><code>docker scout quickview my_docker</code></p>
 <p>And to identify the specific vulnerabilities and recommendations, you would run:</p>
 <p><code>docker scout cves my_docker</code></p>
 <h3 id="my-image-passes-the-local-security-scanning"><strong>My image passes the local security scanning</strong><a class="headerlink" href="#my-image-passes-the-local-security-scanning" title="Permanent link">¶</a></h3>
-<p>Once your custom image is security-compliant based on the analysis from Docker Scout, you are ready to request credentials to submit your Docker image for Gen3 security scanning.</p>
+<p>Once your custom image is security-compliant based on the analysis from Docker Scout, you are ready to request credentials to submit your Docker image for Gen3 security scanning.  </p>
+<p>Local security scanning of your built images is highly recommended for the most efficient path to having your image available for use in Nextflow workflows. However, it is not absolutely required; you can submit images without first scanning them with Docker Scout. If you do not do local scanning, there is a higher chance that you will have to submit your custom-built images more than once.  </p>
 <p><a href="../nextflow-request-creds/"><em>Continue to Request Credentials</em></a></p></div>
 
 

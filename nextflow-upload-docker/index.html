@@ -926,8 +926,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-an-approved-docker-uri" class="md-nav__link">
-    How to use an approved Docker URI
+  <a href="#how-to-use-an-approved-docker-image-uri" class="md-nav__link">
+    How to use an approved Docker Image URI
   </a>
   
 </li>
@@ -1141,8 +1141,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-an-approved-docker-uri" class="md-nav__link">
-    How to use an approved Docker URI
+  <a href="#how-to-use-an-approved-docker-image-uri" class="md-nav__link">
+    How to use an approved Docker Image URI
   </a>
   
 </li>
@@ -1178,18 +1178,19 @@
 <p>This guide is for users who have received temporary credentials granting access to push container images to a specific AWS Elastic Container Registry (ECR) repository.</p>
 <h3 id="prerequisites"><strong>Prerequisites</strong><a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://www.docker.com/get-started/">Docker</a> installed on your local machine.</li>
+<li><a href="https://www.docker.com/get-started/">Docker</a> installed on your local machine. <em>This can be Docker Desktop or the Docker CLI.</em>  </li>
 <li><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">AWS CLI</a> installed locally</li>
-<li>Temporary AWS credentials provided by the User Services team.</li>
-<li>The URI of the ECR repository you have been given access to (shared in the AWS credentials)</li>
-<li>A image you want to push, or a Dockerfile to build your image.</li>
+<li>Temporary AWS credentials provided by the User Services team (see <a href="../nextflow-request-creds/">Request Credentials</a>).</li>
+<li>The ECR repository URI you have been given access to (at the top of the AWS credentials provided by the support team)</li>
+<li>A built image you want to push (see <a href="../nextflow-create-docker/">Create a Dockerfile</a>)</li>
 </ul>
 <h3 id="a-note-about-timing"><strong>A note about timing</strong><a class="headerlink" href="#a-note-about-timing" title="Permanent link">¶</a></h3>
-<p>Your temporary AWS credentials only lasts for 1 hour from when they were created; User Services should have provided an expiration time when sharing the credentials with you. You must fully complete the push to ECR before they expire, or you will need to request new credentials from User Services.</p>
-<p>If you do <strong>not</strong> complete pushing an image to the ECR before they expire, please ping <code>@Sara Volk de Garcia</code> in Slack so she knows not to monitor for an image to progress through scanning.</p>
+<p>Your temporary AWS credentials only lasts for 1 hour from when they were created; User Services should have provided an expiration time when sharing the credentials with you. You must start the push to ECR before they expire, or you will need to request new credentials from User Services.</p>
+<p>If you do <strong>not</strong> push an image to the ECR before they expire, please ping <code>@nextflow-support</code> in Slack so we know not to monitor for an image to progress through scanning.</p>
 <h3 id="a-note-about-security-and-expiration-of-approved-docker-images"><strong>A note about security and expiration of approved Docker images</strong><a class="headerlink" href="#a-note-about-security-and-expiration-of-approved-docker-images" title="Permanent link">¶</a></h3>
 <p>Because of the ever-updating nature of vulnerability detection, an image that has passed in the past is not guaranteed to always pass. Even if you are resumitting an image that has passed previously, there may be new vulnerabilities that have been reported that mean the image does not pass now. Best practices for most efficient submission are to always <a href="../nextflow-create-docker/#run-docker-scout">examine an image with Docker Scout</a> before pushing it.  </p>
 <p>Similarly, because new vulnerabilities are always emerging, to protect the security of the Gen3 Workspace, approved containers will only remain available in the approved repo for 30 days. However, users can always request new credentials and resubmit their image for scanning.</p>
+<p>Finally, although we make every effort to regularly scan and monitor our base images to ensure that they are free of all critical vulnerabilities, you may have the misfortune to be the first to find a vulnerability in our base image. If you believe you have identified a critical vulnerability in one of our base images, please ping us on Slack at <code>@nextflow-support</code>.  </p>
 <h2 id="set-aws-environment-variables"><strong>Set AWS environment variables:</strong><a class="headerlink" href="#set-aws-environment-variables" title="Permanent link">¶</a></h2>
 <p><em>The commands in this section are valid if you are using a Linux or MacOS. If you are using Windows, we will provide a separate set of commands for you to set the AWS environment variables.</em></p>
 <p>Before you can push your Docker image to the ECR repository, you need to configure the AWS CLI with the temporary credentials you received. In the credentials sent to you, there should be the commands needed to run this below the line "Please run the following commands to set your AWS credentials:". Copy those (they will look similar to the block below) and run them in the terminal.</p>
@@ -1198,7 +1199,7 @@
   export AWS_SESSION_TOKEN=&lt;SessionToken&gt;
 </code></pre>
 <blockquote>
-<p>Note: the variables are set only as long as the terminal is open; export the variables again if you close and open a new terminal.</p>
+<p>Note: for Linux or Windows, the variables are set only as long as the terminal is open; export the variables again if you close and open a new terminal.</p>
 </blockquote>
 <h3 id="verify-configuration"><strong>Verify configuration:</strong><a class="headerlink" href="#verify-configuration" title="Permanent link">¶</a></h3>
 <p>Run <code>aws sts get-caller-identity</code> to verify that your CLI is using the temporary credentials. If you successfully set the variables, you should see output showing the AWS information - UserID, account, etc.</p>
@@ -1226,18 +1227,18 @@ If you want to replace previous versions of your container, you can use the same
 <p>Push the tagged image to the ECR repository. The <code>docker push</code> command is also in the credentials - you just need to specify the image tag you selected when either tagging or building the image in the previous section.  </p>
 <pre><code> docker push &lt;repositoryUri&gt;:&lt;image-tag&gt;
 </code></pre>
-<p>If the <strong>push is successful</strong>, you will see various "layer 1" "layer 2" etc outputs, and it will indicate progress in pushing. This can take minutes, depending on how large your container is.  </p>
+<p>If the <strong>push is successful</strong>, you will see various "layer 1" "layer 2" etc outputs, and it will indicate progress in pushing. This can take minutes or longer, depending on how large your container is.  </p>
 <p>If the <strong>push fails</strong>, you will get a persistent message about "Waiting for layer". This usually means it cannot find the repository, so double-check that there is no typo, and that you have set your <a href="#set-aws-environment-variables">AWS environment variables</a> since you opened the terminal most recently.  </p>
 <h3 id="completion"><strong>Completion</strong><a class="headerlink" href="#completion" title="Permanent link">¶</a></h3>
-<p>Once the push completes, your Docker image will be available in the ECR repository (although you will not be able to see it). It will be scanned, and if passes the security scanning, CTDS will move it to the nextflow-approved repo. When it's available in nextflow-approved, User Services will share a docker URI that looks something like this:<br>
+<p>Once the push completes, your Docker image will be available in the ECR repository (although you will not be able to see it). It will be scanned, and if passes the security scanning, CTDS will move it to the nextflow-approved repo. When it's available in nextflow-approved, User Services will reach out by direct message in Slack to share a Docker image URI that looks something like this:<br>
 <code>143731057154.dkr.ecr.us-east-1.amazonaws.com/nextflow-approved/&lt; your username &gt;:&lt; image-tag &gt;</code><br>
-You can then use this new URI to run Nextflow workflows with your container in the BRH workspace. (Note that you need to copy the whole URI into the container field of the nextflow notebook, as described <a href="#how-to-use-an-approved-docker-uri">in the next section</a>.)</p>
-<h2 id="how-to-use-an-approved-docker-uri"><strong>How to use an approved Docker URI</strong><a class="headerlink" href="#how-to-use-an-approved-docker-uri" title="Permanent link">¶</a></h2>
-<p>Once you have your Docker URI, you are ready to run your Nextflow workflow! You can take the Docker URI (copy the entire line) and make it the value for the "container" field(s) in your Nextflow notebook. For example, in the <code>torch_cuda_batch</code> <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb">Nextflow notebook</a>, you would go to the <code>nextflow.config</code> section and replace the <code>placeholder</code> value for <code>container</code> with the approved Docker URI.  </p>
+You can then use this image URI (not to be confused with your repository URI) to run Nextflow workflows with your container in the BRH workspace. (Note that you need to copy the whole image URI into the container field of the nextflow notebook, as described <a href="#how-to-use-an-approved-docker-image-uri">in the next section</a>.)</p>
+<h2 id="how-to-use-an-approved-docker-image-uri"><strong>How to use an approved Docker Image URI</strong><a class="headerlink" href="#how-to-use-an-approved-docker-image-uri" title="Permanent link">¶</a></h2>
+<p>Once you have your Docker image URI, you are ready to run your Nextflow workflow! You can take the Docker image URI (copy the entire line) and make it the value for the "container" field(s) in your Nextflow notebook. For example, in the <code>torch_cuda_batch</code> <a href="https://github.com/uc-cdis/bio-nextflow/blob/master/nextflow_notebooks/containerized_gpu_workflows/torch_cuda_test/torch_cuda_batch_template.ipynb">Nextflow notebook</a>, you would go to the <code>nextflow.config</code> section and replace the <code>placeholder</code> value for <code>container</code> with the approved Docker image URI sent by the support team after you <a href="#push-the-docker-image-to-the-ecr">pushed the image for scanning</a>.  </p>
 <p>Please note that you will need to replace all <code>placeholder</code> values in the <code>nextflow.config</code> with values specific to your workspace. Please see the section <a href="../nextflow-tutorial-workflows/#get-and-replace-placeholder-values-from-the-nextflow-config">"Get and replace placeholder values from the Nextflow config"</a> on the Tutorials page for more information.</p>
-<p><img alt="Screenshot of nextflow.config, showing where you put the Docker URI" src="../img/nextflow-config.png"></p>
+<p><img alt="Screenshot of nextflow.config, showing where you put the Docker image URI" src="../img/nextflow-config.png" style="height:175px"></p>
 <h2 id="support"><strong>Support</strong><a class="headerlink" href="#support" title="Permanent link">¶</a></h2>
-<p>If you encounter any issues or require assistance, please reach out to the User Services team that provided you with the temporary credentials, or <a href="mailto:brhsupport@datacommons.io">brhsupport@datacommons.io</a>, or reach out on Slack. (Slack will result in the quickest reply.)</p>
+<p>If you encounter any issues or require assistance, please reach out to the User Services team on Slack at <code>@nextflow-support</code>, or by email at <a href="mailto:brhsupport@datacommons.io">brhsupport@datacommons.io</a>. (Slack will result in the quickest reply.)</p>
 <p><a href="../nextflow-tutorial-workflows/"><em>Continue to Tutorial Workflows</em></a></p></div>
 
 
