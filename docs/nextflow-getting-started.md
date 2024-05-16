@@ -44,13 +44,13 @@ To run workflows in Gen3, you will need the following:
 
 The BRH exposes a [computational workspace](https://brh.data-commons.org/workspace) that researchers can use to run simple Jupyter notebooks and submit workflows. To submit workflow jobs, you need access to the BRH workspace.
 
-Follow [these instructions](https://uc-cdis.github.io/BRH-documentation/05-workspace_registration/#requesting-temporary-trial-access-to-brh-workspace) to request trial access to the BRH workspace.  After you have submitted your request, please ping `@Sara Volk de Garcia` in Slack to alert her to look for your request and approve it.
+Follow [these instructions](https://uc-cdis.github.io/BRH-documentation/05-workspace_registration/#requesting-temporary-trial-access-to-brh-workspace) to request trial access to the BRH workspace.  After you have submitted your request, please ping `@nextflow-support` in Slack to alert us to look for your request and approve it. We will notify you by Slack when you are approved.  
 
 #### 2) Establish a workspace account with a persistent pay model in BRH
 
 When you initially are granted workspace access in BRH, it is a trial access that is free for the user (paid by CTDS). However, the trial access paymodel does not permit access to the Nextflow image. To gain access to the Nextflow image needed for testing, you must request a workspace account with a persistent paymodel, so that the cost of compute jobs in your project can accrue to the right account. BRH currently supports several persistent pay models such as NIH STRIDES (payment through grant funds) and Direct Pay (credit card payment). If you're curious, [see here](https://uc-cdis.github.io/BRH-documentation/13-workspace_accounts/) for more information about pay models.
 
-For MIDRC, we have already established a Direct-Pay-type* of workspace account for testing. When you receive workspace access, Sara will work with the Nextflow team to add a Direct Pay account to your workspace.
+For MIDRC, we have already established a Direct-Pay-type* of workspace account for testing. When you receive workspace access, the Nextflow Support team will also add a Direct Pay account to your workspace.
 
 *\* Note about this Direct-Pay-type of account: It is not an ACTUAL Direct Pay account, and it does not go through the normal Direct Pay account route, nor through OCC, at all. It is funded with MIDRC contract funds, but will be labeled Direct Pay in your workspace.*
 
