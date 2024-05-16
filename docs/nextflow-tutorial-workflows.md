@@ -12,7 +12,7 @@ Be ready to execute the tutorial workflows below by gathering credentials and in
 
 ### **Get and replace placeholder values from the Nextflow config**
 
-You can find the values to replace the placeholders in the`queue`, `jobRole` and `workDir` fields in the `nextflow.config` file in your Nextflow workspace. Directions for finding this file are at the bottom of the "Welcome to Nextflow" page that opens when your Nextflow workspace first opens. These placeholder values will need to be replaced in each of the various tutorial Nextflow notebooks.
+You can find the values to replace the placeholders in the`queue`, `jobRole` and `workDir` fields in the `nextflow.config` file in your Nextflow workspace (this is found in `/data directory`, unless you have moved it to the `/pd`). These placeholder values will need to be replaced in each of the various tutorial Nextflow notebooks.
 
 Note that you should only copy/paste the value to replace `placeholder` for each field; do not copy/paste larger sections of the nextflow config, or there could be indentation problems that interfere with the code.
 
