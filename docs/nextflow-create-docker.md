@@ -19,11 +19,11 @@ Gen3 offers a collection of FedRAMP security-compliant base images. We re-assess
 
 You can access the URLs to pull these images using Docker here:
 
-[https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt](https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt)
+[https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt)
 
 ![Screenshot of URLs for secure base images](img/base-image-URLs.png)
 
-Please note: if you see **an asterisk next to one of these URLs, it means that the image is temporarily unavailable** because we are resolving a vulnerability in our base image. Please wait until the asterisk is removed to build an image on that base image. If you would like an estimated timeframe for when the base image will be available, please ping us on Slack (`@nextflow-support`).  
+Please note: if, when you click on [this link to the base image text file](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt), **you see an asterisk next to one of these URLs, it means that the image is temporarily unavailable** because we are resolving a vulnerability in our base image. Please wait until the asterisk is removed to build an image on that base image. If you would like an estimated timeframe for when the base image will be available, please ping us on Slack (`@nextflow-support`).  
 
 ### **How to choose your base image**
 
@@ -61,7 +61,7 @@ This will help make sure you can pull the base image of interest by running the 
 
 First, open your Docker Desktop application (just to be sure Docker is running).
 
-Next, open your terminal. Run `docker pull <image URL>`, where the image URL is the full line as displayed in the [file of security-validated base images](https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt). If it's working, you will see language that it is pulling (see below). When it's complete (and successfully pulled), there will be a line that says `Status: Downloaded <image>` (see yellow highlight below). If you see this, you know that all the steps necessary to pull your image work. If you don't see this, reach out to us on Slack (`@nextflow-support`)
+Next, open your terminal. Run `docker pull <image URL>`, where the image URL is the full line as displayed in the [file of security-validated base images](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt). If it's working, you will see language that it is pulling (see below). When it's complete (and successfully pulled), there will be a line that says `Status: Downloaded <image>` (see yellow highlight below). If you see this, you know that all the steps necessary to pull your image work. If you don't see this, reach out to us on Slack (`@nextflow-support`)
 
 ![Test docker pull command in terminal](img/test-docker-pull.png)
 

@@ -6,7 +6,7 @@
 
 **Locally build and test container:**
 
-Gen3 provides several [FedRAMP security-compliant base images](https://github.com/uc-cdis/containers/blob/eec9789a57c5bb196a91f035e4cb069cfaa5abcd/nextflow-base-images/allowed_base_images.txt) that users can pull and customize.
+Gen3 provides several [FedRAMP security-compliant base images](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt) that users can pull and customize.
 
 **Request credentials and push container to Gen3 staging:**
 
