@@ -23,7 +23,7 @@ You can access the URLs to pull these images using Docker here:
 
 ![Screenshot of URLs for secure base images](img/base-image-URLs.png)
 
-Please note: if, when you click on [this link to the base image text file](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt), **you see an asterisk next to one of these URLs, it means that the image is temporarily unavailable** because we are resolving a vulnerability in our base image. Please wait until the asterisk is removed to build an image on that base image. If you would like an estimated timeframe for when the base image will be available, please ping us on Slack (`@nextflow-support`).  
+Please note: if, when you click on [this link to the base image text file](https://github.com/uc-cdis/containers/blob/master/nextflow-base-images/allowed_base_images.txt), **you see an asterisk next to one of these URLs, it means that the image is temporarily unavailable** because they are being updated. Please wait until the asterisk is removed to build an image on that base image. If you would like an estimated timeframe for when the base image will be available, please ping us on Slack (`@nextflow-support`).  
 
 ### **How to choose your base image**
 
