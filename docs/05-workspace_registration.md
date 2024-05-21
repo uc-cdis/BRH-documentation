@@ -41,7 +41,7 @@ Find instructions for funding workspace accounts with any of the persistent pay 
 [img req access]: ./img/profile_login_other_commons.png
 [img workspaces]: ./img/workspace_flavors_080322.png
 [BRH login]: https://brh.data-commons.org/login
-[BRH Workspace]: https://brhstaging.data-commons.org/workspace
+[BRH Workspace]: https://brh.data-commons.org/workspace
 [BRH Workspace Acct Mgr]: https://brh-portal.org/
 [BRH Platform]: https://brh.data-commons.org/
 [Gen3.org]: https://gen3.org/

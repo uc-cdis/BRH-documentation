@@ -53,7 +53,7 @@ We have one base image that is available for running workflows on CPUs.
 
 ## Verify that your Docker and Docker Scout are working as expected
 
-Before you take the time to build your own Dockerfile, its good to be sure your Docker is able to pull the base image of interest and that you are able to scan with Docker Scout. Doing these tests will be quite quick, and will help you identify problems more easily than if you try to troubleshoot problems in a build.
+Before you take the time to build your own Dockerfile, it's good to be sure your Docker is able to pull the base image of interest and that you are able to scan with Docker Scout. Doing these tests will be quite quick, and will help you identify problems more easily than if you try to troubleshoot problems in a build. This is also a good opportunity to verify that your selected base image has not accumulated any vulnerabilities since we last scanned it.
 
 ### **Test pulling the Docker image**
 
@@ -67,7 +67,7 @@ Next, open your terminal. Run `docker pull <image URL>`, where the image URL is 
 
 ### **Test using Docker Scout to evaluate image vulnerabilities**
 
-At the end of your test pull, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). Since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout (even though we do not expect the base images to have any security problems).  
+At the end of your test pull, Docker offers a suggestion to use Docker Scout to examine your image for vulnerabilities (see red box above). Since you will want to use Docker Scout to evaluate your custom build later, now is a convenient time to test this tool and make sure you are fully set up to run Docker Scout. Although we do not expect the base images to have any security problems, it's most efficient to run this quick check before you spend time building on this image, in case it has accumulated a vulnerability since we last scanned it.  
 
 *Note: If you don't seem to have access to Docker Scout, check whether you're using the [latest Docker version](#prerequisites).*
 

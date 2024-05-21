@@ -22,7 +22,7 @@ If you do **not** push an image to the ECR before they expire, please ping `@nex
 
 ### **A note about security and expiration of approved Docker images**
 
-Because of the ever-updating nature of vulnerability detection, an image that has passed in the past is not guaranteed to always pass. Even if you are resumitting an image that has passed previously, there may be new vulnerabilities that have been reported that mean the image does not pass now. Best practices for most efficient submission are to always [examine an image with Docker Scout](nextflow-create-docker.md/#run-docker-scout) before pushing it.  
+Because of the ever-updating nature of vulnerability detection, an image that has passed in the past is not guaranteed to always pass. Even if you are resubmitting an image that has passed previously, there may be new vulnerabilities that have been reported that mean the image does not pass now. Best practices for most efficient submission are to always [examine an image with Docker Scout](nextflow-create-docker.md/#run-docker-scout) before pushing it.  
 
 Similarly, because new vulnerabilities are always emerging, to protect the security of the Gen3 Workspace, approved containers will only remain available in the approved repo for 30 days. However, users can always request new credentials and resubmit their image for scanning.
 
