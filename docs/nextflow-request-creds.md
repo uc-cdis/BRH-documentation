@@ -21,7 +21,7 @@ Since the credentials will ONLY last 1 hour after creation, you may prefer we se
 * Please generate and send my credentials in the afternoon
 * Please generate and send my credentials ASAP
 
-To ensure prompt attention, I will also ping `@nextflow-support` on the Slack channel after I have sent my email.
+To ensure prompt attention, I will also ping `nextflow-support` *(please do not use @ for this)* on the Slack channel after I have sent my email.
 
 
 Thanks!
@@ -32,6 +32,6 @@ Thanks!
 
 We will send you the credentials through direct message on Slack, in a link to keep them private.  
 
-Please note: If you receive credentials but you are not able to successfully upload an image before they expire, please ping `@nextflow-support` on Slack to let us know we do not need to monitor your submitted image.
+Please note: If you receive credentials but you are not able to successfully upload an image before they expire, please ping `nextflow-support` on Slack to let us know we do not need to monitor your submitted image.
 
 [*Continue to Upload Docker Image*](./nextflow-upload-docker.md)
