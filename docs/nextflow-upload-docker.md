@@ -18,7 +18,7 @@ This guide is for users who have received temporary credentials granting access 
 
 Your temporary AWS credentials only lasts for 1 hour from when they were created; User Services should have provided an expiration time when sharing the credentials with you. You must start the push to ECR before they expire, or you will need to request new credentials from User Services.
 
-If you do **not** push an image to the ECR before they expire, please ping `@nextflow-support` in Slack so we know not to monitor for an image to progress through scanning.
+If you do **not** push an image to the ECR before they expire, please ping `nextflow-support` in Slack so we know not to monitor for an image to progress through scanning.
 
 ### **A note about security and expiration of approved Docker images**
 
@@ -26,7 +26,7 @@ Because of the ever-updating nature of vulnerability detection, an image that ha
 
 Similarly, because new vulnerabilities are always emerging, to protect the security of the Gen3 Workspace, approved containers will only remain available in the approved repo for 30 days. However, users can always request new credentials and resubmit their image for scanning.
 
-Finally, although we make every effort to regularly scan and monitor our base images to ensure that they are free of all critical vulnerabilities, you may have the misfortune to be the first to find a vulnerability in our base image. If you believe you have identified a critical vulnerability in one of our base images, please ping us on Slack at `@nextflow-support`.  
+Finally, although we make every effort to regularly scan and monitor our base images to ensure that they are free of all critical vulnerabilities, you may have the misfortune to be the first to find a vulnerability in our base image. If you believe you have identified a critical vulnerability in one of our base images, please ping us on Slack at `nextflow-support`.  
 
 ## **Set AWS environment variables:**
 
@@ -92,6 +92,6 @@ Please note that you will need to replace all `placeholder` values in the `nextf
 
 ## **Support**
 
-If you encounter any issues or require assistance, please reach out to the User Services team on Slack at `@nextflow-support`, or by email at [brhsupport@datacommons.io](mailto:brhsupport@datacommons.io). (Slack will result in the quickest reply.)
+If you encounter any issues or require assistance, please reach out to the User Services team on Slack at `nextflow-support` (no `@`), or by email at [brhsupport@datacommons.io](mailto:brhsupport@datacommons.io). (Slack will result in the quickest reply.)
 
 [*Continue to Tutorial Workflows*](./nextflow-tutorial-workflows.md)
