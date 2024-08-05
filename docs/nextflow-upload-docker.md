@@ -79,7 +79,7 @@ If the **push fails**, you will get a persistent message about "Waiting for laye
 ### **Completion**
 
 Once the push completes, your Docker image will be available in the ECR repository (although you will not be able to see it). It will be scanned, and if passes the security scanning, CTDS will move it to the nextflow-approved repo. When it's available in nextflow-approved, User Services will reach out by direct message in Slack to share a Docker image URI that looks something like this:  
-`143731057154.dkr.ecr.us-east-1.amazonaws.com/nextflow-approved/< your username >:< image-tag >`  
+`< account number >.dkr.ecr.us-east-1.amazonaws.com/nextflow-approved/< your username >:< image-tag >`  
 You can then use this image URI (not to be confused with your repository URI) to run Nextflow workflows with your container in the BRH workspace. (Note that you need to copy the whole image URI into the container field of the nextflow notebook, as described [in the next section](#how-to-use-an-approved-docker-image-uri).)
 
 ## **How to use an approved Docker Image URI**  
