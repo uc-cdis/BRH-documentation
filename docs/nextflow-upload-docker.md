@@ -92,6 +92,6 @@ Please note that you will need to replace all `placeholder` values in the `nextf
 
 ## **Support**
 
-If you encounter any issues or require assistance, please reach out to the User Services team on Slack at `nextflow-support` (no `@`), or by email at [brhsupport@datacommons.io](mailto:brhsupport@datacommons.io). (Slack will result in the quickest reply.)
+If you encounter any issues or require assistance, please reach out to the User Services team on Slack at `nextflow-support` (no `@`), or by email at [brhsupport@gen3.org](mailto:brhsupport@gen3.org). (Slack will result in the quickest reply.)
 
 [*Continue to Tutorial Workflows*](./nextflow-tutorial-workflows.md)
