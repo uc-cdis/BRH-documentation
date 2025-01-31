@@ -1,6 +1,6 @@
 # Types of Shared Data
 
-The BRH provides secure access to study metadata from multiple resources (Data Commons) and will be the driving engine for new discovery. The types of data represented are diverse and include scientific research across multiple disciplines.
+The BRH provides secure access to study metadata from multiple resources (Data Commons) and will be the driving engine for new discovery. The types of data represented are varied and include scientific research across multiple disciplines.
 
 The BRH aims to make data more accessible by following the "FAIR" principles:
 
