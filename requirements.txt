@@ -14,3 +14,4 @@ Pygments==2.16.1
 pymdown-extensions==10.3
 pyyaml_env_tag==0.1
 PyYAML==6.0.1
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
