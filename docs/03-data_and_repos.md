@@ -11,10 +11,8 @@ As of March 2023, the list of currently shared resources/Data Commons on BRH inc
 * CRDC Genomic Data Commons
 * CRDC Integrated Canine Data Commons
 * CRDC Proteomic Data Commons
-* IBD Commons
 * JCOIN
 * MIDRC
-* NIAID ClinicalData
 
 <!-- Links and Images -->
 [BRH Platform]: https://brh.data-commons.org/
