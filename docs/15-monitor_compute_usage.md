@@ -7,7 +7,10 @@ You can see and monitor your compute usage in two places:
 1. Workspace Page
 2. Workspace Account Manager
 
-An important note is that the usage reported in either of these places generally **does not immediately update as you use the workspace**. AWS reports updated usage about three times per day.
+Two important notes:  
+
+* This usage reporting is only available for users with a persistent paymodel; it is not available for the trial access accounts.  
+* Usage reported in either of these places generally **does not immediately update as you use the workspace**. AWS reports updated usage about three times per day.  
 
 ### 1. Monitor usage on the **Workspace page**
 
