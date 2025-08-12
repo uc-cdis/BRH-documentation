@@ -1055,22 +1055,26 @@
 <li>Workspace Page</li>
 <li>Workspace Account Manager</li>
 </ol>
-<p>An important note is that the usage reported in either of these places generally <strong>does not immediately update as you use the workspace</strong>. AWS reports updated usage about three times per day.</p>
+<p>Two important notes:  </p>
+<ul>
+<li>This usage reporting is only available for users with a persistent paymodel; it is not available for the trial access accounts.  </li>
+<li>Usage reported in either of these places generally <strong>does not immediately update as you use the workspace</strong>. AWS reports updated usage about three times per day.  </li>
+</ul>
 <h3 id="1-monitor-usage-on-the-workspace-page">1. Monitor usage on the <strong>Workspace page</strong><a class="headerlink" href="#1-monitor-usage-on-the-workspace-page" title="Permanent link">¶</a></h3>
-<p>You can see your total usage for any active paid accounts by logging in to the <a href="https://brh.data-commons.org/">BRH platform</a>, clicking on <a href="https://brhstaging.data-commons.org/workspace">Workspace</a>, then clicking on Account Information (in the upper left). You can see your total usage and your spending limit.</p>
-<p>If you have more than one funded workspace account, you can use the dropdown to select different active pay models and view their usage and spending limits.</p>
-<p><img alt='Select the studies and click "Open In Workspace".' src="../img/brh-logo.png"></p>
+<p>You can see your total usage for any active paid accounts by logging in to the <a href="https://brh.data-commons.org/">BRH platform</a>, clicking on <a href="https://brhstaging.data-commons.org/workspace">Workspace</a> (#1), then clicking on Account Information (#2 in the upper left). You can see your total usage and your spending limit (see arrows).</p>
+<p>If you have more than one funded workspace account, you can use the dropdown (#3) to select different active pay models and view their usage and spending limits.</p>
+<p><img alt="Monitor your workspace compute usage with information on the Workspace page." src="../img/monitor-workspace-pg.png"></p>
 <h3 id="2-monitor-usage-on-the-workspace-account-manager">2. Monitor usage on the <strong>Workspace Account Manager</strong><a class="headerlink" href="#2-monitor-usage-on-the-workspace-account-manager" title="Permanent link">¶</a></h3>
-<p>You can see your usage details on the <a href="https://brh-portal.org/">Workspace Account Manager</a> Accounts page.</p>
+<p>You can see your usage details on the <a href="https://brh-portal.org/">Workspace Account Manager</a> Accounts page (#4 in the image above).</p>
 <p>After logging in, you will be on the Accounts page. There are different tables for each of the three persistent pay models. Find the table for the persistent pay model account you want to monitor, then look for the active account line in that table.</p>
-<p>The table includes 4 columns relevant for monitoring usage:</p>
+<p>The table includes 4 columns relevant for monitoring usage (these are highlighted in the image below):</p>
 <ul>
 <li><strong>Total Usage:</strong> This column reports on your compute usage for this account as of the most recent AWS report.</li>
 <li><strong>Compute Purchased (or STRIDES Credits):</strong> This is the total purchase amount you have made for this account. For STRIDES Credits accounts, this is the total amount of credit you were awarded.</li>
 </ul>
 <p>The soft and hard limit columns deserve their own section; see below.</p>
 <h2 id="hard-and-soft-limits">Hard and Soft Limits<a class="headerlink" href="#hard-and-soft-limits" title="Permanent link">¶</a></h2>
-<p>You can see your hard and soft limits in the tables on the <a href="https://brh-portal.org/">Workspace Account Manager</a> Accounts page. They each have a column:</p>
+<p>You can see your hard and soft limits (highlighted in yellow below) in the tables on the <a href="https://brh-portal.org/">Workspace Account Manager</a> Accounts page. They each have a column:</p>
 <ul>
 <li>
 <p><strong>Soft Limit:</strong> This is the limit at which an alert will be triggered for you that you are approaching the spending limit for the account. For STRIDES accounts, users can edit this column to set the alert threshold. For OCC Direct Pay, the soft limit is set in accordance with your Direct Pay User Agreement (signed during Direct Pay BillingID setup).</p>
@@ -1079,7 +1083,7 @@
 <p><strong>Hard Limit:</strong> This is the limit at which a workspace VM will be immediately terminated and the workspace account will be shut down such that no VMs can be launched with it. For STRIDES accounts, users can edit this column to set the threshold at which the account becomes inactive. For OCC Direct Pay, the hard limit is set in accordance with your Direct Pay User Agreement (signed during Direct Pay BillingID setup).</p>
 </li>
 </ul>
-<p><img alt='Select the studies and click "Open In Workspace".' src="../img/brh-logo.png"></p>
+<p><img alt="Monitor your workspace compute usage, and see your hard and soft limits, on the Workspace Account Manager." src="../img/monitor-workspace-acct-mgr.png"></p>
 <p><a href="../16-usage_exceeds_funding/"><em>What happens when you exceed your funding for a workspace account?</em></a></p>
 <!-- Images -->
 <!-- Links --></div>
