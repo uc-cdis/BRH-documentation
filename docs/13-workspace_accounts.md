@@ -13,7 +13,7 @@ Instructions for requesting funding for each pay model are provided below.
 
 > **Please Note:**
 
-> * The process for granting access for a workspace account can take **2-4 weeks for NIH STRIDES**, and **a month for Direct Pay**, although it may also be faster.
+> * The process for granting access for a workspace account can take **2-4 weeks for NIH STRIDES**, although it may also be faster.
 > * The account from each different paymodel will have its own workspace storage directory (`/pd`; [read about `/pd` here][Workspaces page]); **data is not shared between accounts with different funding types**. However, you can import and export data among accounts as long as they are active and have funding.
 
 ## Request Trial Access
@@ -50,8 +50,6 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
 
 #### Request BillingID
 
-*Note: It can take up to a month to receive a BillingID if you act promptly to complete each step.*
-
 1. Go to [**https://payments.occ-data.org**][OCC Payment Portal] or click on the Payment Portal link (red arrow below) on the OCC Direct Pay tab for the workspace account request form.
 
       ![Screenshot showing where the OCC Payment Portal link can be found in the OCC Direct Pay form][img Link to pay Portal]
@@ -80,7 +78,7 @@ Funding a workspace account with OCC Direct Pay has 2 major parts:
       If you have any questions or concerns about the terms and conditions, please email [billing@occ-data.org][OCC billing] before you sign.
       >>>
 
-      Once you submit the signed document, it could take up to 5 days to finish processing receipt of the signed document and update your progress tracker. You will receive an email when processing is complete.
+      Once you submit the signed document, allow 1 business day to finish processing receipt of the signed document and update your progress tracker. You will receive an email when processing is complete.
 
       But, you will receive an email quickly confirming that the document has been signed and providing a link to download the signed document for your records. If you do not receive that within 5 minutes (be sure to check your spam folder), please return to the document and verify that you fully signed and submitted the document. Please save the document so you can reference it as needed.
 
@@ -107,7 +105,7 @@ You may now use your BillingID to provision a Direct Pay workspace account in BR
 
        ![OCC Workspace Account Request form on BRH Workspace Account Manager][img Request Direct Pay workspace]
 
-7. Once you submit this form, you will receive an email with the invoice. (It can take up to 5 business days to be sent.) There will be a secure link in the invoice to submit your credit card information and pay the invoice. When you pay the invoice, OCC will apply the funds, create an AWS account for this project’s workspace, and send that information to BRH to provision your account. This can take up to 7 business days after you have signed the form. You will receive an email when your account is set up and ready to be used in your workspace.
+7. Once you submit this form, you will receive an email with the invoice. (Allow 1 business day for this to be sent.) There will be a secure link in the invoice to submit your credit card information and pay the invoice. When you pay the invoice, OCC will apply the funds, create an AWS account for this project’s workspace, and send that information to BRH to provision your account. Allow 1 business day for this after you have signed the form. You will receive an email when your account is set up and ready to be used in your workspace.
 
       When you submit this form, you will also see a new entry in the OCC Direct Pay Accounts table in the [Workspace Account Manager][Workspace Acct Mgr]. The request status for your request will be Pending until the invoice is paid and the account is finalized.
 
