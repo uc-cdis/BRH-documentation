@@ -90,8 +90,6 @@ You may now use your BillingID to provision a Direct Pay workspace account in BR
 
 *Note 1: Before you request a workspace account through any persistent pay model (eg, Direct Pay, STRIDES), be sure to backup all data in your `/pd` for your workspace. Once your persistent pay model is funded, you will no longer have access to the `/pd` used during trial access. ([What’s a `/pd`?][pd link])*
 
-*Note 2: It can take up to 12 business days to provision funds from a BillingID.*
-
 1. Copy your BillingID from your [User Profile page][Payment Portal Profile] in the OCC Payment Portal.
 2. Return to the [Workspace Account Manager][BRH Workspace Acct Mgr], and click Request New Workspace to open the [Workspace Account Request Form][Req new wksp].
 3. Click the OCC Direct Pay tab.
