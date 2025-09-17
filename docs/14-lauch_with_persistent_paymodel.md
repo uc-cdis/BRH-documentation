@@ -6,15 +6,15 @@ You can select which workspace account pay model to use from the Workspace page.
 
 * Log in and click on Workspace to open the workspace page.
 
-      ![Select the studies and click "Open In Workspace".][img BRH logo]
+      ![Click on the workspace page, then login.][img open workspace]{: style="height:250px"}
 
-* Click on Account Information to expand that tab.
+* Click on Account Information to expand that tab *(note that it is usually already expanded)*.
 
-      ![Select the studies and click "Open In Workspace".][img BRH logo]
+      ![The Account information bar may already be expanded. If it is not, you can click on the Account Information to expand it to see the dropdown to select a workspace account.][img expand acct info]{: style="height:250px"}
 
 * Under "Account" and "Apply for an account", you can click the dropdown to select which workspace account you want to use to launch the VM.
 
-      ![Select the studies and click "Open In Workspace".][img BRH logo]
+      ![Click the dropdown and select the workspace account you want to use to launch the workspace.][img select wkspc acct]{: style="height:250px"}
 
       The dropdown will only show workspace accounts that are active.
 
@@ -27,6 +27,9 @@ You can select which workspace account pay model to use from the Workspace page.
 *Looking for information on how to use the Workspace? Check out our [Getting Started page][Getting Started Workspaces page].*
 
 <!-- Images -->
+[img open workspace]: ./img/wkspc-open-workspace.png
+[img expand acct info]: ./img/wkspc-expand-acct-info.png
+[img select wkspc acct]: ./img/wkspc-select-wkspc-acct.png
 [img BRH Admin Portal]: ./img/brh-portal-login.png
 [img BRH logo]: ./img/brh-logo.png
 [img BRH portal request]: ./img/brh-portal-request.png
