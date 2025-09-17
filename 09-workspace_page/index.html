@@ -1075,21 +1075,20 @@
 <p><img alt="Screenshot of the launch status of the workspace" src="../img/workspace_launch.png"></p>
 </li>
 <li>
-<p>After launching, the home folders are displayed. One of these folders is the user's persistent drive ("/pd").</p>
-<p><img alt="Workspace home folder, including the /pd directory" src="../img/workspace_data_folder_080322.png"></p>
+<p>After launching, the home folders are displayed. One of these folders is the user's persistent drive (<code>/pd</code>).</p>
+<p><img alt="Workspace home folder, including the /pd directory" src="../img/wkspc-pd-and-data.png" style="height:200px"></p>
 </li>
 <li>
-<p>Select the /pd folder. New files or licenses should be saved in the the /pd directory if users need to access them after restarting the workspaces. Only files saved in the /pd directory will remain available after termination of a workspace session.</p>
-<p>[<img alt="Screenshot of the /pd folder" src="../img/workspace_pd_folder_080422.png" style="height:400px">]</p>
+<p>Select the <code>/pd</code> folder. New files or licenses should be saved in the the <code>/pd</code> directory if users need to access them after restarting the workspaces. Only files saved in the <code>/pd</code> directory will remain available after termination of a workspace session.</p>
 <ul>
-<li><strong>Attention:</strong> Any personal files in the folder “data” will be lost. Personal files in the directory /pd will persist.</li>
-<li>Do not save files in the "data" or “data/brh.data-commons.org” folders.</li>
-<li>The folder “brh.data-commons.org” in the “data” folder will host the data files you have exported from the Discovery Page. Move these files to the /pd directory if you do not want to have to export them again.</li>
-<li>/pd has a capacity limit of 10GB.</li>
+<li>Use this folder to store files (notebooks, data files, etc) that you want to use again later. The files you save here will still be available when you come back after terminating your workspace session.  </li>
+<li>Any files you create or add outside of this folder will be lost if they are not moved to the <code>/pd</code> before your workspace session terminates.  </li>
+<li>The capacity of the <code>/pd</code> will vary by image. The Nextflow CPU image has capacity of 10GB, while the Tutorial and Generic images can hold 2 GB.  </li>
 </ul>
+<p>The <code>/brh.data-commons.org</code> folder, found in the <code>/data</code> folder, will host the data files you have exported from the <a href="../08-discovery_page/">Discovery Page</a>. Move these files to the <code>/pd</code> directory if you want to access them again after you terminate your workspace session</p>
 </li>
 <li>
-<p>Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language. <em>Note: You can open and run multiple notebooks in your workspace. However, the generic, tutorial and nextflow workspace images are currently separate docker images, so there is no functionality to combine them or run nextflow in the tutorial or generic images. This may be available in the future, after further testing and development activities.</em></p>
+<p>Start a new notebook under “Notebook” in the Launcher tab. Click the tiles in the launcher and choose between Python 3 or R Studio as the base programmatic language. <em>Note: You can open and run multiple notebooks in your workspace. However, the Generic, Tutorial and Nextflow workspace images are currently separate Docker images, so there is no functionality to combine them or run Nextflow in the Tutorial or Generic images. This may be available in the future, after further testing and development activities.</em></p>
 <p><img alt="Start a new notebook under “Notebook” in the Launcher tab" src="../img/workspace_new_080322.png"></p>
 </li>
 <li>
@@ -1097,49 +1096,59 @@
 <p>Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.</p>
 </li>
 <li>
-<p>Do not forget to terminate your workspace once your work is finished. Unterminated workspaces continue to accrue computational costs. <strong>Note, that Workspaces automatically shut down after 90 minutes of <a href="./">idle time</a>.</strong></p>
-<p><img alt="Screenshot for terminating your workspace" src="../img/workspace_terminate_2.png"></p>
+<p>Do not forget to terminate your workspace once your work is finished. Unterminated workspaces continue to accrue computational costs. <strong>Note, Workspaces automatically shut down after 90 minutes of <a href="./">idle time</a>.</strong></p>
+<p><img alt="Screenshot for terminating your workspace" src="../img/workspace_terminate_2.png" style="height:150px"></p>
 </li>
 </ol>
-<p>Further reading: read more about how to download data files into the Workspaces <a href="../11-downloading_data_files/">here</a>.</p>
+<blockquote>
+<p><strong>Read more about how to <a href="../11-downloading_data_files/">export data files from the Discovery page into the Workspace here</a>.</strong></p>
+</blockquote>
 <h2 id="upload-save-and-download-filesnotebooks">Upload, save, and download Files/Notebooks<a class="headerlink" href="#upload-save-and-download-filesnotebooks" title="Permanent link">¶</a></h2>
-<p>Users can <strong>upload</strong> data files or Notebooks from the local machine to the home directory by clicking on “Upload” in the top left corner. Access the uploaded content in the Notebook (see below).</p>
-<p><img alt="Upload data files or Notebooks to the workspace by clicking on “Upload” in the top left corner." src="../img/workspace_upload_080322.png"></p>
-<p>Then <strong>run</strong> in the cells, for example:</p>
-<p><code>import os</code></p>
-<p><code>import pandas as pd</code></p>
-<p><code>os.chdir('/data')</code></p>
-<p><code>demo_df = pd.read_csv('/this_is_a_demo.txt', sep='\t')</code></p>
-<p><code>demo_df.head()</code></p>
-<p>Users can <strong>save</strong> the notebook by clicking "File" - "Save as", as shown below.</p>
+<p>Users can <strong>upload</strong> data files or notebooks from the local machine to the Workspace by clicking on the Upload icon above the navigation panel on the left (see screenshot below). See the code example below for how to access the uploaded content for analysis in a notebook in thw Workspace.</p>
+<p><img alt="Upload data files or Notebooks to the workspace by clicking on “Upload” in the top left corner." src="../img/wkspc-upload-files.png" style="height:200px"></p>
+<p>Then <strong>run</strong> your code in the cells of the notebook. For example, you may run this code to read in data from a file in the <code>/data</code> directory:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># change directories to the /data directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'/data'</span><span class="p">)</span>
+
+<span class="c1"># read in a TSV that you have in the /data directory</span>
+<span class="n">demo_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/path_to_your_file.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="c1"># look at your DataFrame</span>
+<span class="n">demo_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p>Users can <strong>save</strong> the notebook by clicking <code>File</code> --&gt; <code>Save as</code>, as shown below.</p>
 <p><img alt='Save the notebook under “File” - "Save Notebook as"' src="../img/workspace_notebook_save_080322.png"></p>
-<p>Users can <strong>download</strong> notebooks by clicking "File" - "Download", as shown below. Download the notebook, for example, as ".ipynb".</p>
-<p><img alt="Download notebook" src="../img/workspace_notebook_download_080422.png"></p>
+<p>Users can <strong>download</strong> notebooks by clicking <code>File</code> --&gt; <code>Download</code>, as shown below.  </p>
+<p><img alt="Download notebook" src="../img/workspace_notebook_download_080422.png" style="height:400px"></p>
 <h2 id="environments-languages-and-tools">Environments, Languages, and Tools<a class="headerlink" href="#environments-languages-and-tools" title="Permanent link">¶</a></h2>
-<p>The following <strong>environments</strong> are available in the workspaces:</p>
+<p>The following <strong>environments</strong> are available in the workspaces:  </p>
 <ul>
 <li>
-<p>Jupyter Lab</p>
+<p>Jupyter Lab  </p>
 <p><img alt="Jupyter logo" src="../img/workspace_jupyter_logo.png" style="height:100px"></p>
 </li>
 </ul>
-<p>The following <strong>programmatic languages</strong> are available in Jupyter Notebooks:</p>
+<p>The following <strong>programmatic languages</strong> are available in Jupyter Notebooks:  </p>
 <ul>
-<li>R</li>
-<li>Python 3</li>
+<li>R  </li>
+<li>Python 3  </li>
 </ul>
-<p>The following <strong>tools</strong> are available in Jupyter Notebooks:</p>
+<p>The following <strong>tools</strong> are available in Jupyter Notebooks:  </p>
 <ul>
 <li>GitHub (<a href="https://docs.github.com/en">read GitHub documentation</a>)</li>
 </ul>
 <h2 id="python-3-and-r-in-jupyter">Python 3 and R in Jupyter<a class="headerlink" href="#python-3-and-r-in-jupyter" title="Permanent link">¶</a></h2>
-<p>Both Python 3 and R are available in Jupyter Notebooks.</p>
-<p>Users can expect to be able to use typical Python or R packages, such as PyPI or CRAN. For Python and R, users can start a new notebook with a tile under "Notebook", as shown below.</p>
+<p>Both Python 3 and R are available in Jupyter Notebooks.  </p>
+<p>Users can expect to be able to use typical Python or R packages, such as PyPI or CRAN. For Python and R, users can start a new notebook with a tile under "Notebook", as shown below.  </p>
+<p>Install software tools by using <code>pip install</code> (Python) or <code>CRAN</code> (R). If you have a requirements text, you can install them with <code>pip install -r requirements.txt</code>. Most of our Workspace images have some software tools pre-installed for user convenience (e.g., the Gen3 SDK, Pandas, Plotly, NumPy). You can view all pre-installed software packages by opening a terminal window and using the command <code>pip list</code>.  </p>
 <p><img alt="Find Python 3 or R when starting a new notebook under “New”." src="../img/workspace_new_080322.png"></p>
 <h2 id="automatic-workspace-shutdown">Automatic Workspace Shutdown<a class="headerlink" href="#automatic-workspace-shutdown" title="Permanent link">¶</a></h2>
 <p><strong>Warning:</strong> When a BRH Workspace reaches the STRIDES Credits limit for STRIDES Credits Workspaces, or reaches the Hard Limit for STRIDES Grant Workspaces, the Workspace will be automatically terminated. Please be sure to save any work before reaching the STRIDES Credit or Hard Limit.</p>
 <p><strong>Warning:</strong> Workspaces will also automatically shut down after 90 minutes of idle time. A pop-up window will remind users to navigate back to the workspaces page in order to save the data.</p>
-<p><img alt="2' warning for shutdown for workspace" src="../img/workspace_shutdown_sign_2.png"></p>
+<p><img alt="2 minute warning for shutdown for workspace" src="../img/workspace_shutdown_sign_2.png"></p>
 <!-- Links and Images --></div>
 
 
