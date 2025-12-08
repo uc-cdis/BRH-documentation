@@ -10,9 +10,9 @@ The platform provides a way to **search and query** over study metadata and vari
 
 The BRH also offers a secure and cost-effective cloud-computing environment for data analysis, empowering collaborative research and development of new analytical tools. New workflows and results of analyses can be shared with the community.
 
-The BRH is powered by the open-source software [“Gen3”](https://ctds.uchicago.edu/gen3).
+The BRH is powered by the open-source software [“Gen3”](https://gen3.org).
 
-[![](img/gen3blue.png){: style="height:50px"}](https://ctds.uchicago.edu/gen3)
+[![](img/gen3blue.png){: style="height:50px"}](https://gen3.org)
 
 >Gen3 was created by and is actively developed at the
 >University of Chicago’s Center for Translational Data Science (CTDS)
